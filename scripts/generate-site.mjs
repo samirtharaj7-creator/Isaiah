@@ -530,14 +530,14 @@ const shell = ({ title, description, active, bodyClass = "", content, scripts = 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260710-reference-cursor-1">
+  <link rel="stylesheet" href="/site.css?v=20260711-daniel-picker-colors-1">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260710-reference-cursor-1" defer></script>
+  <script src="/site.js?v=20260711-daniel-picker-colors-1" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -4771,8 +4771,8 @@ textarea {
   top: calc(46px + 4rem);
   min-height: 4rem;
   gap: 0.65rem;
-  border-bottom-color: rgba(201, 164, 76, 0.18);
-  background: rgba(31, 47, 68, 0.96);
+  border-bottom-color: rgba(201, 164, 76, 0.22);
+  background: #143241;
   padding: 0.45rem clamp(1rem, 2.4vw, 2rem);
 }
 
@@ -4784,8 +4784,8 @@ textarea {
   width: 3rem;
   height: 3rem;
   border-radius: 0.5rem;
-  border-color: rgba(201, 164, 76, 0.22);
-  background: rgba(16, 38, 58, 0.42);
+  border-color: rgba(229, 205, 154, 0.20);
+  background: rgba(20, 50, 65, 0.78);
   color: rgba(236, 224, 196, 0.72);
 }
 
@@ -4799,8 +4799,8 @@ textarea {
   min-width: 24rem;
   height: 3rem;
   border-radius: 0.5rem;
-  border-color: rgba(201, 164, 76, 0.28);
-  background: rgba(236, 224, 196, 0.08);
+  border-color: rgba(229, 205, 154, 0.24);
+  background: rgba(27, 54, 69, 0.95);
   padding: 0 0.9rem 0 0.7rem;
 }
 
@@ -4838,7 +4838,7 @@ textarea {
 
 .recent-toggle {
   min-width: 7.1rem;
-  background: rgba(236, 224, 196, 0.08);
+  background: rgba(27, 54, 69, 0.95);
   color: rgba(236, 224, 196, 0.76);
 }
 
@@ -4851,24 +4851,25 @@ textarea {
 .reference-picker {
   width: min(31rem, calc(100vw - 1.5rem));
   border-radius: 0.55rem;
-  background: rgba(244, 238, 224, 0.98);
-  color: #111827;
+  border-color: rgba(229, 205, 154, 0.24);
+  background: #08233d;
+  color: #f4ead2;
 }
 
 .reference-picker-head {
-  border-bottom-color: rgba(17, 24, 39, 0.1);
+  border-bottom-color: rgba(229, 205, 154, 0.18);
 }
 
 .reference-picker-head strong,
 .reference-picker-grid button,
 .reference-picker-close,
 .reference-picker-back {
-  color: #111827;
+  color: rgba(244, 234, 210, 0.78);
 }
 
 .reference-picker-close,
 .reference-picker-back {
-  background: rgba(17, 24, 39, 0.06);
+  background: rgba(31, 52, 74, 0.95);
 }
 
 .reference-picker-grid {
@@ -4879,8 +4880,8 @@ textarea {
 
 .reference-picker-grid button {
   min-height: 2rem;
-  border-radius: 0;
-  background: #c5cfdd;
+  border-radius: 0.35rem;
+  background: transparent;
   font-size: 0.82rem;
 }
 
