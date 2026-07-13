@@ -3576,3 +3576,17 @@ a.word-note-reference-chip:hover {
     color: #000;
   }
 }
+
+/* Keep independently scrolled chapter panes from extending the document's
+   visual overflow below the global footer. */
+html:has(body.chapter-route) {
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+body.chapter-route {
+  height: 100% !important;
+  min-height: 100% !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}

@@ -338,3 +338,36 @@ body > #root:empty::before{
     padding:28px 20px;
   }
 }
+
+/* Prevent independent commentary panes from extending or overscrolling past the footer. */
+html,
+body{
+  overscroll-behavior-y:none;
+}
+
+@media(min-width:981px){
+  body.mbe-shell-managed > main:has(:is(.split-reader,.reader-shell)),
+  body:has(> .mbe-global-footer) > main:has(:is(.split-reader,.reader-shell)){
+    contain:layout paint;
+    overflow:clip;
+  }
+
+  body.mbe-shell-managed > main:has(:is(.split-reader,.reader-shell)) :is(
+    .scripture-pane,
+    .commentary-pane,
+    .scripture-pane-body,
+    .commentary-pane-body,
+    .scripture-panel,
+    .commentary-panel
+  ),
+  body:has(> .mbe-global-footer) > main:has(:is(.split-reader,.reader-shell)) :is(
+    .scripture-pane,
+    .commentary-pane,
+    .scripture-pane-body,
+    .commentary-pane-body,
+    .scripture-panel,
+    .commentary-panel
+  ){
+    overscroll-behavior-y:contain;
+  }
+}

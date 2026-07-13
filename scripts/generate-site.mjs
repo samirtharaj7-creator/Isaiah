@@ -489,7 +489,6 @@ const navItems = [
   ["background", "/background/", "Introduction", icon.library],
   ["chapters", "/chapters/1/", "Commentary", icon.book],
   ["articles", "/articles/", "Articles", icon.file],
-  ["charts", "/charts/", "Visual Prophecy", icon.search],
 ];
 
 const appHeader = (active) => `
@@ -1108,7 +1107,6 @@ const homePage = () =>
             <a href="/background/">${icon.library}<span><strong>Introduction</strong><small>Historical and devotional overview</small></span></a>
             <a href="/chapters/1/">${icon.book}<span><strong>Commentary</strong><small>Verse-by-verse notes placeholder</small></span></a>
             <a href="/articles/">${icon.file}<span><strong>Articles</strong><small>Focused studies placeholder</small></span></a>
-            <a href="/charts/">${icon.search}<span><strong>Visual Prophecy</strong><small>Chart placeholders ready for later studies</small></span></a>
           </article>
         </section>
       </main>`,
@@ -1412,30 +1410,6 @@ const articlePage = (article, articles = []) => {
       </main>`,
   });
 };
-
-const chartsPage = () =>
-  shell({
-    title: "Visual Prophecy | Isaiah Study Workspace",
-    description: "Blank visual prophecy page prepared for the Isaiah study workspace.",
-    active: "charts",
-    bodyClass: "subpage-route",
-    content: `
-      <main>
-        <section class="subhero">
-          <div>
-            <p class="eyebrow">Isaiah study</p>
-            <h1>Visual Prophecy</h1>
-          </div>
-        </section>
-        <section class="content-band">
-          <div class="blank-document blank-document-grid" aria-label="Visual prophecy placeholder">
-            <div class="blank-card"></div>
-            <div class="blank-card"></div>
-            <div class="blank-card"></div>
-          </div>
-        </section>
-      </main>`,
-  });
 
 const searchPage = () =>
   shell({
@@ -6242,7 +6216,6 @@ const main = async () => {
   await write(join(root, "index.html"), homePage());
   await write(join(root, "background", "index.html"), backgroundPage());
   await write(join(root, "articles", "index.html"), articlesPage(articles));
-  await write(join(root, "charts", "index.html"), chartsPage());
   await write(join(root, "search", "index.html"), searchPage());
   await write(join(root, "chapters", "index.html"), chaptersIndexPage());
   await write(join(root, "404.html"), notFoundPage());
