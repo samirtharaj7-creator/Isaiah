@@ -529,14 +529,14 @@ const shell = ({ title, description, active, bodyClass = "", content, scripts = 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260713-hero-lockup-4">
+  <link rel="stylesheet" href="/site.css?v=20260713-current-design-5">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260713-hero-lockup-4" defer></script>
+  <script src="/site.js?v=20260713-current-design-5" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -1060,6 +1060,23 @@ const validateChapterOutlines = (chapters) => {
   }
 };
 
+const validateCommentaryCompleteness = (chapters, commentary) => {
+  const missing = [];
+
+  chapters.forEach((chapter) => {
+    chapter.verses.forEach(({ verse }) => {
+      const paragraphs = commentary[String(chapter.chapter)]?.[String(verse)];
+      if (!Array.isArray(paragraphs) || paragraphs.length === 0) {
+        missing.push(`Isaiah ${chapter.chapter}:${verse}`);
+      }
+    });
+  });
+
+  if (missing.length) {
+    throw new Error(`Missing Isaiah commentary for:\n${missing.join("\n")}`);
+  }
+};
+
 const chapterGrid = (extraClass = "") => `
   <div class="chapter-grid ${extraClass}">
     ${groups
@@ -1084,7 +1101,7 @@ const homePage = () =>
         <section class="hero">
           <div class="hero-content">
             <h1><span class="hero-title-kicker">The Book of</span><span>Isaiah</span></h1>
-            <p class="hero-copy">Read every chapter of Isaiah with a split Scripture and complete verse-by-verse commentary workspace. The introduction is prepared for devotional study, while articles remain ready for your material.</p>
+            <p class="hero-copy">Read every chapter of Isaiah in a split Scripture and verse-by-verse study workspace. The introduction supplies historical and theological context, while the articles trace Isaiah's major themes and enduring message.</p>
             <div class="hero-actions">
               <a class="primary-action" href="/chapters/1/">Start with Chapter 1 ${icon.arrowRight}</a>
               <a class="secondary-action" href="/background/">Introduction</a>
@@ -1101,13 +1118,13 @@ const homePage = () =>
         <section class="content-band muted-band">
           <div class="section-heading">
             <p class="eyebrow">Study material</p>
-            <h2>Blank spaces prepared for your content</h2>
+            <h2>Study Isaiah from text to theme</h2>
           </div>
-          <div class="template-links">
-            <a href="/background/">${icon.library}<span><strong>Introduction</strong><small>Historical and devotional overview</small></span></a>
-            <a href="/chapters/1/">${icon.book}<span><strong>Commentary</strong><small>Verse-by-verse notes placeholder</small></span></a>
-            <a href="/articles/">${icon.file}<span><strong>Articles</strong><small>Focused studies placeholder</small></span></a>
-          </article>
+          <div class="study-section-links">
+            <a href="/background/">${icon.library}<span><strong>Introduction</strong><small>Historical setting, structure, and themes</small></span></a>
+            <a href="/chapters/1/">${icon.book}<span><strong>Commentary</strong><small>Complete verse-by-verse study notes</small></span></a>
+            <a href="/articles/">${icon.file}<span><strong>Articles</strong><small>Focused studies on Isaiah's message</small></span></a>
+          </div>
         </section>
       </main>`,
   });
@@ -1311,11 +1328,8 @@ const renderArticleBlock = (block, titleMap = new Map(), sectionTitle = "") => {
 };
 
 const renderArticleSection = (section, titleMap) => {
-  const sectionClass =
-    section.title.toLowerCase() === "key passages" ? "article-section article-callout" : "article-section";
-
   return `
-            <section class="${sectionClass}" id="${attr(section.id)}">
+            <section class="article-section" id="${attr(section.id)}">
               <h2>${htmlEscape(section.title)}</h2>
               ${section.blocks
                 .map((block) => renderArticleBlock(block, titleMap, section.title))
@@ -1458,14 +1472,6 @@ const chaptersIndexPage = () =>
         </section>
       </main>`,
   });
-
-const renderBlankCommentary = (verses, n) => `
-          <div class="notes-stack" aria-label="Blank commentary placeholders">
-            <article class="commentary-entry is-empty is-active">
-              <h4>Isaiah ${n}</h4>
-              <div class="ruled-blank"></div>
-            </article>
-          </div>`;
 
 const isaiahReferenceHref = (reference) => {
   const match = String(reference).match(/^Isaiah\s+(\d+):(\d+)(?:-\d+)?$/);
@@ -1838,27 +1844,7 @@ const renderStudyLinks = (sourceReference, references = [], verseText = "") => {
 };
 
 const renderVerseCommentary = (verses, n, chapterCommentary, crossReferences = {}) => {
-  const hasStudyNotes = verses.some(
-    ({ verse, text }) =>
-      chapterCommentary[String(verse)]?.length ||
-      crossReferences[`Isaiah ${n}:${verse}`]?.length ||
-      phraseNotesForVerse(text, 1).length,
-  );
-
-  if (!hasStudyNotes) {
-    return renderBlankCommentary(verses, n);
-  }
-
-  const activeVerse = String(
-    verses.find(
-      ({ verse, text }) =>
-        chapterCommentary[String(verse)]?.length ||
-        crossReferences[`Isaiah ${n}:${verse}`]?.length ||
-        phraseNotesForVerse(text, 1).length,
-    )?.verse ??
-      verses[0]?.verse ??
-      1,
-  );
+  const activeVerse = String(verses[0]?.verse ?? 1);
 
   return `
           <div class="notes-stack commentary-filled" aria-label="Isaiah ${n} verse-by-verse commentary" aria-live="polite">
@@ -1872,10 +1858,6 @@ const renderVerseCommentary = (verses, n, chapterCommentary, crossReferences = {
                   text,
                 );
                 const active = String(verse) === activeVerse;
-                if (!paragraphs.length && !studyLinksMarkup) {
-                  return `<article class="commentary-entry is-empty${active ? " is-active" : ""}" id="note-${n}-${verse}" data-commentary-note="${verse}"${active ? "" : " hidden"}><h4>${sourceReference}</h4><div class="mini-blank"></div></article>`;
-                }
-
                 return `
             <article class="commentary-entry${active ? " is-active" : ""}" id="note-${n}-${verse}" data-commentary-note="${verse}"${active ? "" : " hidden"}>
               <h4><a href="#v${verse}">${sourceReference}</a></h4>
@@ -1893,40 +1875,17 @@ const chapterPage = (chapter, chapterCommentary = {}, crossReferences = {}) => {
   const previous = n > 1 ? n - 1 : null;
   const next = n < 66 ? n + 1 : null;
   const meta = chapterMeta(n);
-  const hasCommentary = verses.some(
-    ({ verse }) =>
-      chapterCommentary[String(verse)]?.length || crossReferences[`Isaiah ${n}:${verse}`]?.length,
-  );
-  const activeVerse = String(
-    verses.find(
-      ({ verse }) =>
-        chapterCommentary[String(verse)]?.length || crossReferences[`Isaiah ${n}:${verse}`]?.length,
-    )?.verse ??
-      verses[0]?.verse ??
-      1,
-  );
+  const activeVerse = String(verses[0]?.verse ?? 1);
   const verseMarkup = verses
     .map(
       ({ verse, text }) => {
         const verseKey = String(verse);
         const outlineMarkup = renderPassageOutline(n, verse);
-        const verseHasCommentary =
-          chapterCommentary[verseKey]?.length || crossReferences[`Isaiah ${n}:${verse}`]?.length;
-
-        if (!hasCommentary) {
-          return `
-        ${outlineMarkup}
-        <div class="verse-unit">
-          <p class="verse verse-text" id="v${verse}">
-            <sup class="verse-number"><a href="#v${verse}" aria-label="Isaiah ${n}:${verse}">${verse}</a></sup><span>${htmlEscape(text)}</span>
-          </p>
-        </div>`;
-        }
 
         return `
         ${outlineMarkup}
         <div class="verse-unit">
-          <button class="verse verse-button verse-highlight${verseKey === activeVerse && verseHasCommentary ? " is-active" : ""}" id="v${verse}" type="button" data-verse-select="${verse}"${verseHasCommentary ? ` aria-controls="note-${n}-${verse}"` : ""} aria-pressed="${verseKey === activeVerse && verseHasCommentary ? "true" : "false"}" aria-label="Show study notes for Isaiah ${n}:${verse}">
+          <button class="verse verse-button verse-highlight${verseKey === activeVerse ? " is-active" : ""}" id="v${verse}" type="button" data-verse-select="${verse}" aria-controls="note-${n}-${verse}" aria-pressed="${verseKey === activeVerse ? "true" : "false"}" aria-label="Show study notes for Isaiah ${n}:${verse}">
             <sup class="verse-number">${verse}</sup><span>${htmlEscape(text)}</span>
           </button>
         </div>`;
@@ -2436,13 +2395,13 @@ h3 {
   line-height: 1;
 }
 
-.template-links {
+.study-section-links {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.template-links a {
+.study-section-links a {
   display: flex;
   min-width: 0;
   gap: 0.85rem;
@@ -2452,22 +2411,22 @@ h3 {
   padding: 1.1rem;
 }
 
-.template-links .icon {
+.study-section-links .icon {
   flex: 0 0 auto;
   color: var(--gold-bright);
 }
 
-.template-links strong,
-.template-links small {
+.study-section-links strong,
+.study-section-links small {
   display: block;
 }
 
-.template-links strong {
+.study-section-links strong {
   color: var(--cream);
   font-size: 1rem;
 }
 
-.template-links small {
+.study-section-links small {
   margin-top: 0.28rem;
   color: var(--muted);
   line-height: 1.45;
@@ -2501,55 +2460,6 @@ h3 {
 .subcopy {
   max-width: 42rem;
   color: rgba(245, 234, 213, 0.78);
-}
-
-.blank-document {
-  min-height: 32rem;
-  border: 1px solid var(--line);
-  border-radius: 0.45rem;
-  background:
-    linear-gradient(180deg, rgba(251, 243, 221, 0.055), rgba(251, 243, 221, 0.025)),
-    rgba(16, 38, 58, 0.76);
-  padding: clamp(1.2rem, 3vw, 2rem);
-  box-shadow: var(--shadow);
-}
-
-.blank-line,
-.blank-space,
-.blank-card,
-.ruled-blank,
-.mini-blank {
-  border: 1px dashed rgba(239, 207, 118, 0.22);
-  border-radius: 0.35rem;
-  background:
-    linear-gradient(90deg, rgba(251, 243, 221, 0.08), rgba(251, 243, 221, 0.02)),
-    rgba(7, 17, 28, 0.18);
-}
-
-.blank-line {
-  height: 1rem;
-  max-width: 38rem;
-  margin-bottom: 0.8rem;
-}
-
-.blank-line.short {
-  max-width: 22rem;
-}
-
-.blank-space {
-  min-height: 24rem;
-  margin-top: 1.5rem;
-}
-
-.blank-document-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  min-height: 20rem;
-  gap: 1rem;
-}
-
-.blank-card {
-  min-height: 16rem;
 }
 
 .articles-route {
@@ -2786,13 +2696,6 @@ h3 {
   text-decoration: underline;
   text-decoration-color: rgba(201, 164, 76, 0.34);
   text-underline-offset: 0.18em;
-}
-
-.article-callout {
-  border: 1px solid rgba(201, 164, 76, 0.22);
-  border-radius: 0.45rem;
-  background: rgba(7, 17, 28, 0.25);
-  padding: clamp(1rem, 2vw, 1.35rem);
 }
 
 .article-nav {
@@ -3259,7 +3162,6 @@ h3 {
 }
 
 .chapter-jump > span,
-.chapter-progress,
 .chapter-step,
 .chapter-menu summary {
   font-size: 0.7rem;
@@ -3282,20 +3184,6 @@ h3 {
 .chapter-jump option {
   background: #132d3f;
   color: var(--cream);
-}
-
-.chapter-progress {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  min-height: 2.1rem;
-  border: 1px solid rgba(229, 205, 154, 0.14);
-  border-radius: 0.4rem;
-  background: rgba(7, 17, 28, 0.10);
-  color: rgba(245, 234, 213, 0.60);
-  padding: 0 0.65rem;
-  letter-spacing: 0.04em;
 }
 
 .verse-jump {
@@ -3902,50 +3790,8 @@ h3 {
   font-size: 1.5rem;
 }
 
-.ruled-blank {
-  min-height: 12rem;
-  background-image:
-    repeating-linear-gradient(180deg, transparent 0, transparent 2.15rem, rgba(239, 207, 118, 0.14) 2.18rem),
-    linear-gradient(90deg, rgba(251, 243, 221, 0.04), rgba(251, 243, 221, 0.01));
-}
-
-.ruled-blank.compact {
-  min-height: 8rem;
-}
-
-.verse-note-grid {
-  display: grid;
-  gap: 0.65rem;
-}
-
-.verse-note-grid > div {
-  display: grid;
-  grid-template-columns: 4rem minmax(0, 1fr);
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.verse-note-grid span {
-  color: var(--gold-bright);
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.mini-blank {
-  min-height: 2.35rem;
-}
-
 .commentary-filled {
   align-content: start;
-}
-
-.verse-commentary-section {
-  min-width: 0;
-}
-
-.commentary-entries {
-  display: grid;
-  gap: 1rem;
 }
 
 .commentary-entry {
@@ -3986,13 +3832,7 @@ h3 {
   margin-top: 0.85rem;
 }
 
-.commentary-entry.is-empty .mini-blank {
-  min-height: 4rem;
-}
-
-/* Daniel visual system ported to Isaiah.
-   Keep these overrides late so the generated site stays visually locked to
-   the Daniel navy/gold reader, header, and shell treatment. */
+/* Current Isaiah visual system */
 :root {
   --background: #0b1f3a;
   --foreground: #ece0c4;
@@ -4195,8 +4035,7 @@ h4 {
 
 .secondary-action,
 .chapter-group,
-.template-links a,
-.blank-document,
+.study-section-links a,
 .search-workspace {
   border-color: var(--line);
   background: rgba(14, 33, 56, 0.82);
@@ -4391,17 +4230,6 @@ h4 {
   background: rgba(24, 39, 58, 0.92);
 }
 
-.ruled-blank,
-.mini-blank,
-.blank-line,
-.blank-space,
-.blank-card {
-  border-color: rgba(201, 164, 76, 0.22);
-  background:
-    repeating-linear-gradient(180deg, transparent 0, transparent 2.15rem, rgba(201, 164, 76, 0.10) 2.18rem),
-    linear-gradient(90deg, rgba(236, 224, 196, 0.04), rgba(236, 224, 196, 0.01));
-}
-
 ::selection {
   background: rgba(201, 164, 76, 0.35);
   color: #fff6e4;
@@ -4417,7 +4245,7 @@ h4 {
   }
 
   .chapter-grid,
-  .template-links,
+  .study-section-links,
   .article-list {
     grid-template-columns: 1fr;
   }
@@ -4582,10 +4410,6 @@ h4 {
     display: none;
   }
 
-  .chapter-progress {
-    display: none;
-  }
-
   .verse-jump {
     flex: 1 1 auto;
     width: auto;
@@ -4709,10 +4533,6 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .blank-document-grid {
-    grid-template-columns: 1fr;
-  }
-
   .reader-panel-header {
     min-height: 4.5rem;
   }
@@ -4730,12 +4550,9 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .verse-note-grid > div {
-    grid-template-columns: 3.5rem minmax(0, 1fr);
-  }
 }
 
-/* Strict Isaiah font system overrides */
+/* Current Isaiah typography and reader details */
 :root {
   --serif: "EB Garamond", Georgia, serif;
   --scripture-serif: "EB Garamond", Georgia, serif;
@@ -5038,28 +4855,6 @@ textarea {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75rem;
-}
-
-.chapter-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.chapter-tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.625rem;
-  border: 1px solid rgba(201, 164, 76, 0.18);
-  border-radius: 999px;
-  background: rgba(236, 224, 196, 0.04);
-  color: rgba(236, 224, 196, 0.76);
-  padding: 0.25rem 0.625rem;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1rem;
 }
 
 .scripture-verses {
@@ -5396,10 +5191,6 @@ a.word-note-reference-chip:hover {
   color: #fff8e6;
 }
 
-.commentary-entry.is-empty .mini-blank {
-  min-height: 10rem;
-}
-
 @media (max-width: 1100px) {
   .reader-shell {
     display: block;
@@ -5701,25 +5492,6 @@ const js = `
   const scripture = document.querySelector("[data-scripture-text]");
   const fontUp = document.querySelector("[data-font-up]");
   const fontDown = document.querySelector("[data-font-down]");
-  const safeStorageRemove = (key) => {
-    try {
-      window.localStorage.removeItem(key);
-    } catch {
-      // Browsers can disable localStorage; text sizing still works for this page.
-    }
-  };
-  [
-    "isaiah-reader-font",
-    "isaiah-reader-font-v2",
-    "isaiah-reader-font-daniel",
-    "isaiah-reader-font-system",
-    "isaiah-reader-font-step-daniel-v2",
-    "isaiah-notes-font",
-    "isaiah-notes-font-v2",
-    "isaiah-notes-font-daniel",
-    "isaiah-notes-font-system",
-    "isaiah-notes-font-step-daniel-v2",
-  ].forEach(safeStorageRemove);
   const readerFontSteps = [
     { size: 1.125, line: 1.75 },
     { size: 1.25, line: 1.75 },
@@ -6373,6 +6145,7 @@ const main = async () => {
   const chapters = Object.values(isaiah.chaptersByNumber).sort((a, b) => a.chapter - b.chapter);
   const verseCount = chapters.reduce((sum, chapter) => sum + chapter.verses.length, 0);
   validateChapterOutlines(chapters);
+  validateCommentaryCompleteness(chapters, commentary);
 
   await Promise.all([
     rm(join(root, "background"), { recursive: true, force: true }),

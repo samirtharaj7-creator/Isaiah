@@ -36,25 +36,6 @@
   const scripture = document.querySelector("[data-scripture-text]");
   const fontUp = document.querySelector("[data-font-up]");
   const fontDown = document.querySelector("[data-font-down]");
-  const safeStorageRemove = (key) => {
-    try {
-      window.localStorage.removeItem(key);
-    } catch {
-      // Browsers can disable localStorage; text sizing still works for this page.
-    }
-  };
-  [
-    "isaiah-reader-font",
-    "isaiah-reader-font-v2",
-    "isaiah-reader-font-daniel",
-    "isaiah-reader-font-system",
-    "isaiah-reader-font-step-daniel-v2",
-    "isaiah-notes-font",
-    "isaiah-notes-font-v2",
-    "isaiah-notes-font-daniel",
-    "isaiah-notes-font-system",
-    "isaiah-notes-font-step-daniel-v2",
-  ].forEach(safeStorageRemove);
   const readerFontSteps = [
     { size: 1.125, line: 1.75 },
     { size: 1.25, line: 1.75 },

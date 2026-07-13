@@ -427,13 +427,13 @@ h3 {
   line-height: 1;
 }
 
-.template-links {
+.study-section-links {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.template-links a {
+.study-section-links a {
   display: flex;
   min-width: 0;
   gap: 0.85rem;
@@ -443,22 +443,22 @@ h3 {
   padding: 1.1rem;
 }
 
-.template-links .icon {
+.study-section-links .icon {
   flex: 0 0 auto;
   color: var(--gold-bright);
 }
 
-.template-links strong,
-.template-links small {
+.study-section-links strong,
+.study-section-links small {
   display: block;
 }
 
-.template-links strong {
+.study-section-links strong {
   color: var(--cream);
   font-size: 1rem;
 }
 
-.template-links small {
+.study-section-links small {
   margin-top: 0.28rem;
   color: var(--muted);
   line-height: 1.45;
@@ -492,55 +492,6 @@ h3 {
 .subcopy {
   max-width: 42rem;
   color: rgba(245, 234, 213, 0.78);
-}
-
-.blank-document {
-  min-height: 32rem;
-  border: 1px solid var(--line);
-  border-radius: 0.45rem;
-  background:
-    linear-gradient(180deg, rgba(251, 243, 221, 0.055), rgba(251, 243, 221, 0.025)),
-    rgba(16, 38, 58, 0.76);
-  padding: clamp(1.2rem, 3vw, 2rem);
-  box-shadow: var(--shadow);
-}
-
-.blank-line,
-.blank-space,
-.blank-card,
-.ruled-blank,
-.mini-blank {
-  border: 1px dashed rgba(239, 207, 118, 0.22);
-  border-radius: 0.35rem;
-  background:
-    linear-gradient(90deg, rgba(251, 243, 221, 0.08), rgba(251, 243, 221, 0.02)),
-    rgba(7, 17, 28, 0.18);
-}
-
-.blank-line {
-  height: 1rem;
-  max-width: 38rem;
-  margin-bottom: 0.8rem;
-}
-
-.blank-line.short {
-  max-width: 22rem;
-}
-
-.blank-space {
-  min-height: 24rem;
-  margin-top: 1.5rem;
-}
-
-.blank-document-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  min-height: 20rem;
-  gap: 1rem;
-}
-
-.blank-card {
-  min-height: 16rem;
 }
 
 .articles-route {
@@ -777,13 +728,6 @@ h3 {
   text-decoration: underline;
   text-decoration-color: rgba(201, 164, 76, 0.34);
   text-underline-offset: 0.18em;
-}
-
-.article-callout {
-  border: 1px solid rgba(201, 164, 76, 0.22);
-  border-radius: 0.45rem;
-  background: rgba(7, 17, 28, 0.25);
-  padding: clamp(1rem, 2vw, 1.35rem);
 }
 
 .article-nav {
@@ -1250,7 +1194,6 @@ h3 {
 }
 
 .chapter-jump > span,
-.chapter-progress,
 .chapter-step,
 .chapter-menu summary {
   font-size: 0.7rem;
@@ -1273,20 +1216,6 @@ h3 {
 .chapter-jump option {
   background: #132d3f;
   color: var(--cream);
-}
-
-.chapter-progress {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  min-height: 2.1rem;
-  border: 1px solid rgba(229, 205, 154, 0.14);
-  border-radius: 0.4rem;
-  background: rgba(7, 17, 28, 0.10);
-  color: rgba(245, 234, 213, 0.60);
-  padding: 0 0.65rem;
-  letter-spacing: 0.04em;
 }
 
 .verse-jump {
@@ -1893,50 +1822,8 @@ h3 {
   font-size: 1.5rem;
 }
 
-.ruled-blank {
-  min-height: 12rem;
-  background-image:
-    repeating-linear-gradient(180deg, transparent 0, transparent 2.15rem, rgba(239, 207, 118, 0.14) 2.18rem),
-    linear-gradient(90deg, rgba(251, 243, 221, 0.04), rgba(251, 243, 221, 0.01));
-}
-
-.ruled-blank.compact {
-  min-height: 8rem;
-}
-
-.verse-note-grid {
-  display: grid;
-  gap: 0.65rem;
-}
-
-.verse-note-grid > div {
-  display: grid;
-  grid-template-columns: 4rem minmax(0, 1fr);
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.verse-note-grid span {
-  color: var(--gold-bright);
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.mini-blank {
-  min-height: 2.35rem;
-}
-
 .commentary-filled {
   align-content: start;
-}
-
-.verse-commentary-section {
-  min-width: 0;
-}
-
-.commentary-entries {
-  display: grid;
-  gap: 1rem;
 }
 
 .commentary-entry {
@@ -1977,13 +1864,7 @@ h3 {
   margin-top: 0.85rem;
 }
 
-.commentary-entry.is-empty .mini-blank {
-  min-height: 4rem;
-}
-
-/* Daniel visual system ported to Isaiah.
-   Keep these overrides late so the generated site stays visually locked to
-   the Daniel navy/gold reader, header, and shell treatment. */
+/* Current Isaiah visual system */
 :root {
   --background: #0b1f3a;
   --foreground: #ece0c4;
@@ -2186,8 +2067,7 @@ h4 {
 
 .secondary-action,
 .chapter-group,
-.template-links a,
-.blank-document,
+.study-section-links a,
 .search-workspace {
   border-color: var(--line);
   background: rgba(14, 33, 56, 0.82);
@@ -2382,17 +2262,6 @@ h4 {
   background: rgba(24, 39, 58, 0.92);
 }
 
-.ruled-blank,
-.mini-blank,
-.blank-line,
-.blank-space,
-.blank-card {
-  border-color: rgba(201, 164, 76, 0.22);
-  background:
-    repeating-linear-gradient(180deg, transparent 0, transparent 2.15rem, rgba(201, 164, 76, 0.10) 2.18rem),
-    linear-gradient(90deg, rgba(236, 224, 196, 0.04), rgba(236, 224, 196, 0.01));
-}
-
 ::selection {
   background: rgba(201, 164, 76, 0.35);
   color: #fff6e4;
@@ -2408,7 +2277,7 @@ h4 {
   }
 
   .chapter-grid,
-  .template-links,
+  .study-section-links,
   .article-list {
     grid-template-columns: 1fr;
   }
@@ -2573,10 +2442,6 @@ h4 {
     display: none;
   }
 
-  .chapter-progress {
-    display: none;
-  }
-
   .verse-jump {
     flex: 1 1 auto;
     width: auto;
@@ -2700,10 +2565,6 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .blank-document-grid {
-    grid-template-columns: 1fr;
-  }
-
   .reader-panel-header {
     min-height: 4.5rem;
   }
@@ -2721,12 +2582,9 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .verse-note-grid > div {
-    grid-template-columns: 3.5rem minmax(0, 1fr);
-  }
 }
 
-/* Strict Isaiah font system overrides */
+/* Current Isaiah typography and reader details */
 :root {
   --serif: "EB Garamond", Georgia, serif;
   --scripture-serif: "EB Garamond", Georgia, serif;
@@ -3029,28 +2887,6 @@ textarea {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75rem;
-}
-
-.chapter-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.chapter-tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.625rem;
-  border: 1px solid rgba(201, 164, 76, 0.18);
-  border-radius: 999px;
-  background: rgba(236, 224, 196, 0.04);
-  color: rgba(236, 224, 196, 0.76);
-  padding: 0.25rem 0.625rem;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1rem;
 }
 
 .scripture-verses {
@@ -3385,10 +3221,6 @@ a.cross-reference-chip:hover {
 a.word-note-reference-chip:hover {
   background: transparent;
   color: #fff8e6;
-}
-
-.commentary-entry.is-empty .mini-blank {
-  min-height: 10rem;
 }
 
 @media (max-width: 1100px) {
