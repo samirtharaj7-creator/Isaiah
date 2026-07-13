@@ -529,14 +529,14 @@ const shell = ({ title, description, active, bodyClass = "", content, scripts = 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260713-current-design-5">
+  <link rel="stylesheet" href="/site.css?v=20260713-home-sections-15">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260713-current-design-5" defer></script>
+  <script src="/site.js?v=20260713-home-sections-15" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -1108,16 +1108,8 @@ const homePage = () =>
             </div>
           </div>
         </section>
-        <section class="content-band">
-          <div class="section-heading">
-            <p class="eyebrow">Scripture</p>
-            <h2>All 66 chapters are ready</h2>
-          </div>
-          ${chapterGrid()}
-        </section>
         <section class="content-band muted-band">
           <div class="section-heading">
-            <p class="eyebrow">Study material</p>
             <h2>Study Isaiah from text to theme</h2>
           </div>
           <div class="study-section-links">
@@ -1125,6 +1117,12 @@ const homePage = () =>
             <a href="/chapters/1/">${icon.book}<span><strong>Commentary</strong><small>Complete verse-by-verse study notes</small></span></a>
             <a href="/articles/">${icon.file}<span><strong>Articles</strong><small>Focused studies on Isaiah's message</small></span></a>
           </div>
+        </section>
+        <section class="content-band">
+          <div class="section-heading">
+            <h2>Read Isaiah Chapter by Chapter</h2>
+          </div>
+          ${chapterGrid()}
         </section>
       </main>`,
   });
@@ -1141,26 +1139,16 @@ const backgroundPage = () =>
         <section class="intro-hero">
           <div class="intro-hero-inner">
             <div class="intro-hero-copy">
-              <p class="eyebrow">Introduction</p>
-              <h1>Introduction to the Book of Isaiah</h1>
-              <p class="intro-lede">Isaiah is not only a book of ancient warnings. It is a living call to behold the Holy One of Israel, turn from empty confidence, and receive the salvation God Himself provides.</p>
-              <div class="hero-actions">
-                <a class="primary-action" href="#purpose">Read the Introduction ${icon.arrowRight}</a>
-                <a class="secondary-action" href="/chapters/1/">Open Isaiah 1</a>
-              </div>
-            </div>
-            <div class="intro-facts" aria-label="Isaiah quick facts">
-              <div class="intro-fact"><span>Name</span><strong>Isaiah means "Yahweh is salvation."</strong></div>
-              <div class="intro-fact"><span>Prophet</span><strong>Isaiah son of Amoz ministered in Judah and Jerusalem.</strong></div>
-              <div class="intro-fact"><span>Setting</span><strong>The Assyrian crisis during Uzziah, Jotham, Ahaz, and Hezekiah.</strong></div>
-              <div class="intro-fact"><span>Message</span><strong>Judgment is real, mercy is deeper, and God will save a remnant.</strong></div>
-              <div class="intro-fact"><span>Hope</span><strong>The Servant, Zion, the nations, and the new heavens and new earth.</strong></div>
+              <h1>
+                <span class="intro-title-kicker">Introduction to the Book of</span>
+                <span class="intro-title-book">Isaiah</span>
+              </h1>
+              <p class="intro-lede">A concise guide to Isaiah's name, prophet, historical setting, structure, major themes, and central burden.</p>
             </div>
           </div>
         </section>
         <div class="intro-section-nav" aria-label="Introduction page sections">
           <div class="intro-section-nav-inner">
-            <p>${icon.book} Read this page</p>
             <nav>
               <a href="#purpose"><span>01</span>Purpose</a>
               <a href="#prophet"><span>02</span>Prophet</a>
@@ -2189,7 +2177,7 @@ input {
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92) 0%, rgba(7, 17, 28, 0.68) 34%, rgba(7, 17, 28, 0.12) 100%),
     linear-gradient(180deg, rgba(7, 17, 28, 0.1) 0%, rgba(7, 17, 28, 0.28) 58%, rgba(7, 17, 28, 0.88) 100%),
-    url("/assets/isaiah-hero.png");
+    url("/assets/isaiah-hero-v2.png");
   background-position: center;
   background-size: cover;
 }
@@ -2442,7 +2430,7 @@ h3 {
   padding: clamp(6rem, 12vh, 9rem) clamp(1.5rem, 5vw, 5rem) clamp(2rem, 6vh, 4rem);
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92), rgba(7, 17, 28, 0.48)),
-    url("/assets/isaiah-hero.png");
+    url("/assets/isaiah-hero-v2.png");
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -2548,7 +2536,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(11, 31, 58, 0.95) 0%, rgba(11, 31, 58, 0.72) 45%, rgba(11, 31, 58, 0.22) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.1), rgba(11, 31, 58, 0.86)),
-    url("/assets/isaiah-hero.png");
+    url("/assets/isaiah-hero-v2.png");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -2754,12 +2742,15 @@ h3 {
 
 .intro-hero {
   position: relative;
+  display: flex;
+  min-height: clamp(29rem, 65svh, 37rem);
+  align-items: center;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   background:
-    linear-gradient(90deg, rgba(11, 31, 58, 0.96), rgba(11, 31, 58, 0.72) 48%, rgba(11, 31, 58, 0.42)),
-    linear-gradient(180deg, rgba(11, 31, 58, 0.1), rgba(11, 31, 58, 0.88)),
-    url("/assets/isaiah-hero.png");
+    linear-gradient(90deg, rgba(11, 31, 58, 0.98) 0%, rgba(11, 31, 58, 0.92) 24%, rgba(11, 31, 58, 0.60) 52%, rgba(11, 31, 58, 0.18) 78%, rgba(11, 31, 58, 0.34) 100%),
+    linear-gradient(180deg, rgba(11, 31, 58, 0.24), rgba(11, 31, 58, 0.70)),
+    url("/assets/isaiah-hero-v2.png");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -2772,54 +2763,57 @@ h3 {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 80%, rgba(11, 31, 58, 0.72), transparent 42%),
-    linear-gradient(90deg, rgba(7, 17, 28, 0.68), transparent 74%);
+    radial-gradient(circle at 12% 46%, rgba(11, 31, 58, 0.36), transparent 40%),
+    linear-gradient(180deg, rgba(7, 17, 28, 0.10), rgba(7, 17, 28, 0.52));
 }
 
 .intro-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.75fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  width: min(100%, 1320px);
+  width: min(100%, 1500px);
   margin: 0 auto;
-  padding: clamp(6.5rem, 12vh, 9rem) clamp(1rem, 4vw, 2rem) clamp(3rem, 7vh, 5rem);
+  padding: clamp(3.5rem, 6vh, 4.5rem) clamp(2rem, 6vw, 6rem);
 }
 
 .intro-hero-copy {
-  align-self: end;
+  width: min(100%, 74rem);
   min-width: 0;
 }
 
 .intro-hero h1 {
-  max-width: 14ch;
+  max-width: 72rem;
   color: var(--cream);
-  font-size: clamp(2.25rem, 5.15vw, 4.5rem);
   text-shadow: 0 2px 22px rgba(0, 0, 0, 0.42);
 }
 
+.intro-title-kicker,
+.intro-title-book {
+  display: block;
+}
+
+.intro-title-kicker {
+  color: var(--gold-bright);
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+  line-height: 1.18;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.intro-title-book {
+  margin-top: 0.3rem;
+  font-size: clamp(3rem, 6.2vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .intro-lede {
-  max-width: 46rem;
-  margin: 1.35rem 0 0;
-  color: rgba(245, 234, 213, 0.82);
-  font-size: clamp(0.9rem, 2vw, 1.08rem);
-  line-height: 1.78;
+  max-width: 50rem;
+  margin: clamp(1.75rem, 4vh, 2.5rem) 0 0;
+  color: rgba(236, 224, 196, 0.78);
+  font-family: var(--serif);
+  font-size: clamp(1.08rem, 1.3vw, 1.25rem);
+  line-height: 1.5;
 }
 
-.intro-facts {
-  display: grid;
-  align-self: end;
-  gap: 0.72rem;
-}
-
-.intro-fact {
-  border: 1px solid rgba(201, 164, 76, 0.2);
-  border-radius: 0.42rem;
-  background: rgba(9, 22, 34, 0.76);
-  padding: 1rem;
-  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.18);
-}
-
-.intro-fact span,
 .intro-outline span,
 .intro-theme-grid span,
 .intro-chapter-links span {
@@ -2831,45 +2825,19 @@ h3 {
   text-transform: uppercase;
 }
 
-.intro-fact strong {
-  display: block;
-  margin-top: 0.35rem;
-  color: var(--cream);
-  font-family: var(--serif);
-  font-size: 1.08rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
 .intro-section-nav {
   position: sticky;
   top: calc(46px + 4rem);
   z-index: 50;
   border-bottom: 1px solid var(--line);
   background: rgba(9, 22, 34, 0.95);
-  padding: 0.8rem clamp(1rem, 4vw, 2rem);
+  padding: 0.65rem clamp(1rem, 4vw, 2rem);
   backdrop-filter: blur(16px);
 }
 
 .intro-section-nav-inner {
   width: min(100%, 1320px);
   margin: 0 auto;
-}
-
-.intro-section-nav p {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin: 0 0 0.62rem;
-  color: rgba(245, 234, 213, 0.66);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
-}
-
-.intro-section-nav p .icon {
-  color: var(--gold-bright);
 }
 
 .intro-section-nav nav {
@@ -3984,7 +3952,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.32) 57%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero.png");
+    url("/assets/isaiah-hero-v2.png");
   background-position: center top;
   opacity: 0.86;
 }
@@ -3994,6 +3962,54 @@ h4 {
   background:
     radial-gradient(circle at 20% 76%, rgba(11, 31, 58, 0.76) 0%, rgba(11, 31, 58, 0.34) 24%, transparent 52%),
     radial-gradient(circle at 86% 52%, rgba(201, 164, 76, 0.11) 0%, transparent 36%);
+}
+
+.home-route main {
+  background: #0b1f3a;
+}
+
+.home-route .hero {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.home-route .hero::before {
+  background-image:
+    linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
+    linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.30) 52%, rgba(11, 31, 58, 0.78) 82%, #0b1f3a 100%),
+    url("/assets/isaiah-hero-v2.png");
+}
+
+.home-route .hero::after {
+  background:
+    linear-gradient(180deg, transparent 44%, rgba(11, 31, 58, 0.16) 62%, #0b1f3a 100%),
+    radial-gradient(circle at 20% 76%, rgba(11, 31, 58, 0.76) 0%, rgba(11, 31, 58, 0.34) 24%, transparent 52%),
+    radial-gradient(circle at 86% 52%, rgba(201, 164, 76, 0.11) 0%, transparent 36%);
+}
+
+.home-route .hero + .content-band {
+  position: relative;
+  z-index: 1;
+  border-top: 0;
+  padding-bottom: 1.5rem;
+  background:
+    linear-gradient(180deg, #0b1f3a 0%, rgba(19, 45, 63, 0.48) 34%, rgba(9, 22, 34, 0.24) 100%),
+    radial-gradient(600px 260px at 14% 30%, rgba(102, 113, 87, 0.18), transparent 62%);
+}
+
+.home-route .hero + .content-band + .content-band {
+  padding-top: 1.5rem;
+}
+
+.home-route .content-band .section-heading h2 {
+  max-width: none;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+}
+
+@media (min-width: 761px) {
+  .home-route .content-band .section-heading h2 {
+    white-space: nowrap;
+  }
 }
 
 .hero-content {
@@ -4052,7 +4068,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.92) 0%, rgba(11, 31, 58, 0.64) 42%, rgba(11, 31, 58, 0.16) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.18) 0%, rgba(11, 31, 58, 0.30) 58%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero.png");
+    url("/assets/isaiah-hero-v2.png");
   background-position: center right;
   background-size: cover;
 }
@@ -4236,14 +4252,6 @@ h4 {
 }
 
 @media (max-width: 1100px) {
-  .intro-hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .intro-facts {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .chapter-grid,
   .study-section-links,
   .article-list {
@@ -4355,15 +4363,26 @@ h4 {
   }
 
   .intro-hero-inner {
-    padding-top: 5.25rem;
-    padding-bottom: 2.4rem;
+    padding-top: 4rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
   }
 
-  .intro-hero h1 {
-    font-size: clamp(2.25rem, 10.5vw, 3.75rem);
+  .intro-title-kicker {
+    font-size: 1rem;
+    line-height: 1.35;
   }
 
-  .intro-facts,
+  .intro-title-book {
+    font-size: 3.75rem;
+  }
+
+  .intro-lede {
+    margin-top: 1.75rem;
+    font-size: 1.08rem;
+  }
+
   .intro-outline,
   .intro-theme-grid,
   .intro-chapter-links {
