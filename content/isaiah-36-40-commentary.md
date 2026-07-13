@@ -424,7 +424,7 @@ This is more than an abstract doctrine of Scripture. It is comfort for people wh
 
 The contrast also humbles religious pride. Flesh is not dependable simply because it is energetic, organized, or sincere. Human faithfulness must be anchored in something firmer than human resolve. Isaiah gives that anchor: what God has spoken remains.
 
-Adventist faith depends on this confidence. Prophecy, doctrine, worship, Sabbath faithfulness, resurrection hope, and the expectation of a restored creation must be governed by the enduring word rather than cultural pressure or religious fashion. The people of God live because God has spoken and still stands by what He says.
+Prophecy, doctrine, worship, Sabbath faithfulness, resurrection hope, and the expectation of a restored creation must be governed by the enduring word rather than cultural pressure or religious fashion. The people of God live because God has spoken and still stands by what He says.
 
 ## Isaiah 40:9
 

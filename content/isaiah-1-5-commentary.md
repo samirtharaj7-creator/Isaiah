@@ -4,7 +4,7 @@ Isaiah begins by anchoring the whole book in history. This is not a floating med
 
 The opening also tells us how to read Isaiah. God is interpreting His covenant people before they interpret themselves. Judah may measure itself by temple activity, political survival, or royal success, but the Lord measures it by holiness, justice, trust, and faithfulness. Revelation is therefore mercy: God tells the truth before judgment becomes final.
 
-For Adventist readers, this verse quietly establishes a habit needed for the whole book. Prophecy is not detached from history, and history is not detached from God. The Lord who speaks through Isaiah rules time, exposes sin, preserves a remnant, and carries His purpose toward final restoration.
+This verse quietly establishes a habit needed for the whole book. Prophecy is not detached from history, and history is not detached from God. The Lord who speaks through Isaiah rules time, exposes sin, preserves a remnant, and carries His purpose toward final restoration.
 
 ## Isaiah 1:2
 
@@ -12,7 +12,7 @@ Heaven and earth are summoned as witnesses because Judah’s sin is covenant bet
 
 This verse keeps judgment from sounding arbitrary. God is not striking at weakness; He is confronting ingratitude, hardness, and moral revolt in those He had carried. The people’s privileges make their rebellion heavier, not lighter. Light received becomes responsibility before God.
 
-The great controversy is already visible in seed form. The question is whether God’s creatures will trust His character or treat His care as something to exploit. Isaiah’s rebuke is stern because God’s love is not indifferent. The Father still speaks, and His speaking is the first mercy of the chapter.
+The deeper conflict over God’s character is already visible in seed form. The question is whether His creatures will trust Him or treat His care as something to exploit. Isaiah’s rebuke is stern because God’s love is not indifferent. The Father still speaks, and His speaking is the first mercy of the chapter.
 
 ## Isaiah 1:3
 
@@ -274,7 +274,7 @@ Zion will be redeemed with judgment, and her converts with righteousness. Isaiah
 
 The word “converts” matters. The restored people are those who return. Zion’s future is not guaranteed to a religious system unchanged by God. It belongs to a people brought back into righteousness. Mercy creates a converted community, not a protected hypocrisy.
 
-This line is deeply Adventist in its moral shape. God’s final work vindicates His character by showing that grace does not excuse rebellion but restores loyalty. The redeemed city is not merely spared; it is made right before the Holy One.
+This line gives moral shape to Isaiah’s final hope. God’s final work vindicates His character by showing that grace does not excuse rebellion but restores loyalty. The redeemed city is not merely spared; it is made right before the Holy One.
 
 ## Isaiah 1:28
 
@@ -346,7 +346,7 @@ The nations say, “Come, let us go up,” because they want to be taught the Lo
 
 The law going forth from Zion is not legalism. It is God’s revealed way becoming light for the nations. Isaiah joins grace and instruction, invitation and obedience. People are drawn not merely to comfort but to the truth that reforms life.
 
-For Adventist faith, this verse resonates with the final call to worship the Creator and walk in His commandments through faith. The nations need more than religious emotion. They need the word of the Lord, received humbly and lived faithfully.
+This verse resonates with the final call to worship the Creator and walk in His commandments through faith. The nations need more than religious emotion. They need the word of the Lord, received humbly and lived faithfully.
 
 ## Isaiah 2:4
 
@@ -354,7 +354,7 @@ The promise of swords beaten into plowshares is one of Isaiah’s most beautiful
 
 This hope is not naive optimism about human progress. Isaiah has already exposed pride, violence, and rebellion too deeply for that. Peace comes because the Lord judges and teaches. Human hostility is healed only when God’s rule is acknowledged.
 
-The verse points toward the restored creation where violence no longer organizes life. Adventist hope should hear this with longing for Christ’s visible return and God’s final kingdom, not as a promise that human systems will perfect themselves before He acts.
+The verse points toward the restored creation where violence no longer organizes life. Its hope rests in Christ’s visible return and God’s final kingdom, not in a promise that human systems will perfect themselves before He acts.
 
 ## Isaiah 2:5
 
@@ -812,7 +812,7 @@ The Branch of the Lord is beautiful and glorious, and the fruit of the land is e
 
 The word “survivors” keeps the promise sober. This beauty comes through judgment, not around it. God preserves a remnant, purifies His people, and brings fruit where pride had made barrenness. Hope is therefore disciplined by holiness.
 
-Christian readers naturally see this Branch hope opening toward the Messiah, while still honoring Isaiah’s remnant setting. God’s answer to human collapse is not merely punishment; it is a living future rooted in His own saving purpose.
+This Branch hope opens toward the Messiah while still honoring Isaiah’s remnant setting. God’s answer to human collapse is not merely punishment; it is a living future rooted in His own saving purpose.
 
 ## Isaiah 4:3
 

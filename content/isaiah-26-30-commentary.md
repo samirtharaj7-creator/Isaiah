@@ -74,7 +74,7 @@ This stands among the chapter’s most restful lines. The people do not secure t
 
 The people remember that other lords once ruled over them. The wording includes political powers, but it also reaches into the deeper bondage of misplaced allegiance. Anything that claims the heart’s obedience in God’s place becomes another lord. Judah had known domination from outside and compromise from within. Yet now the confession is clear: “your name alone we bring to remembrance.” The soul that once lived under rival masters has been brought back to exclusive devotion. This is repentance expressed as allegiance.
 
-There is tenderness and honesty here. The people do not pretend they were always single-hearted. They remember their history of subjection. That memory makes their present confession more meaningful, not less. Grace does not require us to erase the truth about former bondage. It teaches us to speak that truth while turning freshly to God. Isaiah also shows that deliverance is not complete until worship is restored. Freedom is more than relief from harsh lords; it is the recovery of right remembrance. God’s name fills the place once occupied by lesser rulers. For modern readers, the verse quietly asks what names govern our imaginations, fears, and loyalties. Career, approval, desire, power, security—many lords compete for rule. But the healed heart says, with growing simplicity, “Your name alone.” That is not narrowness. It is liberation.
+There is tenderness and honesty here. The people do not pretend they were always single-hearted. They remember their history of subjection. That memory makes their present confession more meaningful, not less. Grace does not require us to erase the truth about former bondage. It teaches us to speak that truth while turning freshly to God. Isaiah also shows that deliverance is not complete until worship is restored. Freedom is more than relief from harsh lords; it is the recovery of right remembrance. God’s name fills the place once occupied by lesser rulers. The verse quietly asks what names govern our imaginations, fears, and loyalties. Career, approval, desire, power, security—many lords compete for rule. But the healed heart says, with growing simplicity, “Your name alone.” That is not narrowness. It is liberation.
 
 ## Isaiah 26:14
 
@@ -112,7 +112,7 @@ The dead shall live, and those who dwell in the dust will awake and sing. Isaiah
 
 This promise answers the confession just before it: human labor brought forth only wind. God does what human striving cannot. He gives life where there is no strength left, and He turns the place of silence into song.
 
-For Adventist faith, this verse is precious because it keeps hope centered on the resurrection. Death is an enemy, not a doorway to an already completed life. The Lord who created the body can raise the body, and the redeemed rejoice because dust is not final.
+This verse is precious because it keeps hope centered on the resurrection. Death is an enemy, not a doorway to an already completed life. The Lord who created the body can raise the body, and the redeemed rejoice because dust is not final.
 
 ## Isaiah 26:20
 
@@ -126,7 +126,7 @@ The Lord comes out to punish the inhabitants of the earth for their iniquity, an
 
 This is solemn comfort for the oppressed. Hidden blood is not forgotten. The earth itself is not permitted to cover testimony forever. God’s judgment means moral reality will be made plain; victims will not be erased by the success of the violent.
 
-Adventist eschatology should hold this note carefully. Judgment is not God’s cruelty but His public answer to evil. It vindicates His character, exposes rebellion, and prepares the way for a creation where hidden violence no longer stains the ground.
+This note about judgment must be held carefully. Judgment is not God’s cruelty but His public answer to evil. It vindicates His character, exposes rebellion, and prepares the way for a creation where hidden violence no longer stains the ground.
 
 ## Isaiah 27:1
 
@@ -134,7 +134,7 @@ Leviathan, the fleeing and twisting serpent, gathers the imagery of chaotic evil
 
 The verse reaches beyond any single human enemy. Empires, spiritual rebellion, violence, and chaos all stand under the Lord’s final judgment. The serpent may twist and flee, but it cannot escape the Creator.
 
-This belongs naturally within the great controversy frame. Evil is not eternal, equal with God, or self-ending. The Lord Himself brings it to judgment. The hope of the redeemed rests not in their ability to manage chaos but in God’s promise to end it.
+This belongs within Isaiah’s larger conflict between divine rule and rebellious power. Evil is not eternal, equal with God, or self-ending. The Lord Himself brings it to judgment. The hope of the redeemed rests not in their ability to manage chaos but in God’s promise to end it.
 
 ## Isaiah 27:2
 
@@ -164,7 +164,7 @@ Yet even here, in the midst of warning, an invitation appears: let them take hol
 
 Isaiah 27 treats the remnant as a people gathered for renewed worship, not mere survival. The prophetic horizon is public and moral: God exposes evil, vindicates faithful worship, and renews what sin has damaged.
 
-The text beautifully displays the heart of divine mercy. The Lord does not delight in destruction as such. Even as He speaks of burning what opposes Him, He opens a way for reconciliation. To “take hold” suggests need, humility, and urgency. One does not take hold of God’s strength casually. One clings because there is nowhere else to stand. Peace with God, then, is not sentimentalized comfort but rescued relationship. It arises where the sinner abandons resistance and rests in the strength of the God who could justly judge him. For Christian readers, the verse naturally opens toward the peace God gives through His own gracious initiative. But even in Isaiah’s own setting, the truth is clear: God’s holiness is not contrary to mercy. The same Lord who destroys evil sincerely invites rebels to make peace with Him.
+The text beautifully displays the heart of divine mercy. The Lord does not delight in destruction as such. Even as He speaks of burning what opposes Him, He opens a way for reconciliation. To “take hold” suggests need, humility, and urgency. One does not take hold of God’s strength casually. One clings because there is nowhere else to stand. Peace with God, then, is not sentimentalized comfort but rescued relationship. It arises where the sinner abandons resistance and rests in the strength of the God who could justly judge him. Within the larger biblical witness, the verse opens toward the peace God gives through His own gracious initiative. Yet even in Isaiah’s own setting, the truth is clear: God’s holiness is not contrary to mercy. The same Lord who destroys evil sincerely invites rebels to make peace with Him.
 
 ## Isaiah 27:6
 
@@ -220,7 +220,7 @@ This sentence carries tenderness in its precision. One by one. The Lord’s peop
 
 The gathering culminates in the sounding of a great trumpet. Those perishing in Assyria and those driven out into Egypt come to worship the Lord on the holy mountain in Jerusalem. The trumpet announces more than relocation. It signals decisive divine action, release, and joyous assembly. The end of scattering is worship. God does not gather His people merely to give them a safer geography. He gathers them to Himself.
 
-The chapter pictures restoration as a guarded vineyard and a holy homecoming. The Lord is rejecting the use of holy things while refusing a holy life. The trumpet gathers what judgment scattered, turning remnant hope into worship before the Lord. The remnant is gathered for worship, a theme that fits the Adventist emphasis on final allegiance to the Creator. The point is not mood, but loyalty returned to the Lord.
+The chapter pictures restoration as a guarded vineyard and a holy homecoming. The Lord is rejecting the use of holy things while refusing a holy life. The trumpet gathers what judgment scattered, turning remnant hope into worship before the Lord. The remnant is gathered in final allegiance to the Creator. The point is not mood, but loyalty returned to the Lord.
 
 Isaiah's line is rich with hope. The perishing are not beyond His reach, and the exiled are not beyond His call. Places of oppression and dispersion do not define the final identity of God’s people. His summons is stronger than their distance. And when they come, they come to worship. That is the restored center of life. The journey of discipline, purging, and preservation ends not in self-congratulation but in adoration. Isaiah thus shows that the purpose of redemption is communion rightly ordered under God’s holiness. His scattered people become His gathered worshipers. For believers today, this remains significant. Every gracious recall of the wandering soul, every recovery of the dispersed heart, is ultimately ordered toward worship. We are brought back so that the Lord may be honored in the place He chooses, and so that our lives may revolve again around His presence.
 

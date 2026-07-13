@@ -434,7 +434,7 @@ That opening matters for the whole song. If we begin only with suffering, we may
 
 The word translated around wise or prospering action suggests more than intelligence. The Servant carries out God's mission effectively. He understands the will of the Lord and accomplishes it. Human rulers often pursue glory through force, display, and self-protection. This Servant fulfills divine wisdom through self-giving faithfulness.
 
-Christian readers rightly see Christ at the center of this promise. His cross and exaltation reveal that God's victory does not follow the world's pattern of power. The Servant conquers not by avoiding shame, but by bearing what sinners could not bear and being vindicated by God.
+Christ stands at the center of this promise. His cross and exaltation reveal that God's victory does not follow the world's pattern of power. The Servant conquers not by avoiding shame, but by bearing what sinners could not bear and being vindicated by God.
 
 ## Isaiah 52:14
 
@@ -522,7 +522,7 @@ The wounds of the Servant are interpreted for us: He is pierced for transgressio
 
 The chastisement that brings peace falls on Him, and by His stripes healing comes. This is not a denial that disciples still suffer, nor a promise of instant bodily ease in every circumstance. It is the deeper healing of reconciliation with God, from which all final restoration will flow.
 
-Adventist faith should keep both substitution and transformation here. Christ bears guilt we cannot bear, and His healing creates a people restored to loyalty. Forgiveness and renewal belong together because the Servant’s work is complete.
+Substitution and transformation must remain together here. Christ bears guilt we cannot bear, and His healing creates a people restored to loyalty. Forgiveness and renewal belong together because the Servant’s work is complete.
 
 ## Isaiah 53:6
 
@@ -590,7 +590,7 @@ The verse does not portray God as cruel or arbitrary. It reveals that redemption
 
 The guilt-offering language ties the Servant's death to atonement, not mere example. He is not simply showing courage under pressure. He is dealing with guilt before God. Yet the verse immediately refuses to end at death. He sees offspring, His days are prolonged, and the divine purpose prospers. Suffering opens into fruitful victory.
 
-Christian hope naturally hears resurrection here. The Servant passes through death into life and gathers a redeemed people. For Adventist readers, the verse also keeps hope concrete: God does not save by treating death as harmless, but by overcoming it through the victorious Servant.
+The Servant passes through death into life and gathers a redeemed people. The verse keeps this resurrection hope concrete: God does not save by treating death as harmless, but by overcoming it through the victorious Servant.
 
 ## Isaiah 53:11
 

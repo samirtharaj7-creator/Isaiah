@@ -371,3 +371,25 @@ body{
     overscroll-behavior-y:contain;
   }
 }
+
+
+/* Keep desktop split readers inside the visible viewport below both headers. */
+@media(min-width:981px){
+  body.mbe-shell-managed:has(> .reader-header) > main.reader-page:has(> .split-reader){
+    height:calc(100dvh - 47px - 4.35rem) !important;
+    min-height:calc(100dvh - 47px - 4.35rem) !important;
+    flex:0 0 auto;
+  }
+
+  body.mbe-shell-managed:has(> .reader-header) > main.reader-page:has(> .split-reader) > .split-reader{
+    height:calc(100dvh - 47px - 4.35rem - var(--chapter-strip-height)) !important;
+    min-height:0 !important;
+  }
+
+  body.mbe-shell-managed:has(> .reader-header) > main.reader-page:has(> .split-reader) :is(
+    .scripture-pane-body,
+    .commentary-pane-body
+  ){
+    padding-bottom:calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}

@@ -283,6 +283,16 @@ h3 {
   display: block;
 }
 
+.hero h1 .hero-title-kicker {
+  margin: 0 0 0.3em 0.05em;
+  color: var(--gold-bright);
+  font-size: 0.36em;
+  line-height: 1.15;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .hero-copy {
   max-width: 44rem;
   margin: 1.5rem 0 0;
@@ -3577,16 +3587,67 @@ a.word-note-reference-chip:hover {
   }
 }
 
-/* Keep independently scrolled chapter panes from extending the document's
-   visual overflow below the global footer. */
-html:has(body.chapter-route) {
-  height: 100% !important;
-  overflow: hidden !important;
+body.chapter-route {
+  overflow-x: hidden !important;
 }
 
-body.chapter-route {
-  height: 100% !important;
-  min-height: 100% !important;
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
+body.chapter-route > .reader-shell {
+  flex: 0 0 auto;
+}
+
+/* On desktop, either reader pane can reveal one shared footer. Its measured
+   height is removed from the workspace so it never covers either pane. */
+@media (min-width: 1101px) {
+  html:has(body.chapter-route.reader-footer-ready) {
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  body.chapter-route.reader-footer-ready {
+    height: 100% !important;
+    min-height: 100% !important;
+    overflow-y: hidden !important;
+  }
+
+  body.chapter-route.reader-footer-ready > .reader-shell {
+    height: calc(100dvh - 46px - 4rem - 4rem);
+  }
+
+  body.chapter-route.reader-footer-ready.reader-footer-visible > .reader-shell {
+    height: calc(100dvh - 46px - 4rem - 4rem - var(--reader-footer-height, 0px));
+  }
+
+  body.chapter-route.reader-footer-ready > .mbe-global-footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 70;
+    width: 100%;
+    margin-top: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+    visibility: hidden;
+    transition:
+      transform 180ms ease,
+      opacity 140ms ease,
+      visibility 0s linear 180ms;
+  }
+
+  body.chapter-route.reader-footer-ready.reader-footer-visible > .mbe-global-footer {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    visibility: visible;
+    transition:
+      transform 180ms ease,
+      opacity 140ms ease,
+      visibility 0s linear 0s;
+  }
+
+  body.chapter-route.reader-footer-ready .scripture-panel,
+  body.chapter-route.reader-footer-ready .commentary-panel {
+    overscroll-behavior-y: contain;
+  }
 }

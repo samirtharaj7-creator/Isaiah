@@ -116,6 +116,107 @@
   const noteEntries = Array.from(document.querySelectorAll("[data-commentary-note]"));
   const commentaryPanel = document.querySelector("[data-study-panel]");
   const workspace = document.querySelector("[data-chapter-workspace]");
+  const scripturePanel = document.querySelector("[data-scripture-panel]");
+  const pageFooter = document.querySelector(".mbe-global-footer");
+  const desktopReaderQuery = window.matchMedia("(min-width: 1101px)");
+
+  if (
+    document.body.classList.contains("chapter-route") &&
+    workspace &&
+    scripturePanel &&
+    commentaryPanel &&
+    pageFooter
+  ) {
+    const readerPanels = [scripturePanel, commentaryPanel];
+    const previousScrollTop = new WeakMap();
+    let footerVisible = false;
+
+    const panelIsAtBottom = (panel) =>
+      panel.scrollHeight - panel.clientHeight - panel.scrollTop <= 3;
+
+    const measureFooter = () => {
+      if (!desktopReaderQuery.matches) return;
+      const footerHeight = Math.ceil(pageFooter.getBoundingClientRect().height);
+      document.body.style.setProperty("--reader-footer-height", footerHeight + "px");
+    };
+
+    const keepPanelAtBottom = (panel) => {
+      window.requestAnimationFrame(() => {
+        panel.scrollTop = panel.scrollHeight;
+        previousScrollTop.set(panel, panel.scrollTop);
+      });
+    };
+
+    const setFooterVisible = (visible, sourcePanel = null) => {
+      if (!desktopReaderQuery.matches) visible = false;
+      if (visible === footerVisible) return;
+
+      footerVisible = visible;
+      document.body.classList.toggle("reader-footer-visible", visible);
+
+      if (visible && sourcePanel) {
+        measureFooter();
+        keepPanelAtBottom(sourcePanel);
+      }
+    };
+
+    const handlePanelScroll = (event) => {
+      if (!desktopReaderQuery.matches) return;
+      const panel = event.currentTarget;
+      const currentScrollTop = panel.scrollTop;
+      const lastScrollTop = previousScrollTop.get(panel) ?? currentScrollTop;
+      const direction = currentScrollTop - lastScrollTop;
+      previousScrollTop.set(panel, currentScrollTop);
+
+      if (direction < -1) {
+        setFooterVisible(false);
+        return;
+      }
+
+      if (direction > 0 && panelIsAtBottom(panel)) {
+        setFooterVisible(true, panel);
+      }
+    };
+
+    const handlePanelWheel = (event) => {
+      if (!desktopReaderQuery.matches) return;
+      const panel = event.currentTarget;
+
+      if (event.deltaY < 0) {
+        setFooterVisible(false);
+      } else if (event.deltaY > 0 && panelIsAtBottom(panel)) {
+        setFooterVisible(true, panel);
+      }
+    };
+
+    const syncReaderFooterMode = () => {
+      setFooterVisible(false);
+      readerPanels.forEach((panel) => previousScrollTop.set(panel, panel.scrollTop));
+
+      if (desktopReaderQuery.matches) {
+        document.body.classList.add("reader-footer-ready");
+        measureFooter();
+      } else {
+        document.body.classList.remove("reader-footer-ready");
+        document.body.style.removeProperty("--reader-footer-height");
+      }
+    };
+
+    readerPanels.forEach((panel) => {
+      previousScrollTop.set(panel, panel.scrollTop);
+      panel.addEventListener("scroll", handlePanelScroll, { passive: true });
+      panel.addEventListener("wheel", handlePanelWheel, { passive: true });
+    });
+
+    if ("ResizeObserver" in window) {
+      const footerResizeObserver = new ResizeObserver(measureFooter);
+      footerResizeObserver.observe(pageFooter);
+    }
+
+    desktopReaderQuery.addEventListener("change", syncReaderFooterMode);
+    window.addEventListener("resize", measureFooter, { passive: true });
+    syncReaderFooterMode();
+  }
   const chapterVerseCounts = [0, 31, 22, 26, 6, 30, 13, 25, 22, 21, 34, 16, 6, 22, 32, 9, 14, 14, 7, 25, 6, 17, 25, 18, 23, 12, 21, 13, 29, 24, 33, 9, 20, 24, 17, 10, 22, 38, 22, 8, 31, 29, 25, 28, 28, 25, 13, 15, 22, 26, 11, 23, 15, 12, 17, 13, 12, 21, 14, 21, 22, 11, 12, 19, 12, 25, 24];
   const verseJumpForm = document.querySelector("[data-verse-jump-form]");
   const verseJumpInput = document.querySelector("[data-verse-jump-input]");

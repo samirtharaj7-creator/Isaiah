@@ -1195,7 +1195,7 @@ The Sabbath is often misunderstood in opposite ways. Some treat it only as rule 
 
 The Sabbath in Isaiah reveals what kind of relationship God desires with His people. It is not a mechanical sign with no heart in it. It is joined to delight, honor, rest, reverence, and belonging. Isaiah also sets Sabbath within a moral and spiritual frame. The day cannot be rightly honored while the heart remains proud, unjust, and self-directed.
 
-Isaiah also presents the Sabbath as a place of hope. It appears alongside the inclusion of the faithful outsider and the final gathering of all flesh. That makes it a beautiful, deeply Adventist-relevant theme: worship, creation, covenant, mercy, and final restoration held together.
+Isaiah also presents the Sabbath as a place of hope. It appears alongside the inclusion of the faithful outsider and the final gathering of all flesh. Worship, creation, covenant, mercy, and final restoration are held together in one beautiful theme.
 
 ### Biblical Context in Isaiah
 
@@ -1423,7 +1423,7 @@ Worship remains central. Isaiah 66 places new creation alongside the promise tha
 
 There is also continuity and discontinuity here. Isaiah does not portray a formless heavenly abstraction. He uses images of city, labor, peace, offspring, worship, and delight. Yet he also announces something qualitatively new. The world to come is not merely this world, slightly improved. It is creation under God’s final, unchallenged blessing.
 
-Finally, the last chapters do not let us separate this hope from holiness. The new heavens and new earth appear alongside the final distinction between servants and rebels. In Adventist terms, Isaiah’s hope belongs with God’s final judgment, the defeat of evil, true worship, and the restored creation. New creation is not sentimental universalism. It is the righteous future of the God who judges evil and redeems His people.
+Finally, the last chapters do not let us separate this hope from holiness. The new heavens and new earth appear alongside the final distinction between servants and rebels. Isaiah’s hope belongs with God’s final judgment, the defeat of evil, true worship, and the restored creation. New creation is not sentimental universalism. It is the righteous future of the God who judges evil and redeems His people.
 
 ### How This Points to Christ
 

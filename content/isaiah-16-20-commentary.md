@@ -812,7 +812,7 @@ The mention of imperial authority also reminds readers that empires move decisiv
 
 The text also gives us an implicit caution against detached curiosity. Knowing the names and movements of commanders is not enough. Historical awareness without spiritual discernment leaves the heart unhelped. Judah needed more than information. It needed wisdom.
 
-For modern readers, this verse teaches us to read public events with theological seriousness. Not every detail carries a simple message, but history is not empty of divine relevance. God still addresses people through the rise and fall of powers, through crises that unmask false confidence, and through moments that reveal where human trust has been placed.
+This verse teaches us to read public events with theological seriousness. Not every detail carries a simple message, but history is not empty of divine relevance. God still addresses people through the rise and fall of powers, through crises that unmask false confidence, and through moments that reveal where human trust has been placed.
 
 The date marker, then, does more than situate. It signals that what follows belongs in the real world, where faith and fear are tested amid the movement of nations.
 

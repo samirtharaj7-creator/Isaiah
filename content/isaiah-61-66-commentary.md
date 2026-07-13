@@ -724,7 +724,7 @@ The promise of new heavens and a new earth is the great horizon of Isaiah’s ho
 
 This is not escapism. It is the Creator’s answer to a world damaged by sin. The God who made heaven and earth will restore His creation so fully that sorrow’s tyranny is broken. Salvation is cosmic in scope because sin’s damage has been cosmic in reach.
 
-Adventist hope belongs naturally here. The future is not an immortal soul floating away from creation, but God’s renewed world after judgment, resurrection, and the final defeat of evil. The Creator finishes what He promised.
+The future is not an immortal soul floating away from creation, but God’s renewed world after judgment, resurrection, and the final defeat of evil. The Creator finishes what He promised.
 
 ## Isaiah 65:18
 
@@ -808,7 +808,7 @@ Isaiah is not offering a sentimental nature scene. The imagery answers the long 
 
 The serpent reference keeps the hope from becoming shallow. The old deceiver's pattern is not enthroned in the new world. Evil is not negotiated with, preserved, or given a permanent corner of God's future. It is brought low. The holy mountain is safe because God has dealt with what destroys.
 
-This final peace cannot be produced by human reform alone. It belongs to God's new creation. Adventist hope hears here the restoration of the world Christ returns to redeem, not an escape from creation into disembodied existence. The verse trains the heart to long for the day when every form of violence is answered and the whole earth becomes safe under the Lord.
+This final peace cannot be produced by human reform alone. It belongs to God's new creation and the restoration of the world Christ returns to redeem, not an escape from creation into disembodied existence. The verse trains the heart to long for the day when every form of violence is answered and the whole earth becomes safe under the Lord.
 
 ## Isaiah 66:1
 
@@ -1050,7 +1050,7 @@ The permanence here rests entirely on the Lord. Human kingdoms rise and vanish, 
 
 The verse also gathers the whole book into its final horizon. Isaiah began with a people sick with rebellion and a land under judgment. He ends with new creation and a preserved people. The movement is not from sin to denial, but from sin through judgment and mercy into restoration.
 
-Adventist hope rightly hears here the final state after evil is judged and creation is made new. The future is not a temporary improvement or an immortal soul's escape from earth. It is God's durable new creation, inhabited by a redeemed people whose name remains because His word remains.
+This is the final state after evil is judged and creation is made new. The future is not a temporary improvement or an immortal soul's escape from earth. It is God's durable new creation, inhabited by a redeemed people whose name remains because His word remains.
 
 ## Isaiah 66:23
 
@@ -1058,7 +1058,7 @@ From one new moon to another and from one Sabbath to another, all flesh comes to
 
 The phrase "all flesh" widens the scene beyond ethnic boundary. God's final worshiping people are gathered from the nations, yet their worship is directed to the one Creator and Redeemer. Universal welcome and holy allegiance stand together. The nations are not gathered into vague spirituality; they come before the Lord.
 
-For Adventist reading, this matters because it places Sabbath worship inside the final horizon of restoration. The Sabbath belongs to the Creator's finished purpose, not merely to an old ceremonial arrangement. It is tied to worship, creaturely dependence, and joyful recognition of God's lordship.
+This matters because it places Sabbath worship inside the final horizon of restoration. The Sabbath belongs to the Creator's finished purpose, not merely to an old ceremonial arrangement. It is tied to worship, creaturely dependence, and joyful recognition of God's lordship.
 
 The redeemed do not outgrow worship; they enter its fullness. Sacred time is no longer burdened by hypocrisy, injustice, or distraction. From Sabbath to Sabbath, creation answers its Maker with adoration. Isaiah's ending invites the church now to practice the worship that will one day fill the restored world.
 

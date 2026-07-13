@@ -12,7 +12,7 @@ Blessed is the one who keeps justice, does righteousness, keeps the Sabbath, and
 
 The blessing falls on the person who “holds fast.” That language suggests perseverance in a world where faithfulness may cost something. Sabbath is not a disposable detail; it is part of clinging to the Creator’s covenant way.
 
-This verse is important for Adventist reading because it guards the Sabbath from two distortions. It is not legalistic merit, and it is not optional sentiment. It is a blessed sign of allegiance to the Lord, expressed in a life that also refuses evil and practices righteousness.
+This verse guards the Sabbath from two distortions. It is not legalistic merit, and it is not optional sentiment. It is a blessed sign of allegiance to the Lord, expressed in a life that also refuses evil and practices righteousness.
 
 ## Isaiah 56:3
 
@@ -464,7 +464,7 @@ The Sabbath is addressed directly: turn your foot from trampling it, stop doing 
 
 The issue is allegiance. “My holy day” means the Sabbath belongs to the Lord before it belongs to our schedules. To honor it is to receive time as a gift from the Creator and Redeemer, not as raw material for self-rule.
 
-For Adventist faith, this verse is central. Sabbath delight is not cold legalism and not casual leisure. It is joyful loyalty, a weekly protest against self-centered living, and a foretaste of restored communion with God.
+This verse is central to Isaiah’s teaching about Sabbath. Sabbath delight is not cold legalism and not casual leisure. It is joyful loyalty, a weekly protest against self-centered living, and a foretaste of restored communion with God.
 
 ## Isaiah 58:14
 

@@ -529,14 +529,14 @@ const shell = ({ title, description, active, bodyClass = "", content, scripts = 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260711-daniel-picker-colors-1">
+  <link rel="stylesheet" href="/site.css?v=20260713-hero-lockup-4">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260711-daniel-picker-colors-1" defer></script>
+  <script src="/site.js?v=20260713-hero-lockup-4" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -1083,7 +1083,7 @@ const homePage = () =>
       <main>
         <section class="hero">
           <div class="hero-content">
-            <h1><span>The</span><span>Book of</span><span>Isaiah</span></h1>
+            <h1><span class="hero-title-kicker">The Book of</span><span>Isaiah</span></h1>
             <p class="hero-copy">Read every chapter of Isaiah with a split Scripture and complete verse-by-verse commentary workspace. The introduction is prepared for devotional study, while articles remain ready for your material.</p>
             <div class="hero-actions">
               <a class="primary-action" href="/chapters/1/">Start with Chapter 1 ${icon.arrowRight}</a>
@@ -1116,7 +1116,7 @@ const backgroundPage = () =>
   shell({
     title: "Introduction to Isaiah | Isaiah Study Workspace",
     description:
-      "A devotional Adventist introduction to Isaiah, including authorship, historical setting, covenant crisis, major themes, and gospel hope.",
+      "A devotional introduction to Isaiah, including authorship, historical setting, covenant crisis, major themes, and gospel hope.",
     active: "background",
     bodyClass: "subpage-route intro-route",
     content: `
@@ -1152,7 +1152,7 @@ const backgroundPage = () =>
               <a href="#unity"><span>05</span>Unity</a>
               <a href="#shape"><span>06</span>Shape</a>
               <a href="#themes"><span>07</span>Themes</a>
-              <a href="#adventist"><span>08</span>Adventist</a>
+              <a href="#reading"><span>08</span>Reading</a>
               <a href="#begin"><span>09</span>Begin</a>
             </nav>
           </div>
@@ -1211,7 +1211,7 @@ const backgroundPage = () =>
                 <h2>Authorship and unity</h2>
                 <div class="intro-copy">
                   <p>The book presents its vision as the word given through Isaiah son of Amoz. Many modern discussions divide Isaiah into later sections because chapters 40-66 speak so powerfully to exile, return, Cyrus, and restoration. The uploaded background material notes those debates while also showing that even scholars who differ over composition often recognize the final book's deep literary and theological unity.</p>
-                  <p>An Adventist reading can affirm that unity with confidence. Scripture does not need to be embarrassed by predictive prophecy. The God who names kings, judges empires, and announces the end from the beginning is able to reveal future deliverance before it arrives. At the same time, the book may have been preserved, arranged, and handed down through faithful transmission without weakening the authority of the prophetic word.</p>
+                  <p>The book's own witness allows us to affirm that unity with confidence. Scripture does not need to be embarrassed by predictive prophecy. The God who names kings, judges empires, and announces the end from the beginning is able to reveal future deliverance before it arrives. At the same time, the book may have been preserved, arranged, and handed down through faithful transmission without weakening the authority of the prophetic word.</p>
                   <p>For study, the important point is that Isaiah should be read as one coherent witness. The early chapters prepare the later comfort. The holiness of God in Isaiah 6 belongs with the Servant's suffering in Isaiah 53. The remnant promise belongs with the new heavens and new earth. The book is not a loose collection of religious fragments; it is a grand testimony to the God who judges, cleanses, comforts, and restores.</p>
                 </div>
               </div>
@@ -1249,14 +1249,14 @@ const backgroundPage = () =>
                 </div>
               </div>
             </section>
-            <section class="intro-section" id="adventist">
+            <section class="intro-section" id="reading">
               <span class="intro-number">08</span>
               <div>
-                <h2>An Adventist reading of Isaiah</h2>
+                <h2>Reading Isaiah as a whole</h2>
                 <div class="intro-copy">
-                  <p>Adventist readers should feel at home in Isaiah because the book holds together truths we deeply cherish: the seriousness of judgment, the beauty of grace, the call to covenant faithfulness, the hope of a purified remnant, and the promise that God's final purpose is a renewed creation. Isaiah does not separate doctrine from devotion. Truth is meant to become worship, justice, courage, and hope.</p>
-                  <p>The great controversy theme is present in the background of the book's conflict. Proud empires rise, idols promise security, rulers boast, and God's people are tempted to fear what they can see. Yet the Lord reveals Himself as Creator, Redeemer, Judge, and King. History is not finally governed by Assyria, Babylon, or any human empire. It is governed by the Holy One whose word cannot fail.</p>
-                  <p>Isaiah also speaks powerfully to Sabbath and righteousness. Isaiah 56 blesses the outsider who keeps covenant and takes hold of the Sabbath. Isaiah 58 shows that true Sabbath delight cannot be separated from mercy, justice, and care for the oppressed. Isaiah 66 looks toward worship in the new earth. For Adventist study, these passages do not make the Sabbath a cold badge of identity. They show it as a sign of restored relationship with the Creator and Redeemer.</p>
+                  <p>Isaiah holds together truths that belong together: the seriousness of judgment, the beauty of grace, the call to covenant faithfulness, the hope of a purified remnant, and the promise that God's final purpose is a renewed creation. Isaiah does not separate doctrine from devotion. Truth is meant to become worship, justice, courage, and hope.</p>
+                  <p>Behind the book's public conflicts lies a deeper struggle between God's truth and rebellious power. Proud empires rise, idols promise security, rulers boast, and God's people are tempted to fear what they can see. Yet the Lord reveals Himself as Creator, Redeemer, Judge, and King. History is not finally governed by Assyria, Babylon, or any human empire. It is governed by the Holy One whose word cannot fail.</p>
+                  <p>Isaiah also speaks powerfully to Sabbath and righteousness. Isaiah 56 blesses the outsider who keeps covenant and takes hold of the Sabbath. Isaiah 58 shows that true Sabbath delight cannot be separated from mercy, justice, and care for the oppressed. Isaiah 66 looks toward worship in the new earth. These passages do not make the Sabbath a cold badge of identity. They show it as a sign of restored relationship with the Creator and Redeemer.</p>
                   <p>Most of all, Isaiah points us to Christ. The Child born, the Son given, the Branch from Jesse, the Servant wounded for our transgressions, the One anointed to preach good tidings - all of these lines draw the reader toward the gospel. Isaiah's final hope is not merely that Judah survives, but that God fills the earth with righteousness, gathers the nations, and makes all things new.</p>
                 </div>
               </div>
@@ -2290,6 +2290,16 @@ h3 {
 
 .hero h1 span {
   display: block;
+}
+
+.hero h1 .hero-title-kicker {
+  margin: 0 0 0.3em 0.05em;
+  color: var(--gold-bright);
+  font-size: 0.36em;
+  line-height: 1.15;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-copy {
@@ -5585,6 +5595,71 @@ a.word-note-reference-chip:hover {
     color: #000;
   }
 }
+
+body.chapter-route {
+  overflow-x: hidden !important;
+}
+
+body.chapter-route > .reader-shell {
+  flex: 0 0 auto;
+}
+
+/* On desktop, either reader pane can reveal one shared footer. Its measured
+   height is removed from the workspace so it never covers either pane. */
+@media (min-width: 1101px) {
+  html:has(body.chapter-route.reader-footer-ready) {
+    height: 100% !important;
+    overflow: hidden !important;
+  }
+
+  body.chapter-route.reader-footer-ready {
+    height: 100% !important;
+    min-height: 100% !important;
+    overflow-y: hidden !important;
+  }
+
+  body.chapter-route.reader-footer-ready > .reader-shell {
+    height: calc(100dvh - 46px - 4rem - 4rem);
+  }
+
+  body.chapter-route.reader-footer-ready.reader-footer-visible > .reader-shell {
+    height: calc(100dvh - 46px - 4rem - 4rem - var(--reader-footer-height, 0px));
+  }
+
+  body.chapter-route.reader-footer-ready > .mbe-global-footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 70;
+    width: 100%;
+    margin-top: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(100%);
+    visibility: hidden;
+    transition:
+      transform 180ms ease,
+      opacity 140ms ease,
+      visibility 0s linear 180ms;
+  }
+
+  body.chapter-route.reader-footer-ready.reader-footer-visible > .mbe-global-footer {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    visibility: visible;
+    transition:
+      transform 180ms ease,
+      opacity 140ms ease,
+      visibility 0s linear 0s;
+  }
+
+  body.chapter-route.reader-footer-ready .scripture-panel,
+  body.chapter-route.reader-footer-ready .commentary-panel {
+    overscroll-behavior-y: contain;
+  }
+}
 `;
 
 const js = `
@@ -5706,6 +5781,107 @@ const js = `
   const noteEntries = Array.from(document.querySelectorAll("[data-commentary-note]"));
   const commentaryPanel = document.querySelector("[data-study-panel]");
   const workspace = document.querySelector("[data-chapter-workspace]");
+  const scripturePanel = document.querySelector("[data-scripture-panel]");
+  const pageFooter = document.querySelector(".mbe-global-footer");
+  const desktopReaderQuery = window.matchMedia("(min-width: 1101px)");
+
+  if (
+    document.body.classList.contains("chapter-route") &&
+    workspace &&
+    scripturePanel &&
+    commentaryPanel &&
+    pageFooter
+  ) {
+    const readerPanels = [scripturePanel, commentaryPanel];
+    const previousScrollTop = new WeakMap();
+    let footerVisible = false;
+
+    const panelIsAtBottom = (panel) =>
+      panel.scrollHeight - panel.clientHeight - panel.scrollTop <= 3;
+
+    const measureFooter = () => {
+      if (!desktopReaderQuery.matches) return;
+      const footerHeight = Math.ceil(pageFooter.getBoundingClientRect().height);
+      document.body.style.setProperty("--reader-footer-height", footerHeight + "px");
+    };
+
+    const keepPanelAtBottom = (panel) => {
+      window.requestAnimationFrame(() => {
+        panel.scrollTop = panel.scrollHeight;
+        previousScrollTop.set(panel, panel.scrollTop);
+      });
+    };
+
+    const setFooterVisible = (visible, sourcePanel = null) => {
+      if (!desktopReaderQuery.matches) visible = false;
+      if (visible === footerVisible) return;
+
+      footerVisible = visible;
+      document.body.classList.toggle("reader-footer-visible", visible);
+
+      if (visible && sourcePanel) {
+        measureFooter();
+        keepPanelAtBottom(sourcePanel);
+      }
+    };
+
+    const handlePanelScroll = (event) => {
+      if (!desktopReaderQuery.matches) return;
+      const panel = event.currentTarget;
+      const currentScrollTop = panel.scrollTop;
+      const lastScrollTop = previousScrollTop.get(panel) ?? currentScrollTop;
+      const direction = currentScrollTop - lastScrollTop;
+      previousScrollTop.set(panel, currentScrollTop);
+
+      if (direction < -1) {
+        setFooterVisible(false);
+        return;
+      }
+
+      if (direction > 0 && panelIsAtBottom(panel)) {
+        setFooterVisible(true, panel);
+      }
+    };
+
+    const handlePanelWheel = (event) => {
+      if (!desktopReaderQuery.matches) return;
+      const panel = event.currentTarget;
+
+      if (event.deltaY < 0) {
+        setFooterVisible(false);
+      } else if (event.deltaY > 0 && panelIsAtBottom(panel)) {
+        setFooterVisible(true, panel);
+      }
+    };
+
+    const syncReaderFooterMode = () => {
+      setFooterVisible(false);
+      readerPanels.forEach((panel) => previousScrollTop.set(panel, panel.scrollTop));
+
+      if (desktopReaderQuery.matches) {
+        document.body.classList.add("reader-footer-ready");
+        measureFooter();
+      } else {
+        document.body.classList.remove("reader-footer-ready");
+        document.body.style.removeProperty("--reader-footer-height");
+      }
+    };
+
+    readerPanels.forEach((panel) => {
+      previousScrollTop.set(panel, panel.scrollTop);
+      panel.addEventListener("scroll", handlePanelScroll, { passive: true });
+      panel.addEventListener("wheel", handlePanelWheel, { passive: true });
+    });
+
+    if ("ResizeObserver" in window) {
+      const footerResizeObserver = new ResizeObserver(measureFooter);
+      footerResizeObserver.observe(pageFooter);
+    }
+
+    desktopReaderQuery.addEventListener("change", syncReaderFooterMode);
+    window.addEventListener("resize", measureFooter, { passive: true });
+    syncReaderFooterMode();
+  }
   const chapterVerseCounts = [0, 31, 22, 26, 6, 30, 13, 25, 22, 21, 34, 16, 6, 22, 32, 9, 14, 14, 7, 25, 6, 17, 25, 18, 23, 12, 21, 13, 29, 24, 33, 9, 20, 24, 17, 10, 22, 38, 22, 8, 31, 29, 25, 28, 28, 25, 13, 15, 22, 26, 11, 23, 15, 12, 17, 13, 12, 21, 14, 21, 22, 11, 12, 19, 12, 25, 24];
   const verseJumpForm = document.querySelector("[data-verse-jump-form]");
   const verseJumpInput = document.querySelector("[data-verse-jump-input]");

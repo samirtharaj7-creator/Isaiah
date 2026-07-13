@@ -40,7 +40,7 @@ The promise that none shall hurt or destroy on God’s holy mountain reaches far
 
 Knowledge here is not mere information. It is relational recognition of God’s character and rule. Where the Lord is truly known, violence loses its home. The peace Isaiah sees is therefore not sentimental; it is grounded in the universal acknowledgment of God.
 
-Adventist hope hears in this verse the direction of the new earth. God will not merely remove believers from a ruined world; He will restore creation itself. The final answer to sin is a world filled with the knowledge of the Creator.
+This verse points toward the new earth. God will not merely remove believers from a ruined world; He will restore creation itself. The final answer to sin is a world filled with the knowledge of the Creator.
 
 ## Isaiah 11:10
 
@@ -258,7 +258,7 @@ Here Isaiah refuses vagueness and makes the spiritual issue concrete. The text k
 
 The taunt over Babylon’s king reaches a dramatic height: the shining one has fallen from heaven. In context, Isaiah is mocking royal arrogance that imagined itself exalted beyond limits. The empire that rose in brilliance is brought down in humiliation.
 
-The language also gives later readers a window into the deeper pattern of pride in the great controversy. Without ignoring the immediate king of Babylon, the verse exposes the logic of all rebellion: created glory becomes corrupt when it seeks the place of God. The fall of Babylon mirrors the fallenness of every power that refuses creaturely dependence.
+The language also gives later readers a window into the deeper pattern of rebellious pride. Without ignoring the immediate king of Babylon, the verse exposes the logic of all rebellion: created glory becomes corrupt when it seeks the place of God. The fall of Babylon mirrors the fallenness of every power that refuses creaturely dependence.
 
 The point is not curiosity about evil for its own sake. It is warning. Pride can make even brilliance destructive. Whatever exalts itself against God is already moving toward a fall.
 
@@ -282,7 +282,7 @@ In the immediate taunt, the proud king of Babylon is stripped of the mythology o
 
 This is not a denial of bodily resurrection hope. It is the language of disgrace and death overtaking arrogant power. Human glory cannot preserve itself when God pronounces the verdict. The ruler who treated others as disposable is himself shown to be mortal, judged, and unable to secure his own name.
 
-The great controversy pattern is clear without forcing the verse away from its historical setting. Evil promises elevation while moving toward ruin. It tells creatures they can rise by grasping, rivaling, and ruling for themselves. God's kingdom works in the opposite direction: humility before Him leads to life, while grasping after His place leads downward.
+The pattern of rebellion is clear without forcing the verse away from its historical setting. Evil promises elevation while moving toward ruin. It tells creatures they can rise by grasping, rivaling, and ruling for themselves. God's kingdom works in the opposite direction: humility before Him leads to life, while grasping after His place leads downward.
 
 ## Isaiah 14:16
 

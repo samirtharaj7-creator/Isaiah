@@ -660,7 +660,7 @@ The earth is defiled under its inhabitants because they have transgressed laws, 
 
 The language is broad enough to reach beyond Judah. Humanity is accountable to God. The earth suffers under human sin because creation was never meant to be severed from righteousness. False worship and public injustice damage more than private spirituality; they disorder the world entrusted to human care.
 
-Adventist readers should hear here the Creator’s claim on all life. God’s law is not an enemy of grace but the moral shape of life under His reign. Final judgment reveals what sin has done and why restoration must be as public as the rebellion has been.
+The Creator’s claim extends over all life. God’s law is not an enemy of grace but the moral shape of life under His reign. Final judgment reveals what sin has done and why restoration must be as public as the rebellion has been.
 
 ## Isaiah 24:6
 
@@ -916,7 +916,7 @@ The Lord will swallow up death forever. Isaiah’s language is astonishingly dir
 
 The wiping away of tears shows the tenderness of this victory. God does not defeat death in the abstract while ignoring the grief it caused. He removes the reproach of His people and answers the sorrow that history has piled upon them.
 
-Adventist resurrection hope belongs here. The final comfort of believers is not a disembodied escape but God’s public overthrow of death, fulfilled through Christ and consummated when He returns. The grave does not get the last word; the Lord does.
+Resurrection hope belongs here. The final comfort of believers is not a disembodied escape but God’s public overthrow of death, fulfilled through Christ and consummated when He returns. The grave does not get the last word; the Lord does.
 
 ## Isaiah 25:9
 

@@ -22,7 +22,7 @@ The seraphim do not begin with human need but with God’s holiness: “Holy, ho
 
 Yet the song immediately widens: the whole earth is full of His glory. Holiness is not locked inside the temple. God’s glory claims creation, nations, public life, worship, and conscience. The earth belongs to Him even when human rebellion makes that hard to see.
 
-This is a foundation for Adventist worship and mission. The Creator’s glory fills the earth, and the final call to worship Him is not a narrow sectarian claim but the truth of reality itself. The Holy One deserves the allegiance of every creature.
+This is a foundation for worship and mission. The Creator’s glory fills the earth, and the final call to worship Him is not a narrow sectarian claim but the truth of reality itself. The Holy One deserves the allegiance of every creature.
 
 ## Isaiah 6:4
 
@@ -808,7 +808,7 @@ The child given to us carries royal names that exceed ordinary kingship. Wonderf
 
 The verse belongs to Judah’s darkness and fear, but it opens toward the Messiah. Christ fulfills the promise not by imitating worldly power but by revealing God’s rule in righteousness, mercy, and self-giving victory. Peace comes through His person, not through human management of history.
 
-For Adventist readers, this King stands at the center of all prophecy. He is the One whose kingdom answers the pride of nations, whose return will end violence, and whose rule will make peace more than a fragile interval between conflicts.
+This King stands at the center of the prophetic hope. His kingdom answers the pride of nations, His return will end violence, and His rule will make peace more than a fragile interval between conflicts.
 
 ## Isaiah 9:7
 
@@ -842,7 +842,7 @@ That phrase “will know” is solemn. They will know by experience what God’s
 
 This line also teaches that arrogance is not a superficial character flaw. It is a spiritual orientation. The people speak proudly because their hearts are proud. Outward speech reveals inward confidence in self. So divine judgment addresses more than their political choices. It addresses the heart that underlies them.
 
-For modern readers, the verse is searching because pride is often socially admired when dressed as confidence, resilience, or vision. But before God, proud speech is never morally neutral. It reveals a refusal to receive life as gift and to live under God’s word as Lord.
+The verse is searching because pride is often socially admired when dressed as confidence, resilience, or vision. But before God, proud speech is never morally neutral. It reveals a refusal to receive life as gift and to live under God’s word as Lord.
 
 Samaria’s downfall will therefore not be merely the defeat of a city. It will be the unmasking of a way of being human that excludes humble dependence. Isaiah presses that point because until pride is exposed, the people will continue imagining that their main problem lies somewhere outside themselves.
 
@@ -1018,7 +1018,7 @@ The later unity against Judah is equally dark. Common hostility can create tempo
 
 The refrain returns once more: for all this, God’s anger has not turned away. The social cannibalizing of the people has not resolved anything. It only confirms how judgment is needed. The nation remains unhealed because it remains unrepentant.
 
-For modern readers, the verse is painfully relevant wherever internal fractures and external blame-games combine. Communities often tear one another apart and then unite around shared hostility toward someone else. That pattern feels like strength for a moment, but it is only another form of devouring.
+The verse remains painfully relevant wherever internal fractures and external blame-games combine. Communities often tear one another apart and then unite around shared hostility toward someone else. That pattern feels like strength for a moment, but it is only another form of devouring.
 
 Isaiah’s point is more than to describe ancient tribal conflict. It is to reveal what happens when a people no longer live under the fear of God. Brotherhood collapses, alliance becomes aggression, and anger remains. The chapter leaves us longing again for the promised ruler under whom peace will not be a thin ceasefire but true reconciliation grounded in righteousness.
 
@@ -1144,7 +1144,7 @@ The danger of this mindset is that it mistakes repeated success for ultimate sov
 
 The text also carries chilling emotional distance here. The cities are names in a catalog, not communities of human lives. Conquest often depends on that kind of flattening. Once places and peoples become examples rather than neighbors, destruction feels clean and logical.
 
-For modern readers, the verse warns against arguments built solely on patterns of visible success. We are often tempted to say, “What happened there will surely happen here, because this always works.” But the Lord may interrupt the pattern. Human precedent is not final destiny.
+The verse warns against arguments built solely on patterns of visible success. We are often tempted to say, “What happened there will surely happen here, because this always works.” But the Lord may interrupt the pattern. Human precedent is not final destiny.
 
 Assyria’s catalog of victories sounds persuasive, and that is precisely why Isaiah includes it. Pride often appears most rational when it arranges evidence in its favor. The trouble is that all the while, the speaker has left God out. When that happens, even accurate memories of past success become fuel for a false confidence that cannot last.
 
