@@ -13,16 +13,6 @@
     });
   }
 
-  const chapterJump = document.querySelector("[data-chapter-jump]");
-  if (chapterJump) {
-    chapterJump.addEventListener("change", () => {
-      const chapter = Number(chapterJump.value);
-      if (chapter >= 1 && chapter <= 66) {
-        window.location.href = "/chapters/" + chapter + "/";
-      }
-    });
-  }
-
   const chapterMenu = document.querySelector("[data-chapter-menu]");
   if (chapterMenu) {
     document.addEventListener("click", (event) => {

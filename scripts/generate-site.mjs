@@ -525,18 +525,19 @@ const shell = ({ title, description, active, bodyClass = "", content, scripts = 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${htmlEscape(title)}</title>
   <meta name="description" content="${attr(description)}">
+${["home", "background", "articles"].includes(active) ? '  <link rel="preload" as="image" href="/assets/isaiah-hero-v2.webp" type="image/webp" fetchpriority="high">' : ""}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260713-home-sections-15">
+  <link rel="stylesheet" href="/site.css?v=20260713-hero-webp-17">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260713-home-sections-15" defer></script>
+  <script src="/site.js?v=20260713-hero-webp-17" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -1961,14 +1962,10 @@ const css = `
   --soft: #d8c49a;
   --gold: #cfa950;
   --gold-bright: #efcf76;
-  --card: #10263a;
-  --card-2: #132d3f;
   --line: rgba(229, 205, 154, 0.22);
   --line-strong: rgba(239, 207, 118, 0.38);
   --ink: #07111c;
   --cream: #fbf3dd;
-  --olive: #667157;
-  --terra: #8d5944;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
   --display-font: "Cinzel", Georgia, serif;
   --scripture-font: "EB Garamond", Georgia, serif;
@@ -2177,7 +2174,7 @@ input {
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92) 0%, rgba(7, 17, 28, 0.68) 34%, rgba(7, 17, 28, 0.12) 100%),
     linear-gradient(180deg, rgba(7, 17, 28, 0.1) 0%, rgba(7, 17, 28, 0.28) 58%, rgba(7, 17, 28, 0.88) 100%),
-    url("/assets/isaiah-hero-v2.png");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center;
   background-size: cover;
 }
@@ -2430,7 +2427,7 @@ h3 {
   padding: clamp(6rem, 12vh, 9rem) clamp(1.5rem, 5vw, 5rem) clamp(2rem, 6vh, 4rem);
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92), rgba(7, 17, 28, 0.48)),
-    url("/assets/isaiah-hero-v2.png");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -2536,7 +2533,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(11, 31, 58, 0.95) 0%, rgba(11, 31, 58, 0.72) 45%, rgba(11, 31, 58, 0.22) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.1), rgba(11, 31, 58, 0.86)),
-    url("/assets/isaiah-hero-v2.png");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -2750,7 +2747,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(11, 31, 58, 0.98) 0%, rgba(11, 31, 58, 0.92) 24%, rgba(11, 31, 58, 0.60) 52%, rgba(11, 31, 58, 0.18) 78%, rgba(11, 31, 58, 0.34) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.24), rgba(11, 31, 58, 0.70)),
-    url("/assets/isaiah-hero-v2.png");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -3115,43 +3112,12 @@ h3 {
   min-width: 0;
 }
 
-.chapter-jump {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  width: min(14rem, 38vw);
-  min-width: 10.5rem;
-  height: 2.1rem;
-  border: 1px solid rgba(229, 205, 154, 0.22);
-  border-radius: 0.4rem;
-  background: rgba(7, 17, 28, 0.18);
-  padding: 0 0.35rem 0 0.55rem;
-  color: var(--muted);
-}
-
-.chapter-jump > span,
 .chapter-step,
 .chapter-menu summary {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.chapter-jump select {
-  min-width: 0;
-  flex: 1 1 auto;
-  border: 0;
-  background: transparent;
-  color: var(--cream);
-  font: 600 0.82rem var(--sans);
-  letter-spacing: 0;
-  outline: 0;
-}
-
-.chapter-jump option {
-  background: #132d3f;
-  color: var(--cream);
 }
 
 .verse-jump {
@@ -3808,8 +3774,6 @@ h3 {
   --soft: #d8b866;
   --gold: #c9a44c;
   --gold-bright: #d8b866;
-  --card: #18273a;
-  --card-2: #334357;
   --line: rgba(201, 164, 76, 0.18);
   --line-strong: rgba(201, 164, 76, 0.36);
   --ink: #0b1f3a;
@@ -3827,12 +3791,6 @@ body {
     linear-gradient(180deg, #0d1c33 0%, #0b1f3a 55%, #081521 100%) !important;
   background-attachment: fixed !important;
   color: var(--foreground);
-}
-
-.mbe-global-shell[data-tool="isaiah"],
-.mbe-global-footer[data-tool="isaiah"] {
-  --mbe-accent: #c9a44c;
-  --mbe-accent-dark: #5a7049;
 }
 
 .mbe-global-shell,
@@ -3952,7 +3910,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.32) 57%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero-v2.png");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center top;
   opacity: 0.86;
 }
@@ -3977,7 +3935,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.30) 52%, rgba(11, 31, 58, 0.78) 82%, #0b1f3a 100%),
-    url("/assets/isaiah-hero-v2.png");
+    url("/assets/isaiah-hero-v2.webp");
 }
 
 .home-route .hero::after {
@@ -4068,7 +4026,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.92) 0%, rgba(11, 31, 58, 0.64) 42%, rgba(11, 31, 58, 0.16) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.18) 0%, rgba(11, 31, 58, 0.30) 58%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero-v2.png");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center right;
   background-size: cover;
 }
@@ -4079,16 +4037,6 @@ h4 {
   min-height: 2.65rem;
   border-bottom-color: var(--line);
   background: rgba(31, 47, 68, 0.95);
-}
-
-.chapter-jump {
-  border-color: rgba(201, 164, 76, 0.24);
-  background: rgba(11, 31, 58, 0.42);
-}
-
-.chapter-jump > span {
-  color: rgba(236, 224, 196, 0.70);
-  letter-spacing: 0.18em;
 }
 
 .chapter-step,
@@ -4416,17 +4364,6 @@ h4 {
     justify-content: center;
     gap: 0.3rem;
     min-width: 0;
-  }
-
-  .chapter-jump {
-    flex: 1 1 auto;
-    width: auto;
-    min-width: 0;
-    max-width: 11rem;
-  }
-
-  .chapter-jump > span {
-    display: none;
   }
 
   .verse-jump {
@@ -5485,16 +5422,6 @@ const js = `
     menuButton.addEventListener("click", () => {
       const open = mobileNav.classList.toggle("is-open");
       menuButton.setAttribute("aria-expanded", String(open));
-    });
-  }
-
-  const chapterJump = document.querySelector("[data-chapter-jump]");
-  if (chapterJump) {
-    chapterJump.addEventListener("change", () => {
-      const chapter = Number(chapterJump.value);
-      if (chapter >= 1 && chapter <= 66) {
-        window.location.href = "/chapters/" + chapter + "/";
-      }
     });
   }
 

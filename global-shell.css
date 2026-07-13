@@ -1,37 +1,18 @@
 :root{
   --mbe-ink:#111827;
-  --mbe-bg:#ffffff;
   --mbe-soft:#f6f8f7;
-  --mbe-gold:#c9a44c;
   --mbe-gold-dark:#9b7628;
-  --mbe-teal:#2f7d7a;
   --mbe-navy:#0b1f3a;
   --mbe-rule:#e5e0d6;
   --mbe-muted:#5f6673;
   --mbe-ivory:#f7f3e8;
   --mbe-max:1080px;
-  --mbe-accent:var(--mbe-gold);
-  --mbe-accent-dark:var(--mbe-gold-dark);
   --mbe-font-display:"Cinzel",Georgia,serif;
-  --mbe-font-reading:"EB Garamond",Georgia,serif;
   --mbe-font-ui:"Jost",system-ui,sans-serif;
 }
 
 .mbe-global-shell *,
 .mbe-global-footer *{box-sizing:border-box;}
-
-.mbe-global-shell[data-tool="hermeneutics"],
-.mbe-global-footer[data-tool="hermeneutics"]{--mbe-accent:#6b54b3;--mbe-accent-dark:#4b3b87;}
-.mbe-global-shell[data-tool="psalms"],
-.mbe-global-footer[data-tool="psalms"]{--mbe-accent:#c9a44c;--mbe-accent-dark:#2f7d7a;}
-.mbe-global-shell[data-tool="daniel"],
-.mbe-global-footer[data-tool="daniel"]{--mbe-accent:#c9a44c;--mbe-accent-dark:#5a7049;}
-.mbe-global-shell[data-tool="revelation"],
-.mbe-global-footer[data-tool="revelation"]{--mbe-accent:#c1564f;--mbe-accent-dark:#8a2f3a;}
-.mbe-global-shell[data-tool="sanctuary"],
-.mbe-global-footer[data-tool="sanctuary"]{--mbe-accent:#c9a44c;--mbe-accent-dark:#36432f;}
-.mbe-global-shell[data-tool="last-day-events"],
-.mbe-global-footer[data-tool="last-day-events"]{--mbe-accent:#3f5f86;--mbe-accent-dark:#283a54;}
 
 .mbe-global-shell{
   position:sticky;
@@ -266,11 +247,7 @@ body:has(> .mbe-global-footer){
   flex-direction:column;
 }
 
-body:has(> .mbe-global-footer) > main,
-body:has(> .mbe-global-footer) > #root,
-body:has(> .mbe-global-footer) > .page,
-body:has(> .mbe-global-footer) > .app-shell,
-body:has(> .mbe-global-footer) > .atlas-page{
+body:has(> .mbe-global-footer) > main{
   flex:1 0 auto;
   min-width:0;
 }
@@ -278,32 +255,6 @@ body:has(> .mbe-global-footer) > .atlas-page{
 body:has(> .mbe-global-footer) > .mbe-global-footer{
   margin-top:auto;
   flex:0 0 auto;
-}
-
-body > #root:empty{
-  min-height:calc(100vh - 260px);
-  display:grid;
-  place-items:start center;
-  padding:clamp(36px,8vh,80px) 24px;
-}
-
-body > #root:empty::before{
-  content:"";
-  display:block;
-  width:min(680px,100%);
-  height:220px;
-  border:1px solid var(--mbe-rule);
-  border-radius:10px;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,.22),rgba(255,255,255,.72),rgba(255,255,255,.22)) 0 0/220% 100%,
-    linear-gradient(180deg,#fffdf8 0%,var(--mbe-ivory) 100%);
-  box-shadow:0 18px 42px -34px rgba(11,31,58,.42);
-  animation:mbe-shell-loading 1.45s ease-in-out infinite;
-}
-
-@keyframes mbe-shell-loading{
-  0%{background-position:0 0,0 0;}
-  100%{background-position:220% 0,0 0;}
 }
 
 @media(max-width:720px){
@@ -343,53 +294,4 @@ body > #root:empty::before{
 html,
 body{
   overscroll-behavior-y:none;
-}
-
-@media(min-width:981px){
-  body.mbe-shell-managed > main:has(:is(.split-reader,.reader-shell)),
-  body:has(> .mbe-global-footer) > main:has(:is(.split-reader,.reader-shell)){
-    contain:layout paint;
-    overflow:clip;
-  }
-
-  body.mbe-shell-managed > main:has(:is(.split-reader,.reader-shell)) :is(
-    .scripture-pane,
-    .commentary-pane,
-    .scripture-pane-body,
-    .commentary-pane-body,
-    .scripture-panel,
-    .commentary-panel
-  ),
-  body:has(> .mbe-global-footer) > main:has(:is(.split-reader,.reader-shell)) :is(
-    .scripture-pane,
-    .commentary-pane,
-    .scripture-pane-body,
-    .commentary-pane-body,
-    .scripture-panel,
-    .commentary-panel
-  ){
-    overscroll-behavior-y:contain;
-  }
-}
-
-
-/* Keep desktop split readers inside the visible viewport below both headers. */
-@media(min-width:981px){
-  body.mbe-shell-managed:has(> .reader-header) > main.reader-page:has(> .split-reader){
-    height:calc(100dvh - 47px - 4.35rem) !important;
-    min-height:calc(100dvh - 47px - 4.35rem) !important;
-    flex:0 0 auto;
-  }
-
-  body.mbe-shell-managed:has(> .reader-header) > main.reader-page:has(> .split-reader) > .split-reader{
-    height:calc(100dvh - 47px - 4.35rem - var(--chapter-strip-height)) !important;
-    min-height:0 !important;
-  }
-
-  body.mbe-shell-managed:has(> .reader-header) > main.reader-page:has(> .split-reader) :is(
-    .scripture-pane-body,
-    .commentary-pane-body
-  ){
-    padding-bottom:calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important;
-  }
 }
