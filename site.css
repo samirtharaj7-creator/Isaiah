@@ -3071,21 +3071,20 @@ textarea {
 }
 
 .cross-reference-chip[data-verse-preview] {
-  cursor: default;
+  cursor: help;
 }
 
 a.cross-reference-chip[data-verse-preview] {
   cursor: pointer;
 }
 
-.cross-reference-chip[data-verse-preview]::after {
-  content: attr(data-verse-preview);
-  position: absolute;
-  left: 0;
-  bottom: calc(100% + 0.6rem);
-  z-index: 20;
-  display: none;
+.verse-preview-tooltip {
+  position: fixed;
+  z-index: 220;
   width: min(27rem, calc(100vw - 2rem));
+  max-height: min(26rem, calc(100dvh - 2rem));
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border: 1px solid rgba(224, 182, 69, 0.62);
   border-radius: 0.45rem;
   background: rgba(7, 17, 28, 0.98);
@@ -3103,27 +3102,15 @@ a.cross-reference-chip[data-verse-preview] {
   white-space: normal;
 }
 
-.cross-reference-chip[data-verse-preview]::before {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  bottom: calc(100% + 0.34rem);
-  z-index: 21;
-  display: none;
-  width: 0.55rem;
-  height: 0.55rem;
-  border-right: 1px solid rgba(224, 182, 69, 0.62);
-  border-bottom: 1px solid rgba(224, 182, 69, 0.62);
-  background: rgba(7, 17, 28, 0.98);
-  pointer-events: none;
-  transform: rotate(45deg);
+.verse-preview-tooltip[hidden] {
+  display: none !important;
 }
 
-.cross-reference-chip[data-verse-preview]:hover::after,
-.cross-reference-chip[data-verse-preview]:hover::before,
-.cross-reference-chip[data-verse-preview]:focus-visible::after,
-.cross-reference-chip[data-verse-preview]:focus-visible::before {
-  display: block;
+@media (max-width: 640px) {
+  .verse-preview-tooltip {
+    width: calc(100vw - 1.5rem);
+    max-height: min(42dvh, 22rem);
+  }
 }
 
 a.cross-reference-chip:hover {

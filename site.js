@@ -23,6 +23,142 @@
     });
   }
 
+  const versePreviewSelector = "[data-verse-preview]";
+  let versePreviewTrigger = null;
+  let versePreviewPinned = false;
+  let versePreviewFrame = 0;
+
+  const versePreviewFromTarget = (target) =>
+    target instanceof Element ? target.closest(versePreviewSelector) : null;
+
+  const versePreviewElement = () => {
+    let tooltip = document.getElementById("verse-preview-tooltip");
+    if (tooltip) return tooltip;
+    tooltip = document.createElement("aside");
+    tooltip.id = "verse-preview-tooltip";
+    tooltip.className = "verse-preview-tooltip";
+    tooltip.setAttribute("role", "tooltip");
+    tooltip.setAttribute("aria-hidden", "true");
+    tooltip.hidden = true;
+    document.body.appendChild(tooltip);
+    return tooltip;
+  };
+
+  const positionVersePreview = () => {
+    const tooltip = document.getElementById("verse-preview-tooltip");
+    if (!versePreviewTrigger || !tooltip || tooltip.hidden) return;
+    const margin = 12;
+    const gap = 10;
+    const triggerRect = versePreviewTrigger.getBoundingClientRect();
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const spaceAbove = triggerRect.top - margin - gap;
+    const spaceBelow = viewportHeight - triggerRect.bottom - margin - gap;
+    const placeAbove = spaceAbove >= Math.min(tooltipRect.height, 220) || spaceAbove >= spaceBelow;
+    const idealLeft = triggerRect.left + triggerRect.width / 2 - tooltipRect.width / 2;
+    const left = Math.min(
+      Math.max(margin, idealLeft),
+      Math.max(margin, viewportWidth - tooltipRect.width - margin),
+    );
+    const idealTop = placeAbove
+      ? triggerRect.top - tooltipRect.height - gap
+      : triggerRect.bottom + gap;
+    const top = Math.min(
+      Math.max(margin, idealTop),
+      Math.max(margin, viewportHeight - tooltipRect.height - margin),
+    );
+    tooltip.style.left = Math.round(left) + "px";
+    tooltip.style.top = Math.round(top) + "px";
+    tooltip.dataset.placement = placeAbove ? "above" : "below";
+  };
+
+  const scheduleVersePreviewPosition = () => {
+    window.cancelAnimationFrame(versePreviewFrame);
+    versePreviewFrame = window.requestAnimationFrame(positionVersePreview);
+  };
+
+  const hideVersePreview = (force = false) => {
+    if (versePreviewPinned && !force) return;
+    versePreviewPinned = false;
+    if (versePreviewTrigger) {
+      versePreviewTrigger.removeAttribute("aria-describedby");
+      versePreviewTrigger.removeAttribute("data-verse-preview-open");
+    }
+    versePreviewTrigger = null;
+    const tooltip = document.getElementById("verse-preview-tooltip");
+    if (!tooltip) return;
+    tooltip.hidden = true;
+    tooltip.setAttribute("aria-hidden", "true");
+  };
+
+  const showVersePreview = (trigger, pin = false) => {
+    const previewText = trigger?.dataset?.versePreview;
+    if (!previewText) return;
+    hideVersePreview(true);
+    const tooltip = versePreviewElement();
+    versePreviewTrigger = trigger;
+    versePreviewPinned = pin;
+    tooltip.textContent = previewText;
+    tooltip.hidden = false;
+    tooltip.setAttribute("aria-hidden", "false");
+    trigger.setAttribute("aria-describedby", tooltip.id);
+    trigger.setAttribute("data-verse-preview-open", "true");
+    scheduleVersePreviewPosition();
+  };
+
+  document.addEventListener("pointerover", (event) => {
+    if (event.pointerType === "touch") return;
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger || trigger.contains(event.relatedTarget)) return;
+    showVersePreview(trigger, false);
+  });
+  document.addEventListener("pointerout", (event) => {
+    if (event.pointerType === "touch") return;
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger || trigger.contains(event.relatedTarget)) return;
+    hideVersePreview(false);
+  });
+  document.addEventListener("focusin", (event) => {
+    const trigger = versePreviewFromTarget(event.target);
+    if (trigger) showVersePreview(trigger, false);
+  });
+  document.addEventListener("focusout", (event) => {
+    const trigger = versePreviewFromTarget(event.target);
+    if (trigger && !trigger.contains(event.relatedTarget)) hideVersePreview(false);
+  });
+  document.addEventListener("click", (event) => {
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger) {
+      hideVersePreview(true);
+      return;
+    }
+    const touchStyleInteraction = window.matchMedia("(hover: none)").matches;
+    const isPinnedTrigger = versePreviewTrigger === trigger && versePreviewPinned;
+    if (isPinnedTrigger) {
+      if (trigger.tagName !== "A") event.preventDefault();
+      hideVersePreview(true);
+      return;
+    }
+    if (trigger.tagName === "A" && !touchStyleInteraction) return;
+    event.preventDefault();
+    showVersePreview(trigger, true);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hideVersePreview(true);
+      return;
+    }
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger || (event.key !== "Enter" && event.key !== " ")) return;
+    if (trigger.tagName === "A" && event.key === "Enter") return;
+    event.preventDefault();
+    if (versePreviewTrigger === trigger && versePreviewPinned) hideVersePreview(true);
+    else showVersePreview(trigger, true);
+  });
+  document.addEventListener("scroll", () => hideVersePreview(true), true);
+  window.addEventListener("resize", () => hideVersePreview(true), { passive: true });
+
   const scripture = document.querySelector("[data-scripture-text]");
   const fontUp = document.querySelector("[data-font-up]");
   const fontDown = document.querySelector("[data-font-down]");

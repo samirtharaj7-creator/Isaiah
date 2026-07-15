@@ -530,14 +530,14 @@ ${["home", "background", "articles"].includes(active) ? '  <link rel="preload" a
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260713-hero-webp-17">
+  <link rel="stylesheet" href="/site.css?v=20260715-reference-preview-18">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260713-hero-webp-17" defer></script>
+  <script src="/site.js?v=20260715-reference-preview-18" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -1499,12 +1499,12 @@ const renderReferenceChip = (reference, extraClass = "") => {
   const className = `cross-reference-chip${extraClass ? ` ${extraClass}` : ""}`;
   const preview = referenceHoverPreview(reference);
   const previewAttributes = preview
-    ? ` data-verse-preview="${attr(preview)}" aria-label="${attr(preview)}"`
+    ? ` data-verse-preview="${attr(preview)}" aria-label="${attr(reference)}. Show King James Version text."`
     : "";
 
   return href
     ? `<a class="${className}" href="${attr(href)}"${previewAttributes}>${label}</a>`
-    : `<span class="${className}"${previewAttributes}>${label}</span>`;
+    : `<span class="${className}"${previewAttributes}${preview ? ' role="button" tabindex="0"' : ""}>${label}</span>`;
 };
 
 const bestCrossReferences = (sourceReference, references = [], limit = 5) => {
@@ -5073,21 +5073,20 @@ textarea {
 }
 
 .cross-reference-chip[data-verse-preview] {
-  cursor: default;
+  cursor: help;
 }
 
 a.cross-reference-chip[data-verse-preview] {
   cursor: pointer;
 }
 
-.cross-reference-chip[data-verse-preview]::after {
-  content: attr(data-verse-preview);
-  position: absolute;
-  left: 0;
-  bottom: calc(100% + 0.6rem);
-  z-index: 20;
-  display: none;
+.verse-preview-tooltip {
+  position: fixed;
+  z-index: 220;
   width: min(27rem, calc(100vw - 2rem));
+  max-height: min(26rem, calc(100dvh - 2rem));
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border: 1px solid rgba(224, 182, 69, 0.62);
   border-radius: 0.45rem;
   background: rgba(7, 17, 28, 0.98);
@@ -5105,27 +5104,15 @@ a.cross-reference-chip[data-verse-preview] {
   white-space: normal;
 }
 
-.cross-reference-chip[data-verse-preview]::before {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  bottom: calc(100% + 0.34rem);
-  z-index: 21;
-  display: none;
-  width: 0.55rem;
-  height: 0.55rem;
-  border-right: 1px solid rgba(224, 182, 69, 0.62);
-  border-bottom: 1px solid rgba(224, 182, 69, 0.62);
-  background: rgba(7, 17, 28, 0.98);
-  pointer-events: none;
-  transform: rotate(45deg);
+.verse-preview-tooltip[hidden] {
+  display: none !important;
 }
 
-.cross-reference-chip[data-verse-preview]:hover::after,
-.cross-reference-chip[data-verse-preview]:hover::before,
-.cross-reference-chip[data-verse-preview]:focus-visible::after,
-.cross-reference-chip[data-verse-preview]:focus-visible::before {
-  display: block;
+@media (max-width: 640px) {
+  .verse-preview-tooltip {
+    width: calc(100vw - 1.5rem);
+    max-height: min(42dvh, 22rem);
+  }
 }
 
 a.cross-reference-chip:hover {
@@ -5479,6 +5466,142 @@ const js = `
       if (event.key === "Escape") chapterMenu.removeAttribute("open");
     });
   }
+
+  const versePreviewSelector = "[data-verse-preview]";
+  let versePreviewTrigger = null;
+  let versePreviewPinned = false;
+  let versePreviewFrame = 0;
+
+  const versePreviewFromTarget = (target) =>
+    target instanceof Element ? target.closest(versePreviewSelector) : null;
+
+  const versePreviewElement = () => {
+    let tooltip = document.getElementById("verse-preview-tooltip");
+    if (tooltip) return tooltip;
+    tooltip = document.createElement("aside");
+    tooltip.id = "verse-preview-tooltip";
+    tooltip.className = "verse-preview-tooltip";
+    tooltip.setAttribute("role", "tooltip");
+    tooltip.setAttribute("aria-hidden", "true");
+    tooltip.hidden = true;
+    document.body.appendChild(tooltip);
+    return tooltip;
+  };
+
+  const positionVersePreview = () => {
+    const tooltip = document.getElementById("verse-preview-tooltip");
+    if (!versePreviewTrigger || !tooltip || tooltip.hidden) return;
+    const margin = 12;
+    const gap = 10;
+    const triggerRect = versePreviewTrigger.getBoundingClientRect();
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const spaceAbove = triggerRect.top - margin - gap;
+    const spaceBelow = viewportHeight - triggerRect.bottom - margin - gap;
+    const placeAbove = spaceAbove >= Math.min(tooltipRect.height, 220) || spaceAbove >= spaceBelow;
+    const idealLeft = triggerRect.left + triggerRect.width / 2 - tooltipRect.width / 2;
+    const left = Math.min(
+      Math.max(margin, idealLeft),
+      Math.max(margin, viewportWidth - tooltipRect.width - margin),
+    );
+    const idealTop = placeAbove
+      ? triggerRect.top - tooltipRect.height - gap
+      : triggerRect.bottom + gap;
+    const top = Math.min(
+      Math.max(margin, idealTop),
+      Math.max(margin, viewportHeight - tooltipRect.height - margin),
+    );
+    tooltip.style.left = Math.round(left) + "px";
+    tooltip.style.top = Math.round(top) + "px";
+    tooltip.dataset.placement = placeAbove ? "above" : "below";
+  };
+
+  const scheduleVersePreviewPosition = () => {
+    window.cancelAnimationFrame(versePreviewFrame);
+    versePreviewFrame = window.requestAnimationFrame(positionVersePreview);
+  };
+
+  const hideVersePreview = (force = false) => {
+    if (versePreviewPinned && !force) return;
+    versePreviewPinned = false;
+    if (versePreviewTrigger) {
+      versePreviewTrigger.removeAttribute("aria-describedby");
+      versePreviewTrigger.removeAttribute("data-verse-preview-open");
+    }
+    versePreviewTrigger = null;
+    const tooltip = document.getElementById("verse-preview-tooltip");
+    if (!tooltip) return;
+    tooltip.hidden = true;
+    tooltip.setAttribute("aria-hidden", "true");
+  };
+
+  const showVersePreview = (trigger, pin = false) => {
+    const previewText = trigger?.dataset?.versePreview;
+    if (!previewText) return;
+    hideVersePreview(true);
+    const tooltip = versePreviewElement();
+    versePreviewTrigger = trigger;
+    versePreviewPinned = pin;
+    tooltip.textContent = previewText;
+    tooltip.hidden = false;
+    tooltip.setAttribute("aria-hidden", "false");
+    trigger.setAttribute("aria-describedby", tooltip.id);
+    trigger.setAttribute("data-verse-preview-open", "true");
+    scheduleVersePreviewPosition();
+  };
+
+  document.addEventListener("pointerover", (event) => {
+    if (event.pointerType === "touch") return;
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger || trigger.contains(event.relatedTarget)) return;
+    showVersePreview(trigger, false);
+  });
+  document.addEventListener("pointerout", (event) => {
+    if (event.pointerType === "touch") return;
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger || trigger.contains(event.relatedTarget)) return;
+    hideVersePreview(false);
+  });
+  document.addEventListener("focusin", (event) => {
+    const trigger = versePreviewFromTarget(event.target);
+    if (trigger) showVersePreview(trigger, false);
+  });
+  document.addEventListener("focusout", (event) => {
+    const trigger = versePreviewFromTarget(event.target);
+    if (trigger && !trigger.contains(event.relatedTarget)) hideVersePreview(false);
+  });
+  document.addEventListener("click", (event) => {
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger) {
+      hideVersePreview(true);
+      return;
+    }
+    const touchStyleInteraction = window.matchMedia("(hover: none)").matches;
+    const isPinnedTrigger = versePreviewTrigger === trigger && versePreviewPinned;
+    if (isPinnedTrigger) {
+      if (trigger.tagName !== "A") event.preventDefault();
+      hideVersePreview(true);
+      return;
+    }
+    if (trigger.tagName === "A" && !touchStyleInteraction) return;
+    event.preventDefault();
+    showVersePreview(trigger, true);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hideVersePreview(true);
+      return;
+    }
+    const trigger = versePreviewFromTarget(event.target);
+    if (!trigger || (event.key !== "Enter" && event.key !== " ")) return;
+    if (trigger.tagName === "A" && event.key === "Enter") return;
+    event.preventDefault();
+    if (versePreviewTrigger === trigger && versePreviewPinned) hideVersePreview(true);
+    else showVersePreview(trigger, true);
+  });
+  document.addEventListener("scroll", () => hideVersePreview(true), true);
+  window.addEventListener("resize", () => hideVersePreview(true), { passive: true });
 
   const scripture = document.querySelector("[data-scripture-text]");
   const fontUp = document.querySelector("[data-font-up]");
