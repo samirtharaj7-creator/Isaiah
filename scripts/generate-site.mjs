@@ -530,14 +530,14 @@ ${["home", "background", "articles"].includes(active) ? '  <link rel="preload" a
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260715-reference-preview-19">
+  <link rel="stylesheet" href="/site.css?v=20260715-mobile-inline-notes-20">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260715-reference-preview-19" defer></script>
+  <script src="/site.js?v=20260715-mobile-inline-notes-20" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -1919,7 +1919,7 @@ const chapterPage = (chapter, chapterCommentary = {}, crossReferences = {}) => {
         return `
         ${outlineMarkup}
         <div class="verse-unit">
-          <button class="verse verse-button verse-highlight${verseKey === activeVerse ? " is-active" : ""}" id="v${verse}" type="button" data-verse-select="${verse}" aria-controls="note-${n}-${verse}" aria-pressed="${verseKey === activeVerse ? "true" : "false"}" aria-label="Show study notes for Isaiah ${n}:${verse}">
+          <button class="verse verse-button verse-highlight${verseKey === activeVerse ? " is-active" : ""}" id="v${verse}" type="button" data-verse-select="${verse}" aria-controls="note-${n}-${verse}" aria-expanded="${verseKey === activeVerse ? "true" : "false"}" aria-pressed="${verseKey === activeVerse ? "true" : "false"}" aria-label="Show study notes for Isaiah ${n}:${verse}">
             <sup class="verse-number">${verse}</sup><span>${htmlEscape(text)}</span>
           </button>
         </div>`;
@@ -5175,6 +5175,10 @@ a.word-note-reference-chip:hover {
   color: #fff8e6;
 }
 
+.mobile-inline-note {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .reader-shell {
     display: block;
@@ -5193,11 +5197,94 @@ a.word-note-reference-chip:hover {
   }
 
   .commentary-panel {
+    display: none;
     border-top: 1px solid rgba(201, 164, 76, 0.18);
   }
 
   .notes-jump {
+    display: none;
+  }
+
+  .mobile-inline-note:not([hidden]) {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+    overflow: visible;
+    border: 1px solid rgba(201, 164, 76, 0.55);
+    border-left: 3px solid var(--gold);
+    border-radius: 0.375rem;
+    background: #223247;
+    box-shadow: 0 0.75rem 1.5rem rgba(4, 12, 22, 0.18);
+  }
+
+  .mobile-inline-note-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 3rem;
+    border-bottom: 1px solid rgba(201, 164, 76, 0.22);
+    background: #18273a;
+    padding: 0.5rem 0.65rem 0.5rem 1rem;
+  }
+
+  .mobile-inline-note-title {
+    color: #f4ead2;
+    font-family: var(--display-font);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  .mobile-inline-note-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .mobile-inline-note-action {
     display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(201, 164, 76, 0.24);
+    border-radius: 0.35rem;
+    background: rgba(14, 33, 56, 0.72);
+    color: rgba(244, 234, 210, 0.84);
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .mobile-inline-note-action:hover,
+  .mobile-inline-note-action:focus-visible {
+    border-color: rgba(224, 182, 69, 0.68);
+    background: rgba(224, 182, 69, 0.14);
+    color: #fff8e6;
+  }
+
+  .mobile-inline-note-action:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
+
+  .mobile-inline-note-content {
+    min-width: 0;
+  }
+
+  .mobile-inline-note .commentary-entry {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 1rem;
+    box-shadow: none;
   }
 }
 
@@ -5355,6 +5442,7 @@ a.word-note-reference-chip:hover {
   .site-header,
   .chapter-strip,
   .commentary-panel,
+  .mobile-inline-note,
   .reader-controls,
   .prev-next,
   .mbe-global-footer {
@@ -5640,14 +5728,29 @@ const js = `
   const applyNotesFont = () => {
     if (!notesPanel) return;
     const step = notesFontSteps[notesFontIndex];
-    notesPanel.style.setProperty("--notes-font-size", step.size + "rem");
-    notesPanel.style.setProperty("--notes-line-height", step.line + "rem");
-    notesPanel.style.setProperty("--notes-chip-font-size", step.chip + "rem");
-    notesPanel.style.setProperty("--notes-word-font-size", step.word + "rem");
-    notesPanel.style.setProperty("--notes-word-line-height", step.wordLine + "rem");
-    notesPanel.style.setProperty("--notes-reference-font-size", step.ref + "rem");
-    if (notesFontDown) notesFontDown.disabled = notesFontIndex === 0;
-    if (notesFontUp) notesFontUp.disabled = notesFontIndex === notesFontSteps.length - 1;
+    const scopes = new Set([
+      notesPanel,
+      document.querySelector("[data-chapter-workspace]"),
+    ]);
+    scopes.forEach((scope) => {
+      if (!scope) return;
+      scope.style.setProperty("--notes-font-size", step.size + "rem");
+      scope.style.setProperty("--notes-line-height", step.line + "rem");
+      scope.style.setProperty("--notes-chip-font-size", step.chip + "rem");
+      scope.style.setProperty("--notes-word-font-size", step.word + "rem");
+      scope.style.setProperty("--notes-word-line-height", step.wordLine + "rem");
+      scope.style.setProperty("--notes-reference-font-size", step.ref + "rem");
+    });
+    document
+      .querySelectorAll("[data-notes-font-down], [data-mobile-notes-font-down]")
+      .forEach((button) => {
+        button.disabled = notesFontIndex === 0;
+      });
+    document
+      .querySelectorAll("[data-notes-font-up], [data-mobile-notes-font-up]")
+      .forEach((button) => {
+        button.disabled = notesFontIndex === notesFontSteps.length - 1;
+      });
   };
   if (notesPanel) applyNotesFont();
   if (notesFontUp) notesFontUp.addEventListener("click", () => {
@@ -5666,6 +5769,105 @@ const js = `
   const scripturePanel = document.querySelector("[data-scripture-panel]");
   const pageFooter = document.querySelector(".mbe-global-footer");
   const desktopReaderQuery = window.matchMedia("(min-width: 1101px)");
+  const mobileInlineReaderQuery = window.matchMedia("(max-width: 1100px)");
+  const notesStack = commentaryPanel?.querySelector(".notes-stack");
+  const mobileInlineNote = document.createElement("section");
+  mobileInlineNote.className = "mobile-inline-note";
+  mobileInlineNote.hidden = true;
+  mobileInlineNote.setAttribute("aria-live", "polite");
+  mobileInlineNote.innerHTML =
+    '<div class="mobile-inline-note-header">' +
+      '<span class="mobile-inline-note-title">Study Notes</span>' +
+      '<div class="mobile-inline-note-actions">' +
+        '<button class="mobile-inline-note-action" type="button" data-mobile-notes-font-down aria-label="Decrease study notes text size" title="Decrease text size">&minus;</button>' +
+        '<button class="mobile-inline-note-action" type="button" data-mobile-notes-font-up aria-label="Increase study notes text size" title="Increase text size">+</button>' +
+        '<button class="mobile-inline-note-action" type="button" data-mobile-inline-close aria-label="Close study notes" title="Close study notes">&times;</button>' +
+      "</div>" +
+    "</div>" +
+    '<div class="mobile-inline-note-content" data-mobile-inline-content></div>';
+  const mobileInlineContent = mobileInlineNote.querySelector("[data-mobile-inline-content]");
+  const mobileInlineClose = mobileInlineNote.querySelector("[data-mobile-inline-close]");
+  const mobileNotesFontDown = mobileInlineNote.querySelector("[data-mobile-notes-font-down]");
+  const mobileNotesFontUp = mobileInlineNote.querySelector("[data-mobile-notes-font-up]");
+  let mobileInlineExpanded = false;
+
+  const selectedVerseKey = () =>
+    workspace?.dataset.selectedVerse ||
+    verseButtons.find((button) => button.classList.contains("is-active"))?.dataset.verseSelect ||
+    "1";
+
+  const restoreCommentaryEntries = () => {
+    if (!notesStack) return;
+    noteEntries.forEach((entry) => notesStack.appendChild(entry));
+  };
+
+  const updateVerseExpansion = (verse, expanded) => {
+    verseButtons.forEach((button) => {
+      const active = button.dataset.verseSelect === String(verse);
+      button.setAttribute("aria-expanded", String(active && expanded));
+    });
+  };
+
+  const mountMobileInlineNote = (note, verse, expanded = true) => {
+    const verseButton = verseButtons.find(
+      (button) => button.dataset.verseSelect === String(verse),
+    );
+    const verseUnit = verseButton?.closest(".verse-unit");
+    if (!note || !verseUnit || !mobileInlineContent) return;
+
+    restoreCommentaryEntries();
+    verseUnit.appendChild(mobileInlineNote);
+    mobileInlineContent.appendChild(note);
+    mobileInlineNote.dataset.verse = String(verse);
+    mobileInlineNote.setAttribute("aria-label", "Study notes for verse " + verse);
+    mobileInlineNote.hidden = !expanded;
+    note.hidden = !expanded;
+    mobileInlineExpanded = expanded;
+    updateVerseExpansion(verse, expanded);
+  };
+
+  const collapseMobileInlineNote = ({ restoreFocus = false } = {}) => {
+    const verse = mobileInlineNote.dataset.verse || selectedVerseKey();
+    const note = noteEntries.find(
+      (entry) => entry.dataset.commentaryNote === String(verse),
+    );
+    mobileInlineExpanded = false;
+    mobileInlineNote.hidden = true;
+    if (note) note.hidden = true;
+    updateVerseExpansion(verse, false);
+    if (restoreFocus) {
+      verseButtons
+        .find((button) => button.dataset.verseSelect === String(verse))
+        ?.focus({ preventScroll: true });
+    }
+  };
+
+  const restoreDesktopCommentary = () => {
+    const verse = selectedVerseKey();
+    restoreCommentaryEntries();
+    mobileInlineNote.remove();
+    mobileInlineNote.hidden = true;
+    mobileInlineExpanded = false;
+    noteEntries.forEach((entry) => {
+      const active = entry.dataset.commentaryNote === String(verse);
+      entry.hidden = !active;
+      entry.classList.toggle("is-active", active);
+    });
+    updateVerseExpansion(verse, true);
+  };
+
+  mobileInlineClose?.addEventListener("click", () => {
+    collapseMobileInlineNote({ restoreFocus: true });
+  });
+  mobileNotesFontUp?.addEventListener("click", () => {
+    notesFontIndex = Math.min(notesFontSteps.length - 1, notesFontIndex + 1);
+    applyNotesFont();
+  });
+  mobileNotesFontDown?.addEventListener("click", () => {
+    notesFontIndex = Math.max(0, notesFontIndex - 1);
+    applyNotesFont();
+  });
+  applyNotesFont();
 
   if (
     document.body.classList.contains("chapter-route") &&
@@ -5953,6 +6155,16 @@ const js = `
     const note = document.querySelector('[data-commentary-note="' + verse + '"]');
     if (!note) return;
     const verseButton = verseButtons.find((button) => button.dataset.verseSelect === String(verse));
+    const previousVerse = selectedVerseKey();
+    const inlineMode = mobileInlineReaderQuery.matches;
+    const collapseRequested =
+      inlineMode &&
+      options.toggleInline &&
+      previousVerse === String(verse) &&
+      mobileInlineExpanded &&
+      mobileInlineNote.dataset.verse === String(verse) &&
+      !mobileInlineNote.hidden;
+    const inlineOpen = inlineMode && options.openInline !== false && !collapseRequested;
 
     verseButtons.forEach((button) => {
       const active = button.dataset.verseSelect === String(verse);
@@ -5966,6 +6178,17 @@ const js = `
       entry.classList.toggle("is-active", active);
     });
 
+    if (inlineMode) {
+      mountMobileInlineNote(note, verse, inlineOpen);
+    } else {
+      restoreCommentaryEntries();
+      mobileInlineNote.remove();
+      mobileInlineNote.hidden = true;
+      mobileInlineExpanded = false;
+      note.hidden = false;
+      updateVerseExpansion(verse, true);
+    }
+
     if (workspace) workspace.dataset.selectedVerse = String(verse);
     if (verseJumpInput && currentChapter) verseJumpInput.value = formatReference(currentChapter, verse);
     if (currentChapter) addRecentReference(currentChapter, Number(verse));
@@ -5976,18 +6199,28 @@ const js = `
     if (options.scrollVerse && verseButton) {
       verseButton.scrollIntoView({ block: "center", behavior: "smooth" });
     }
-    if (options.scrollNotes && commentaryPanel) {
+    if (options.scrollNotes && commentaryPanel && !inlineMode) {
       commentaryPanel.scrollTo({ top: 0, behavior: "smooth" });
     }
-    if (options.revealNotes && commentaryPanel && window.matchMedia("(max-width: 1100px)").matches) {
-      commentaryPanel.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (
+      (options.scrollNotes || options.revealNotes) &&
+      inlineMode &&
+      inlineOpen &&
+      !options.scrollVerse
+    ) {
+      window.requestAnimationFrame(() => {
+        mobileInlineNote.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      });
     }
   };
 
   if (verseButtons.length && noteEntries.length) {
     verseButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        selectVerse(button.dataset.verseSelect, { scrollNotes: true, revealNotes: true, updateHash: true });
+        selectVerse(button.dataset.verseSelect, {
+          toggleInline: true,
+          updateHash: true,
+        });
       });
     });
 
@@ -5995,7 +6228,10 @@ const js = `
       const match = window.location.hash.match(/^#v(\\d+)$/);
       if (!match) return;
       const verse = match[1];
-      selectVerse(verse, { scrollNotes: true, scrollVerse: verse !== "1" });
+      selectVerse(verse, {
+        openInline: true,
+        scrollVerse: verse !== "1",
+      });
       if (verse === "1") {
         const scripturePanel = document.querySelector("[data-scripture-panel]");
         const resetReaderTop = () => {
@@ -6007,8 +6243,33 @@ const js = `
         [80, 250, 600].forEach((delay) => window.setTimeout(resetReaderTop, delay));
       }
     };
+    const initialHashVerse = window.location.hash.match(/^#v(\\d+)$/);
     selectHashVerse();
+    if (!initialHashVerse) {
+      if (mobileInlineReaderQuery.matches) {
+        const verse = selectedVerseKey();
+        restoreCommentaryEntries();
+        mobileInlineNote.remove();
+        mobileInlineNote.hidden = true;
+        mobileInlineExpanded = false;
+        noteEntries.forEach((entry) => {
+          entry.hidden = true;
+        });
+        updateVerseExpansion(verse, false);
+        if (workspace) workspace.dataset.selectedVerse = String(verse);
+      } else {
+        restoreDesktopCommentary();
+      }
+    }
     window.addEventListener("hashchange", selectHashVerse);
+    mobileInlineReaderQuery.addEventListener("change", (event) => {
+      const verse = selectedVerseKey();
+      if (event.matches) {
+        selectVerse(verse, { openInline: true });
+      } else {
+        restoreDesktopCommentary();
+      }
+    });
     if (currentChapter) addRecentReference(currentChapter, selectedVerseNumber());
   }
 

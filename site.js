@@ -200,14 +200,29 @@
   const applyNotesFont = () => {
     if (!notesPanel) return;
     const step = notesFontSteps[notesFontIndex];
-    notesPanel.style.setProperty("--notes-font-size", step.size + "rem");
-    notesPanel.style.setProperty("--notes-line-height", step.line + "rem");
-    notesPanel.style.setProperty("--notes-chip-font-size", step.chip + "rem");
-    notesPanel.style.setProperty("--notes-word-font-size", step.word + "rem");
-    notesPanel.style.setProperty("--notes-word-line-height", step.wordLine + "rem");
-    notesPanel.style.setProperty("--notes-reference-font-size", step.ref + "rem");
-    if (notesFontDown) notesFontDown.disabled = notesFontIndex === 0;
-    if (notesFontUp) notesFontUp.disabled = notesFontIndex === notesFontSteps.length - 1;
+    const scopes = new Set([
+      notesPanel,
+      document.querySelector("[data-chapter-workspace]"),
+    ]);
+    scopes.forEach((scope) => {
+      if (!scope) return;
+      scope.style.setProperty("--notes-font-size", step.size + "rem");
+      scope.style.setProperty("--notes-line-height", step.line + "rem");
+      scope.style.setProperty("--notes-chip-font-size", step.chip + "rem");
+      scope.style.setProperty("--notes-word-font-size", step.word + "rem");
+      scope.style.setProperty("--notes-word-line-height", step.wordLine + "rem");
+      scope.style.setProperty("--notes-reference-font-size", step.ref + "rem");
+    });
+    document
+      .querySelectorAll("[data-notes-font-down], [data-mobile-notes-font-down]")
+      .forEach((button) => {
+        button.disabled = notesFontIndex === 0;
+      });
+    document
+      .querySelectorAll("[data-notes-font-up], [data-mobile-notes-font-up]")
+      .forEach((button) => {
+        button.disabled = notesFontIndex === notesFontSteps.length - 1;
+      });
   };
   if (notesPanel) applyNotesFont();
   if (notesFontUp) notesFontUp.addEventListener("click", () => {
@@ -226,6 +241,105 @@
   const scripturePanel = document.querySelector("[data-scripture-panel]");
   const pageFooter = document.querySelector(".mbe-global-footer");
   const desktopReaderQuery = window.matchMedia("(min-width: 1101px)");
+  const mobileInlineReaderQuery = window.matchMedia("(max-width: 1100px)");
+  const notesStack = commentaryPanel?.querySelector(".notes-stack");
+  const mobileInlineNote = document.createElement("section");
+  mobileInlineNote.className = "mobile-inline-note";
+  mobileInlineNote.hidden = true;
+  mobileInlineNote.setAttribute("aria-live", "polite");
+  mobileInlineNote.innerHTML =
+    '<div class="mobile-inline-note-header">' +
+      '<span class="mobile-inline-note-title">Study Notes</span>' +
+      '<div class="mobile-inline-note-actions">' +
+        '<button class="mobile-inline-note-action" type="button" data-mobile-notes-font-down aria-label="Decrease study notes text size" title="Decrease text size">&minus;</button>' +
+        '<button class="mobile-inline-note-action" type="button" data-mobile-notes-font-up aria-label="Increase study notes text size" title="Increase text size">+</button>' +
+        '<button class="mobile-inline-note-action" type="button" data-mobile-inline-close aria-label="Close study notes" title="Close study notes">&times;</button>' +
+      "</div>" +
+    "</div>" +
+    '<div class="mobile-inline-note-content" data-mobile-inline-content></div>';
+  const mobileInlineContent = mobileInlineNote.querySelector("[data-mobile-inline-content]");
+  const mobileInlineClose = mobileInlineNote.querySelector("[data-mobile-inline-close]");
+  const mobileNotesFontDown = mobileInlineNote.querySelector("[data-mobile-notes-font-down]");
+  const mobileNotesFontUp = mobileInlineNote.querySelector("[data-mobile-notes-font-up]");
+  let mobileInlineExpanded = false;
+
+  const selectedVerseKey = () =>
+    workspace?.dataset.selectedVerse ||
+    verseButtons.find((button) => button.classList.contains("is-active"))?.dataset.verseSelect ||
+    "1";
+
+  const restoreCommentaryEntries = () => {
+    if (!notesStack) return;
+    noteEntries.forEach((entry) => notesStack.appendChild(entry));
+  };
+
+  const updateVerseExpansion = (verse, expanded) => {
+    verseButtons.forEach((button) => {
+      const active = button.dataset.verseSelect === String(verse);
+      button.setAttribute("aria-expanded", String(active && expanded));
+    });
+  };
+
+  const mountMobileInlineNote = (note, verse, expanded = true) => {
+    const verseButton = verseButtons.find(
+      (button) => button.dataset.verseSelect === String(verse),
+    );
+    const verseUnit = verseButton?.closest(".verse-unit");
+    if (!note || !verseUnit || !mobileInlineContent) return;
+
+    restoreCommentaryEntries();
+    verseUnit.appendChild(mobileInlineNote);
+    mobileInlineContent.appendChild(note);
+    mobileInlineNote.dataset.verse = String(verse);
+    mobileInlineNote.setAttribute("aria-label", "Study notes for verse " + verse);
+    mobileInlineNote.hidden = !expanded;
+    note.hidden = !expanded;
+    mobileInlineExpanded = expanded;
+    updateVerseExpansion(verse, expanded);
+  };
+
+  const collapseMobileInlineNote = ({ restoreFocus = false } = {}) => {
+    const verse = mobileInlineNote.dataset.verse || selectedVerseKey();
+    const note = noteEntries.find(
+      (entry) => entry.dataset.commentaryNote === String(verse),
+    );
+    mobileInlineExpanded = false;
+    mobileInlineNote.hidden = true;
+    if (note) note.hidden = true;
+    updateVerseExpansion(verse, false);
+    if (restoreFocus) {
+      verseButtons
+        .find((button) => button.dataset.verseSelect === String(verse))
+        ?.focus({ preventScroll: true });
+    }
+  };
+
+  const restoreDesktopCommentary = () => {
+    const verse = selectedVerseKey();
+    restoreCommentaryEntries();
+    mobileInlineNote.remove();
+    mobileInlineNote.hidden = true;
+    mobileInlineExpanded = false;
+    noteEntries.forEach((entry) => {
+      const active = entry.dataset.commentaryNote === String(verse);
+      entry.hidden = !active;
+      entry.classList.toggle("is-active", active);
+    });
+    updateVerseExpansion(verse, true);
+  };
+
+  mobileInlineClose?.addEventListener("click", () => {
+    collapseMobileInlineNote({ restoreFocus: true });
+  });
+  mobileNotesFontUp?.addEventListener("click", () => {
+    notesFontIndex = Math.min(notesFontSteps.length - 1, notesFontIndex + 1);
+    applyNotesFont();
+  });
+  mobileNotesFontDown?.addEventListener("click", () => {
+    notesFontIndex = Math.max(0, notesFontIndex - 1);
+    applyNotesFont();
+  });
+  applyNotesFont();
 
   if (
     document.body.classList.contains("chapter-route") &&
@@ -513,6 +627,16 @@
     const note = document.querySelector('[data-commentary-note="' + verse + '"]');
     if (!note) return;
     const verseButton = verseButtons.find((button) => button.dataset.verseSelect === String(verse));
+    const previousVerse = selectedVerseKey();
+    const inlineMode = mobileInlineReaderQuery.matches;
+    const collapseRequested =
+      inlineMode &&
+      options.toggleInline &&
+      previousVerse === String(verse) &&
+      mobileInlineExpanded &&
+      mobileInlineNote.dataset.verse === String(verse) &&
+      !mobileInlineNote.hidden;
+    const inlineOpen = inlineMode && options.openInline !== false && !collapseRequested;
 
     verseButtons.forEach((button) => {
       const active = button.dataset.verseSelect === String(verse);
@@ -526,6 +650,17 @@
       entry.classList.toggle("is-active", active);
     });
 
+    if (inlineMode) {
+      mountMobileInlineNote(note, verse, inlineOpen);
+    } else {
+      restoreCommentaryEntries();
+      mobileInlineNote.remove();
+      mobileInlineNote.hidden = true;
+      mobileInlineExpanded = false;
+      note.hidden = false;
+      updateVerseExpansion(verse, true);
+    }
+
     if (workspace) workspace.dataset.selectedVerse = String(verse);
     if (verseJumpInput && currentChapter) verseJumpInput.value = formatReference(currentChapter, verse);
     if (currentChapter) addRecentReference(currentChapter, Number(verse));
@@ -536,18 +671,28 @@
     if (options.scrollVerse && verseButton) {
       verseButton.scrollIntoView({ block: "center", behavior: "smooth" });
     }
-    if (options.scrollNotes && commentaryPanel) {
+    if (options.scrollNotes && commentaryPanel && !inlineMode) {
       commentaryPanel.scrollTo({ top: 0, behavior: "smooth" });
     }
-    if (options.revealNotes && commentaryPanel && window.matchMedia("(max-width: 1100px)").matches) {
-      commentaryPanel.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (
+      (options.scrollNotes || options.revealNotes) &&
+      inlineMode &&
+      inlineOpen &&
+      !options.scrollVerse
+    ) {
+      window.requestAnimationFrame(() => {
+        mobileInlineNote.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      });
     }
   };
 
   if (verseButtons.length && noteEntries.length) {
     verseButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        selectVerse(button.dataset.verseSelect, { scrollNotes: true, revealNotes: true, updateHash: true });
+        selectVerse(button.dataset.verseSelect, {
+          toggleInline: true,
+          updateHash: true,
+        });
       });
     });
 
@@ -555,7 +700,10 @@
       const match = window.location.hash.match(/^#v(\d+)$/);
       if (!match) return;
       const verse = match[1];
-      selectVerse(verse, { scrollNotes: true, scrollVerse: verse !== "1" });
+      selectVerse(verse, {
+        openInline: true,
+        scrollVerse: verse !== "1",
+      });
       if (verse === "1") {
         const scripturePanel = document.querySelector("[data-scripture-panel]");
         const resetReaderTop = () => {
@@ -567,8 +715,33 @@
         [80, 250, 600].forEach((delay) => window.setTimeout(resetReaderTop, delay));
       }
     };
+    const initialHashVerse = window.location.hash.match(/^#v(\d+)$/);
     selectHashVerse();
+    if (!initialHashVerse) {
+      if (mobileInlineReaderQuery.matches) {
+        const verse = selectedVerseKey();
+        restoreCommentaryEntries();
+        mobileInlineNote.remove();
+        mobileInlineNote.hidden = true;
+        mobileInlineExpanded = false;
+        noteEntries.forEach((entry) => {
+          entry.hidden = true;
+        });
+        updateVerseExpansion(verse, false);
+        if (workspace) workspace.dataset.selectedVerse = String(verse);
+      } else {
+        restoreDesktopCommentary();
+      }
+    }
     window.addEventListener("hashchange", selectHashVerse);
+    mobileInlineReaderQuery.addEventListener("change", (event) => {
+      const verse = selectedVerseKey();
+      if (event.matches) {
+        selectVerse(verse, { openInline: true });
+      } else {
+        restoreDesktopCommentary();
+      }
+    });
     if (currentChapter) addRecentReference(currentChapter, selectedVerseNumber());
   }
 

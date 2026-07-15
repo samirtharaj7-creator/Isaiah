@@ -3173,6 +3173,10 @@ a.word-note-reference-chip:hover {
   color: #fff8e6;
 }
 
+.mobile-inline-note {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .reader-shell {
     display: block;
@@ -3191,11 +3195,94 @@ a.word-note-reference-chip:hover {
   }
 
   .commentary-panel {
+    display: none;
     border-top: 1px solid rgba(201, 164, 76, 0.18);
   }
 
   .notes-jump {
+    display: none;
+  }
+
+  .mobile-inline-note:not([hidden]) {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+    overflow: visible;
+    border: 1px solid rgba(201, 164, 76, 0.55);
+    border-left: 3px solid var(--gold);
+    border-radius: 0.375rem;
+    background: #223247;
+    box-shadow: 0 0.75rem 1.5rem rgba(4, 12, 22, 0.18);
+  }
+
+  .mobile-inline-note-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 3rem;
+    border-bottom: 1px solid rgba(201, 164, 76, 0.22);
+    background: #18273a;
+    padding: 0.5rem 0.65rem 0.5rem 1rem;
+  }
+
+  .mobile-inline-note-title {
+    color: #f4ead2;
+    font-family: var(--display-font);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  .mobile-inline-note-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .mobile-inline-note-action {
     display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    border: 1px solid rgba(201, 164, 76, 0.24);
+    border-radius: 0.35rem;
+    background: rgba(14, 33, 56, 0.72);
+    color: rgba(244, 234, 210, 0.84);
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .mobile-inline-note-action:hover,
+  .mobile-inline-note-action:focus-visible {
+    border-color: rgba(224, 182, 69, 0.68);
+    background: rgba(224, 182, 69, 0.14);
+    color: #fff8e6;
+  }
+
+  .mobile-inline-note-action:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
+
+  .mobile-inline-note-content {
+    min-width: 0;
+  }
+
+  .mobile-inline-note .commentary-entry {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 1rem;
+    box-shadow: none;
   }
 }
 
@@ -3353,6 +3440,7 @@ a.word-note-reference-chip:hover {
   .site-header,
   .chapter-strip,
   .commentary-panel,
+  .mobile-inline-note,
   .reader-controls,
   .prev-next,
   .mbe-global-footer {
