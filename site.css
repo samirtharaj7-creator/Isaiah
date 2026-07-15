@@ -217,7 +217,7 @@ input {
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92) 0%, rgba(7, 17, 28, 0.68) 34%, rgba(7, 17, 28, 0.12) 100%),
     linear-gradient(180deg, rgba(7, 17, 28, 0.1) 0%, rgba(7, 17, 28, 0.28) 58%, rgba(7, 17, 28, 0.88) 100%),
-    url("/assets/isaiah-hero-v2.webp");
+    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
   background-position: center;
   background-size: cover;
 }
@@ -470,7 +470,7 @@ h3 {
   padding: clamp(6rem, 12vh, 9rem) clamp(1.5rem, 5vw, 5rem) clamp(2rem, 6vh, 4rem);
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92), rgba(7, 17, 28, 0.48)),
-    url("/assets/isaiah-hero-v2.webp");
+    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -576,7 +576,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(11, 31, 58, 0.95) 0%, rgba(11, 31, 58, 0.72) 45%, rgba(11, 31, 58, 0.22) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.1), rgba(11, 31, 58, 0.86)),
-    url("/assets/isaiah-hero-v2.webp");
+    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -790,7 +790,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(11, 31, 58, 0.98) 0%, rgba(11, 31, 58, 0.92) 24%, rgba(11, 31, 58, 0.60) 52%, rgba(11, 31, 58, 0.18) 78%, rgba(11, 31, 58, 0.34) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.24), rgba(11, 31, 58, 0.70)),
-    url("/assets/isaiah-hero-v2.webp");
+    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -1953,7 +1953,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.32) 57%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero-v2.webp");
+    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
   background-position: center top;
   opacity: 0.86;
 }
@@ -1978,7 +1978,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.30) 52%, rgba(11, 31, 58, 0.78) 82%, #0b1f3a 100%),
-    url("/assets/isaiah-hero-v2.webp");
+    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
 }
 
 .home-route .hero::after {
@@ -2069,7 +2069,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.92) 0%, rgba(11, 31, 58, 0.64) 42%, rgba(11, 31, 58, 0.16) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.18) 0%, rgba(11, 31, 58, 0.30) 58%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero-v2.webp");
+    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
   background-position: center right;
   background-size: cover;
 }
@@ -3520,4 +3520,22 @@ body.chapter-route > .reader-shell {
   body.chapter-route.reader-footer-ready .commentary-panel {
     overscroll-behavior-y: contain;
   }
+}
+
+
+/* MBE asset delivery fallback: keep hero artwork above the isolated background in Safari. */
+.hero::before,
+.subhero::before {
+  z-index: 0 !important;
+}
+
+.hero::after,
+.subhero::after {
+  z-index: 1 !important;
+}
+
+.hero > *,
+.subhero > * {
+  position: relative;
+  z-index: 2 !important;
 }
