@@ -622,7 +622,7 @@ const chapterMetaRanges = [
     end: 27,
     shortTitle: "Judgment, Resurrection, and Final Song",
     summary:
-      "Isaiah widens the view to earth's final reckoning, the defeat of evil, resurrection hope, and the song of a redeemed people.",
+      "Isaiah widens the view to Christ's return, earth's desolation, the judgment of evil, bodily resurrection, and the song of a redeemed people.",
     tags: ["Final Judgment", "Resurrection", "Zion", "Hope"],
   },
   {
@@ -670,7 +670,7 @@ const chapterMetaRanges = [
     end: 66,
     shortTitle: "Zion's Glory and New Creation",
     summary:
-      "Isaiah closes with Zion's glory, searching rebuke, final judgment, true worship, and the promise of new heavens and a new earth.",
+      "Isaiah closes with Zion's glory, conditional restoration promises, searching rebuke, final judgment, true worship, and the deathless new earth.",
     tags: ["Zion", "Remnant", "Judgment", "New Earth"],
   },
 ];
@@ -1216,8 +1216,8 @@ const backgroundPage = () =>
               <div>
                 <h2>Authorship and unity</h2>
                 <div class="intro-copy">
-                  <p>The book presents its vision as the word given through Isaiah son of Amoz. Many modern discussions divide Isaiah into later sections because chapters 40-66 speak so powerfully to exile, return, Cyrus, and restoration. The uploaded background material notes those debates while also showing that even scholars who differ over composition often recognize the final book's deep literary and theological unity.</p>
-                  <p>The book's own witness allows us to affirm that unity with confidence. Scripture does not need to be embarrassed by predictive prophecy. The God who names kings, judges empires, and announces the end from the beginning is able to reveal future deliverance before it arrives. At the same time, the book may have been preserved, arranged, and handed down through faithful transmission without weakening the authority of the prophetic word.</p>
+                  <p>The book presents its sixty-six chapters as the prophetic witness of Isaiah son of Amoz. Its historical setting changes, and chapters 40-66 speak with remarkable directness about exile, Cyrus, return, and restoration, but a changed horizon does not require a different prophet. Isaiah's repeated language, central themes, and sustained vision bind the whole book together.</p>
+                  <p>That unity also fits the book's theology. The God who names rulers, judges empires, and declares the end from the beginning is able to reveal future deliverance before it arrives. Predictive prophecy is not an embarrassment to be explained away; it is part of Isaiah's argument that the Lord alone knows and governs history. Faithful preservation and arrangement of the prophet's messages do not weaken their common source or authority.</p>
                   <p>For study, the important point is that Isaiah should be read as one coherent witness. The early chapters prepare the later comfort. The holiness of God in Isaiah 6 belongs with the Servant's suffering in Isaiah 53. The remnant promise belongs with the new heavens and new earth. The book is not a loose collection of religious fragments; it is a grand testimony to the God who judges, cleanses, comforts, and restores.</p>
                 </div>
               </div>
@@ -1230,6 +1230,7 @@ const backgroundPage = () =>
                   <p>Isaiah can be read in three large movements. Chapters 1-39 focus on judgment and hope in Judah and Jerusalem, with Assyria as the great surrounding threat. Chapters 40-55 speak comfort to exiled Zion and press toward redemption through the Servant. Chapters 56-66 call the restored people to faithful waiting while looking ahead to final judgment, gathered nations, and new creation.</p>
                   <p>Within that broad movement, the book also has smaller sections that help the reader stay oriented. Isaiah 1-12 exposes Judah's sin and opens messianic hope. Isaiah 13-23 shows that the Lord rules the nations. Isaiah 24-27 widens the horizon to world judgment and restoration. Isaiah 28-35 warns against false trust. Isaiah 36-39 forms a historical bridge through Hezekiah's crisis and the shadow of Babylon.</p>
                   <p>Then the tone of comfort rises. Isaiah 40-48 announces God's sovereign ability to end exile. Isaiah 49-55 centers the Servant's mission and suffering. Isaiah 56-66 presses beyond return from exile to a people made righteous, a Sabbath made delightful, outsiders welcomed, Zion restored, evil judged, and the world finally renewed.</p>
+                  <p>The closing promises often describe what God intended to accomplish through a faithful, restored Israel before the final end of sin. Because those national promises were conditional, their historical form was not realized as offered. Their saving purpose is not lost: it advances through Christ and His worldwide people, while the final new-creation promises reach their complete fulfillment after judgment and resurrection.</p>
                   <div class="intro-outline" aria-label="Isaiah study outline">
                     <div><span>Isaiah 1-39</span><strong>Judgment and hope in the Assyrian crisis</strong></div>
                     <div><span>Isaiah 40-55</span><strong>Comfort, return, and the Servant's redemption</strong></div>
@@ -1262,6 +1263,7 @@ const backgroundPage = () =>
                 <div class="intro-copy">
                   <p>Isaiah holds together truths that belong together: the seriousness of judgment, the beauty of grace, the call to covenant faithfulness, the hope of a purified remnant, and the promise that God's final purpose is a renewed creation. Isaiah does not separate doctrine from devotion. Truth is meant to become worship, justice, courage, and hope.</p>
                   <p>Behind the book's public conflicts lies a deeper struggle between God's truth and rebellious power. Proud empires rise, idols promise security, rulers boast, and God's people are tempted to fear what they can see. Yet the Lord reveals Himself as Creator, Redeemer, Judge, and King. History is not finally governed by Assyria, Babylon, or any human empire. It is governed by the Holy One whose word cannot fail.</p>
+                  <p>Isaiah's final horizon should be read with the rest of Scripture. Christ returns visibly; the dead awake by bodily resurrection rather than by an immortal soul's natural survival; the devastated earth becomes the prison of the defeated rebel powers during the thousand years; and evil is finally consumed rather than kept alive forever in torment. God then makes the earth new, free from death, curse, and rebellion.</p>
                   <p>Isaiah also speaks powerfully to Sabbath and righteousness. Isaiah 56 blesses the outsider who keeps covenant and takes hold of the Sabbath. Isaiah 58 shows that true Sabbath delight cannot be separated from mercy, justice, and care for the oppressed. Isaiah 66 looks toward worship in the new earth. These passages do not make the Sabbath a cold badge of identity. They show it as a sign of restored relationship with the Creator and Redeemer.</p>
                   <p>Most of all, Isaiah points us to Christ. The Child born, the Son given, the Branch from Jesse, the Servant wounded for our transgressions, the One anointed to preach good tidings - all of these lines draw the reader toward the gospel. Isaiah's final hope is not merely that Judah survives, but that God fills the earth with righteousness, gathers the nations, and makes all things new.</p>
                 </div>
@@ -1736,7 +1738,7 @@ const phraseNoteLibrary = [
     phrase: "New Heavens and New Earth",
     test: /\bnew heavens\b|\bnew earth\b/i,
     note:
-      "Isaiah's final hope is restored creation, not escape from creation. God ends sin and makes worship, life, and joy whole again.",
+      "Isaiah's restoration language begins with covenant promises and reaches its final fulfillment after judgment and resurrection. God ends sin and makes creation, worship, life, and joy whole again.",
     refs: ["Isaiah 65:17", "Isaiah 66:22-23", "Revelation 21:1"],
   },
   {
@@ -1783,8 +1785,51 @@ const phraseNoteLibrary = [
   },
 ];
 
-const phraseNotesForVerse = (text, limit = 2) =>
-  phraseNoteLibrary.filter(({ test }) => test.test(text)).slice(0, limit);
+const phraseNoteAnchors = {
+  Vision: ["Isaiah 1:1", "Isaiah 2:1", "Isaiah 6:1"],
+  "Judah and Jerusalem": ["Isaiah 1:1", "Isaiah 2:1"],
+  "Hear, O heavens": ["Isaiah 1:2"],
+  Children: ["Isaiah 1:2", "Isaiah 30:1", "Isaiah 63:8"],
+  Rebelled: ["Isaiah 1:2", "Isaiah 30:9", "Isaiah 63:10"],
+  "Holy One of Israel": ["Isaiah 1:4", "Isaiah 5:24", "Isaiah 10:20", "Isaiah 43:3"],
+  Remnant: ["Isaiah 1:9", "Isaiah 10:20", "Isaiah 10:21", "Isaiah 10:22", "Isaiah 11:11", "Isaiah 37:31"],
+  Zion: ["Isaiah 2:3", "Isaiah 4:3", "Isaiah 52:1", "Isaiah 60:14", "Isaiah 62:1", "Isaiah 66:8"],
+  Woe: ["Isaiah 5:8", "Isaiah 6:5", "Isaiah 10:1", "Isaiah 28:1", "Isaiah 29:1", "Isaiah 30:1", "Isaiah 31:1", "Isaiah 33:1"],
+  Vineyard: ["Isaiah 5:1", "Isaiah 5:7", "Isaiah 27:2"],
+  Branch: ["Isaiah 4:2", "Isaiah 11:1", "Isaiah 11:10"],
+  Immanuel: ["Isaiah 7:14", "Isaiah 8:8", "Isaiah 8:10"],
+  Assyria: ["Isaiah 10:5", "Isaiah 36:1", "Isaiah 37:29"],
+  Babylon: ["Isaiah 13:1", "Isaiah 14:4", "Isaiah 21:9", "Isaiah 39:6", "Isaiah 47:1"],
+  Egypt: ["Isaiah 19:1", "Isaiah 30:2", "Isaiah 31:1"],
+  "Day of the Lord": ["Isaiah 2:12", "Isaiah 13:6", "Isaiah 13:9"],
+  Servant: ["Isaiah 41:8", "Isaiah 42:1", "Isaiah 49:3", "Isaiah 49:5", "Isaiah 49:6", "Isaiah 50:10", "Isaiah 52:13", "Isaiah 53:11"],
+  Comfort: ["Isaiah 40:1", "Isaiah 51:3", "Isaiah 51:12", "Isaiah 52:9", "Isaiah 66:13"],
+  Idols: ["Isaiah 2:8", "Isaiah 2:18", "Isaiah 2:20", "Isaiah 44:9", "Isaiah 46:1"],
+  "Fear not": ["Isaiah 41:10", "Isaiah 43:1", "Isaiah 44:2", "Isaiah 54:4"],
+  Redeemer: ["Isaiah 41:14", "Isaiah 43:1", "Isaiah 44:6", "Isaiah 44:24", "Isaiah 47:4", "Isaiah 49:7", "Isaiah 49:26", "Isaiah 54:5", "Isaiah 59:20", "Isaiah 60:16", "Isaiah 63:16"],
+  "New Thing": ["Isaiah 43:19", "Isaiah 48:6"],
+  Cyrus: ["Isaiah 44:28", "Isaiah 45:1"],
+  "Light to the Gentiles": ["Isaiah 42:6", "Isaiah 49:6", "Isaiah 60:3"],
+  "Wounded / Stripes": ["Isaiah 53:5"],
+  Lamb: ["Isaiah 53:7"],
+  Sabbath: ["Isaiah 56:2", "Isaiah 56:6", "Isaiah 58:13", "Isaiah 66:23"],
+  Fast: ["Isaiah 58:3", "Isaiah 58:5", "Isaiah 58:6"],
+  Watchmen: ["Isaiah 56:10", "Isaiah 62:6"],
+  "New Heavens and New Earth": ["Isaiah 65:17", "Isaiah 66:22"],
+  "Spirit of the Lord": ["Isaiah 11:2", "Isaiah 42:1", "Isaiah 44:3", "Isaiah 48:16", "Isaiah 59:21", "Isaiah 61:1", "Isaiah 63:10", "Isaiah 63:11", "Isaiah 63:14"],
+  Anointed: ["Isaiah 45:1", "Isaiah 61:1"],
+  Highway: ["Isaiah 11:16", "Isaiah 19:23", "Isaiah 35:8", "Isaiah 40:3", "Isaiah 49:11", "Isaiah 62:10"],
+  Wilderness: ["Isaiah 35:1", "Isaiah 40:3", "Isaiah 41:18", "Isaiah 43:19", "Isaiah 51:3"],
+  Righteousness: ["Isaiah 1:27", "Isaiah 32:17", "Isaiah 45:8", "Isaiah 51:6", "Isaiah 61:10"],
+  Salvation: ["Isaiah 12:2", "Isaiah 25:9", "Isaiah 45:22", "Isaiah 49:6", "Isaiah 52:7", "Isaiah 59:17", "Isaiah 62:1"],
+};
+
+const phraseNotesForVerse = (sourceReference, text, limit = 2) =>
+  phraseNoteLibrary
+    .filter(({ phrase, test }) =>
+      test.test(text) && (phraseNoteAnchors[phrase] || []).includes(sourceReference),
+    )
+    .slice(0, limit);
 
 const renderWordPhraseNotes = (notes) => {
   if (!notes.length) return "";
@@ -1811,7 +1856,7 @@ const renderWordPhraseNotes = (notes) => {
 
 const renderStudyLinks = (sourceReference, references = [], verseText = "") => {
   const cleanReferences = bestCrossReferences(sourceReference, references);
-  const phraseNotes = phraseNotesForVerse(verseText);
+  const phraseNotes = phraseNotesForVerse(sourceReference, verseText);
 
   if (!cleanReferences.length && !phraseNotes.length) return "";
 

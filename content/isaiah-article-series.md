@@ -52,19 +52,17 @@ The end of Isaiah stretches beyond a repaired version of the present world. God 
 
 So what is Isaiah about? It is about the holy God who judges sin, saves by grace, sends His Servant, restores Zion, gathers the nations, renews worship, and leads history toward new creation. It is a book of severe mercy and radiant hope.
 
-### How This Points to Christ
-
-Isaiah opens many roads that lead naturally to Christ. The promised Child, the righteous Branch, the Servant of the Lord, the bearer of sin, the announcer of good news, and the restorer of Zion all find their fullest light in Him. Christ stands at the meeting place of Isaiah’s great themes: holiness, judgment, mercy, kingship, suffering, comfort, and final restoration.
-
-In Christ, God confronts sin without compromise and shows mercy without cheapening righteousness. The comfort Isaiah announces becomes personal and living. The Servant’s obedience and suffering become the means by which many are brought into peace. Zion’s hope and the gathering of the nations begin to flower before the final renewal of all things.
-
-### What This Means for Us Today
-
 Isaiah asks a question we would rather avoid: where do we run when we feel threatened, guilty, ashamed, or uncertain? Religious appearances cannot save. Cultural power cannot save. Human leaders, personal discipline, wealth, and inward self-justification cannot save. Isaiah will not let us hide in lies, but neither will he let us despair.
 
 The book teaches us how to hope without becoming shallow. We do not hope by denying sorrow or pretending judgment is unreal. We hope because God speaks, rules, remembers, redeems, and restores. He will not fail to do what He has promised.
 
 For worship, Isaiah gives us reverence, repentance, justice, and joy. For suffering, it gives comfort rooted in God’s presence. For mission, it widens the horizon to the nations. For the future, it gives us a holy imagination shaped by God’s final peace.
+
+### How This Points to Christ
+
+Isaiah opens many roads that lead naturally to Christ. The promised Child, the righteous Branch, the Servant of the Lord, the bearer of sin, the announcer of good news, and the restorer of Zion all find their fullest light in Him. Christ stands at the meeting place of Isaiah’s great themes: holiness, judgment, mercy, kingship, suffering, comfort, and final restoration.
+
+In Christ, God confronts sin without compromise and shows mercy without cheapening righteousness. The comfort Isaiah announces becomes personal and living. The Servant’s obedience and suffering become the means by which many are brought into peace. Zion’s hope and the gathering of the nations begin to flower before the final renewal of all things.
 
 ### Common Misunderstandings
 
@@ -153,6 +151,8 @@ A second key is to watch the book’s recurring themes. Isaiah does not mention 
 
 A third key is to pay attention to shifts in horizon. Isaiah sometimes speaks to a present crisis and then suddenly moves outward to a larger future. A rebuke to a king can open toward messianic hope. A word about return can widen into a vision of worldwide salvation. A promise of restoration can stretch toward new creation. This does not mean Isaiah is confusing. It means the book sees history in relation to God’s larger purposes.
 
+Those shifts also require attention to conditional prophecy. Many promises describe what God intended to accomplish through a faithful Israel: a restored land, a compelling witness to the nations, secure labor, long life, and worldwide worship. Israel's failure changed the historical form of those promises without defeating God's purpose. Their mission moves forward through Christ and His people, and their final hope reaches the resurrected, deathless world God creates after judgment. Reading every restoration promise as an unconditional political forecast misses both the covenant setting and the larger biblical fulfillment.
+
 A fourth key is to read the book as a whole. Isaiah’s final shape matters. The early chapters expose sin and false trust. The middle announces comfort, redemption, and the Servant’s work. The closing chapters explore restored worship, final separation, Zion’s glory, and the new heavens and new earth. When the book is read whole, judgment and salvation are not competing messages. The Holy One exposes evil in order to create a purified and joyful people.
 
 A fifth key is to let Isaiah confront us ethically and spiritually. It is easy to admire the book’s beauty while avoiding its demands. But Isaiah is relentless against empty worship, oppression, pride, and self-made righteousness. He will not let readers excuse injustice while singing sacred songs. He will not let them claim trust in God while relying on idols, politics, or religious performance. Isaiah must be read with readiness to be corrected.
@@ -163,19 +163,17 @@ For Christians, the final key is to read Isaiah with a Christ-sensitive but disc
 
 So how should we read Isaiah? Slowly. Contextually. Theologically. Poetically. With the whole book in view. With ears open to warning, heart open to comfort, and eyes lifted to the Lord who reveals Himself through this remarkable book.
 
-### How This Points to Christ
-
-Reading Isaiah well prepares us to see Christ more fully. The book trains us to expect salvation that comes through God’s initiative, not human strength. It teaches us to look for a ruler marked by righteousness and peace, and for a Servant marked by obedience, gentleness, and suffering. It also teaches us that redemption leads beyond private relief to restored worship, gathered nations, and final renewal.
-
-Christ is not imposed on Isaiah from outside. He stands where Isaiah’s major lines converge. Reading Isaiah carefully helps Christians see that the glory of Christ is not an afterthought but the fulfillment of long-promised hope.
-
-### What This Means for Us Today
-
 Many of us want quick inspiration. Isaiah will not always give it that way. It teaches slow reading and deep listening. It calls us to stay with difficult passages, let Scripture interpret Scripture, and resist the habit of hurry.
 
 It also teaches discernment. We become less impressed by appearances, more attentive to God’s character, and more suspicious of false trust. We learn to expect both conviction and consolation from God’s Word.
 
 For churches and teachers, Isaiah models truth that is both searching and beautiful. Doctrine, poetry, warning, mission, and worship belong together. A thin reading of Isaiah will never do justice to a book this weighty.
+
+### How This Points to Christ
+
+Reading Isaiah well prepares us to see Christ more fully. The book trains us to expect salvation that comes through God’s initiative, not human strength. It teaches us to look for a ruler marked by righteousness and peace, and for a Servant marked by obedience, gentleness, and suffering. It also teaches us that redemption leads beyond private relief to restored worship, gathered nations, and final renewal.
+
+Christ is not imposed on Isaiah from outside. He stands where Isaiah’s major lines converge. Reading Isaiah carefully helps Christians see that the glory of Christ is not an afterthought but the fulfillment of long-promised hope.
 
 ### Common Misunderstandings
 
@@ -254,6 +252,8 @@ Isaiah 1:1 places him in relation to Judah, Jerusalem, and the reigns of four ki
 
 The rest of the book reveals the reach of his message: judgment against Judah and the nations, the call to trust God, the vision of the coming ruler, the promise of comfort, the servant’s mission, the hope of Zion, and the final renewal of all things.
 
+The book also presents these messages as one prophetic witness. Later chapters look far beyond Isaiah's immediate century, but their knowledge of exile, Cyrus, and restoration fits the book's own claim that the Lord can declare what is still future. The recurring titles, themes, and patterns across all sixty-six chapters support reading Isaiah as the unified work of the prophet whose name it bears.
+
 ### Explanation
 
 Isaiah appears as a prophet rooted in the life of God’s people. His ministry is tied to Judah and Jerusalem, so his words are not abstract. He speaks into covenant life: worship, justice, leadership, national fear, and spiritual decline. The people know God’s name, yet their hearts and public life reveal deep corruption. Isaiah is not mainly addressing outsiders. He is speaking to those who should know better.
@@ -272,19 +272,17 @@ Perhaps the most striking thing is how personal Isaiah remains even when his vis
 
 So who was Isaiah? A prophet who saw the Lord, was cleansed by grace, and was sent to speak holiness, judgment, trust, redemption, and hope. He was a messenger to Judah and Jerusalem whose words still summon the world to look to the Lord and be saved.
 
-### How This Points to Christ
-
-Isaiah’s life prepares readers to understand the gospel’s pattern. He is humbled by holiness, cleansed by grace, and sent in service. That pattern finds its deepest fulfillment in Christ’s saving work for sinners and in the ministry that flows from him.
-
-Isaiah also becomes one of the clearest witnesses to Christ in all of Scripture. His visions of the royal child, the righteous ruler, the servant of the Lord, the bearer of sin, and the announcer of good news all lead readers toward Jesus. In that sense, Isaiah not only had a ministry of his own; he also became a faithful herald of the coming Redeemer.
-
-### What This Means for Us Today
-
 Isaiah reminds us that faithful ministry begins with the knowledge of God, not self-confidence. We need to see God rightly, see ourselves honestly, and receive grace gratefully. Only then are we ready to speak truth with courage and tenderness.
 
 He also teaches us that God can use a servant in dark times without giving that servant quick visible success. Isaiah’s ministry includes warning, tears, hope, and endurance. That strengthens believers who serve in hard places and long seasons.
 
 Finally, Isaiah teaches us to interpret public life theologically. He does not ignore politics, suffering, or national instability. But he refuses to let those things become ultimate. The Lord remains on the throne.
+
+### How This Points to Christ
+
+Isaiah’s life prepares readers to understand the gospel’s pattern. He is humbled by holiness, cleansed by grace, and sent in service. That pattern finds its deepest fulfillment in Christ’s saving work for sinners and in the ministry that flows from him.
+
+Isaiah also becomes one of the clearest witnesses to Christ in all of Scripture. His visions of the royal child, the righteous ruler, the servant of the Lord, the bearer of sin, and the announcer of good news all lead readers toward Jesus. In that sense, Isaiah not only had a ministry of his own; he also became a faithful herald of the coming Redeemer.
 
 ### Common Misunderstandings
 
@@ -347,6 +345,8 @@ That does not mean the early chapters have no hope or the later chapters have no
 
 Put another way, Isaiah moves from the crisis of trust and the promise of the King, to comfort and the work of the Servant, to the glory of restored Zion and the renewal of all things. The book does not wander. It advances.
 
+This movement belongs to one prophetic book. The later focus on exile and restoration does not require a later prophetic author; it displays the Lord's ability to reveal future history and allows Isaiah's early warnings to open into the comfort God would eventually provide.
+
 ### Why This Question Matters
 
 Without some sense of Isaiah’s structure, a reader can get lost quickly. Themes recur. Images return. Judgment and salvation stand side by side. A chapter may sound local and immediate, then suddenly open toward the end of the age. It can feel random until we begin to see the order.
@@ -375,21 +375,21 @@ The Servant theme becomes especially important here. God’s saving purpose will
 
 The final section does more than repeat earlier comfort. It asks what life should look like among the people God restores. So the closing chapters speak about Sabbath, true worship, justice, humility, the contrite spirit, prayer, Zion’s radiance, the gathering of nations, and the final separation between servants and rebels. The tone is searching and glorious at the same time.
 
+Some of those closing pictures first describe the order God offered to establish through a faithful restored Israel. Their national form depended on covenant response and was not fulfilled as offered. The book's structure nevertheless carries their purpose forward: the nations are gathered through the Servant's mission, and the promises of a world without curse reach their complete form after judgment, resurrection, and the destruction of evil.
+
 Isaiah does not end with private comfort alone. It ends with public worship and cosmic renewal. Zion becomes radiant, not for self-display, but because the glory of the Lord rises upon her. The nations come. God’s servants rejoice. The new heavens and new earth appear on the horizon. The book that began with corruption ends with renewed creation and all flesh coming before the Lord.
 
 So Isaiah’s structure is more than a convenience for study. It is part of the message. The shape of the book teaches us that God leads His people through exposure, warning, purification, redemption, restoration, and worship. The movement itself is theological.
+
+Structure trains us to read patiently. Instead of grabbing verses at random, we learn to walk through the book’s logic. That strengthens conviction, because Isaiah’s sequence starts to land on us: sin really is serious, false trust really does fail, grace really is astonishing, and worship really is the goal.
+
+It also helps pastors, teachers, and readers avoid imbalance. We need Isaiah’s rebuke, his comfort, his Servant hope, and his final vision. A church that only hears warning will wither. A church that only hears comfort may grow shallow. Isaiah gives both, and we need both.
 
 ### How This Points to Christ
 
 The structure of Isaiah helps readers see Christ in the right place. The early chapters create longing for a righteous king and true deliverer. The middle chapters reveal the servant through whom redemption actually comes. The closing chapters show the kind of restored, worshiping people and renewed world that flow from God’s saving work.
 
 In Christ, the kingly and servant hopes converge. He answers the problem of sin exposed in the opening chapters, fulfills the servant mission at the heart of the book, and secures the future glory envisioned in the ending. Reading the structure well keeps the reader from isolating Christ-texts from the wider drama they complete.
-
-### What This Means for Us Today
-
-Structure trains us to read patiently. Instead of grabbing verses at random, we learn to walk through the book’s logic. That strengthens conviction, because Isaiah’s sequence starts to land on us: sin really is serious, false trust really does fail, grace really is astonishing, and worship really is the goal.
-
-It also helps pastors, teachers, and readers avoid imbalance. We need Isaiah’s rebuke, his comfort, his Servant hope, and his final vision. A church that only hears warning will wither. A church that only hears comfort may grow shallow. Isaiah gives both, and we need both.
 
 ### Common Misunderstandings
 
@@ -488,19 +488,17 @@ That is why holiness in Isaiah has two very different effects. For the proud, it
 
 The end of the book confirms the same truth. God’s throne is heaven and earth is his footstool. He cannot be manipulated by religious performance. Yet he looks with favor on the humble and contrite, on the one who trembles at his word. Holiness is not cold distance. It is the blazing purity and nearness of the living God.
 
-### How This Points to Christ
-
-Isaiah’s holiness prepares us to understand why the coming Redeemer must be more than a political rescuer. The problem is not just oppression or exile. The problem is that sinners stand before the Holy One. That is why cleansing, atonement, and righteous mediation are necessary.
-
-In Christ, the holiness Isaiah proclaims is not diminished but revealed more fully. He comes not to lower God’s standards, but to secure the cleansing sinners need and to create a people who reflect God’s righteousness. The servant’s obedience and suffering show that fellowship with the Holy One comes through costly grace, not through denial of sin.
-
-### What This Means for Us Today
-
 Isaiah calls the church back to reverence. We do not worship a useful projection of our needs. We worship the Lord who is high and lifted up. That should humble our speech, reshape our priorities, and deepen our repentance.
 
 Holiness also comforts. The God who is truly holy is not fickle, corrupt, or compromised. He can be trusted. His promises are sure because His character is pure. He does not save by overlooking evil, but by dealing with it righteously.
 
 And holiness changes how we see ourselves. We stop comparing ourselves with one another and begin seeing our need before God. Yet we do not stay crushed, because the Holy One also cleanses and sends.
+
+### How This Points to Christ
+
+Isaiah’s holiness prepares us to understand why the coming Redeemer must be more than a political rescuer. The problem is not just oppression or exile. The problem is that sinners stand before the Holy One. That is why cleansing, atonement, and righteous mediation are necessary.
+
+In Christ, the holiness Isaiah proclaims is not diminished but revealed more fully. He comes not to lower God’s standards, but to secure the cleansing sinners need and to create a people who reflect God’s righteousness. The servant’s obedience and suffering show that fellowship with the Holy One comes through costly grace, not through denial of sin.
 
 ### Common Misunderstandings
 
@@ -594,19 +592,17 @@ Judgment is not limited to Judah. Babylon, Assyria, Moab, Egypt, Tyre, and other
 
 And yet the final note is not bare destruction. Isaiah moves toward restored worship and the glory of God. Judgment makes way for the humble, the contrite, the Servant-shaped people of God, and the joy of new creation. God will not leave evil unchallenged, and He will not abandon His saving purpose.
 
-### How This Points to Christ
-
-Isaiah’s judgment theme prepares us to understand why the servant’s work is so necessary. If sin were small, suffering for sin would be unnecessary. If evil could be overlooked, there would be no need for redemptive bearing of guilt. But Isaiah shows a holy God confronting a deeply sinful people. That is the world into which the servant comes.
-
-In Christ, judgment and mercy meet without contradiction. He does not deny the holiness of God or the seriousness of sin. He bears what sinners cannot carry and opens the way for peace, pardon, and restored life. Isaiah’s judgments thus create the moral and theological setting in which Christ’s saving work is seen for the wonder it truly is.
-
-### What This Means for Us Today
-
 Isaiah will not let us sentimentalize either God or ourselves. We should not imagine a god who comforts without truth or forgives without righteousness. Nor should we treat sin as a minor matter. Personal corruption, public injustice, empty worship, and proud self-trust remain deadly.
 
 But we should not despair when Isaiah exposes us. The warnings are meant to bring us back to God, not drive us away from Him. Properly heard, judgment is a summons to repentance and hope.
 
 For the church, Isaiah is also a stern warning against hypocrisy. Religious activity does not protect those who refuse justice, mercy, and humble trust. Sacred language cannot cover an unyielded heart.
+
+### How This Points to Christ
+
+Isaiah’s judgment theme prepares us to understand why the servant’s work is so necessary. If sin were small, suffering for sin would be unnecessary. If evil could be overlooked, there would be no need for redemptive bearing of guilt. But Isaiah shows a holy God confronting a deeply sinful people. That is the world into which the servant comes.
+
+In Christ, judgment and mercy meet without contradiction. He does not deny the holiness of God or the seriousness of sin. He bears what sinners cannot carry and opens the way for peace, pardon, and restored life. Isaiah’s judgments thus create the moral and theological setting in which Christ’s saving work is seen for the wonder it truly is.
 
 ### Common Misunderstandings
 
@@ -703,17 +699,15 @@ Hope in Isaiah also reaches beyond present improvement. The book moves toward mo
 
 So Isaiah’s comfort is strong, holy, gracious, and future-filled. It comforts the broken without flattering sin. It assures the repentant without trivializing judgment. It gives hope, not because life is easy, but because the Lord is faithful.
 
+Isaiah teaches us where to go with fear, guilt, grief, and exhaustion. We do not need false reassurance. We need the God who pardons, carries, strengthens, and remembers. Weary believers are invited to rest not in their emotional state but in God’s character and Word.
+
+It also teaches churches how to comfort one another. True comfort says more than “things will get better.” It speaks of God’s mercy, God’s reign, God’s Servant, and God’s future. That kind of comfort can survive suffering because it is rooted in truth.
+
 ### How This Points to Christ
 
 Christ stands naturally within Isaiah’s comfort and hope. He is the Servant who bears sin, the Shepherd who gathers the weak, the light for the nations, the announcer of good news, and the One through whom God’s saving promises take flesh. The comfort promised in Isaiah becomes deeply personal in Him.
 
 Christ also shows that hope can pass through suffering without being destroyed. Isaiah prepares readers to expect a salvation that comes through obedience, sacrificial love, and divine faithfulness rather than through worldly display. In him, the comfort of Isaiah is not abstract. It becomes embodied grace.
-
-### What This Means for Us Today
-
-Isaiah teaches us where to go with fear, guilt, grief, and exhaustion. We do not need false reassurance. We need the God who pardons, carries, strengthens, and remembers. Weary believers are invited to rest not in their emotional state but in God’s character and Word.
-
-It also teaches churches how to comfort one another. True comfort says more than “things will get better.” It speaks of God’s mercy, God’s reign, God’s Servant, and God’s future. That kind of comfort can survive suffering because it is rooted in truth.
 
 ### Common Misunderstandings
 
@@ -808,17 +802,15 @@ Isaiah 61 adds another dimension. The anointed One is empowered by the Spirit to
 
 Put these passages together, and Isaiah’s Messiah is royal, righteous, Spirit-filled, gentle, obedient, suffering, saving, restorative, and world-embracing. He answers not only political corruption, but spiritual bondage, human guilt, and the brokenness of creation.
 
+Isaiah’s Messiah teaches us what kind of salvation we actually need. We need more than better systems, stronger leaders, or temporary relief. We need a righteous ruler and redeeming Servant. We need One who can deal with guilt, heal brokenness, and gather the nations into God’s light.
+
+Isaiah also teaches us how to admire Christ rightly. He is powerful, but also pure. Victorious, but gentle. Glorious, but obedient. Kingly, but self-giving. Isaiah enlarges our worship because it enlarges our view of Him.
+
 ### How This Points to Christ
 
 Isaiah’s messianic vision finds its fullest light in Christ. He is the Child of promise, the righteous ruler, the Spirit-anointed One, the Servant who establishes justice, the light for the nations, the obedient sufferer, and the herald of good news to the poor. In Him, the royal and Servant strands meet.
 
 Christ also shows why Isaiah’s messianic vision cannot be reduced to one category. He reigns, yet he suffers. He is gentle, yet he brings true justice. He bears sin, yet he is exalted. He comforts the brokenhearted, yet he calls for repentance. Isaiah prepares readers to recognize this glory when it arrives.
-
-### What This Means for Us Today
-
-Isaiah’s Messiah teaches us what kind of salvation we actually need. We need more than better systems, stronger leaders, or temporary relief. We need a righteous ruler and redeeming Servant. We need One who can deal with guilt, heal brokenness, and gather the nations into God’s light.
-
-Isaiah also teaches us how to admire Christ rightly. He is powerful, but also pure. Victorious, but gentle. Glorious, but obedient. Kingly, but self-giving. Isaiah enlarges our worship because it enlarges our view of Him.
 
 ### Common Misunderstandings
 
@@ -912,17 +904,15 @@ Then in Isaiah 52:13–53:12, the mystery deepens. The Servant is despised, reje
 
 So who is the Servant? Within Isaiah’s own message, the answer must hold this tension: the Servant is connected to Israel’s calling, yet the individual Servant fulfills that calling, restores Israel, and extends salvation to the nations. He is faithful where the servant people are faithless. He represents, restores, and redeems.
 
+The Servant theme teaches us that God does not abandon His purposes when His people fail. Human unfaithfulness is real, but it does not overturn divine faithfulness. That is deeply comforting.
+
+It also teaches believers what redeemed service looks like: gentleness with the weak, perseverance in obedience, willingness to suffer rather than rebel, and a life given to God’s saving purpose rather than self-display.
+
 ### How This Points to Christ
 
 Christians see the Servant fulfilled in Christ because He fits the pattern Isaiah unfolds. He is the obedient One, the Spirit-anointed One, the bringer of justice, the light to the nations, the One who restores and gathers, the speaker of comfort to the weary, and the innocent sufferer who bears sin.
 
 This does not erase Isaiah’s servant language about Israel. Rather, it shows how Christ gathers Israel’s calling into Himself and brings it to its true form. He is Servant not instead of God’s people, but as the faithful One through whom God forms a faithful people.
-
-### What This Means for Us Today
-
-The Servant theme teaches us that God does not abandon His purposes when His people fail. Human unfaithfulness is real, but it does not overturn divine faithfulness. That is deeply comforting.
-
-It also teaches believers what redeemed service looks like: gentleness with the weak, perseverance in obedience, willingness to suffer rather than rebel, and a life given to God’s saving purpose rather than self-display.
 
 ### Common Misunderstandings
 
@@ -1015,17 +1005,15 @@ Then the chapter moves into its deepest mystery: it was the Lord’s will to cru
 
 The final verse gathers the chapter into triumph. The Servant is given a portion among the great because He poured out His life unto death, was numbered with transgressors, bore the sin of many, and made intercession for transgressors. Isaiah 53 does not end in defeat. It ends in vindicated, saving victory.
 
+Isaiah 53 humbles us. It tells the truth about our condition: we are the wandering sheep. It also tells the truth about grace: peace comes at great cost to the Servant. That destroys pride and nourishes gratitude.
+
+The chapter also steadies believers in suffering. It does not say all suffering is redemptive in the same way. But it does show that God can work through what appears weak, rejected, and disastrous. The Servant’s path teaches us never to measure God’s saving work only by outward appearance.
+
 ### How This Points to Christ
 
 Christians rightly see Isaiah 53 fulfilled in Christ because the passage’s portrait of innocent suffering, burden-bearing, silence before unjust treatment, death, and saving purpose reaches its fullest clarity in him. He is the righteous servant who bears sin and brings peace.
 
 But even in pointing to Christ, we should let Isaiah speak first. The passage teaches that salvation comes through a servant who suffers in the place of others and is vindicated by God. Christ does not weaken that meaning; he embodies it.
-
-### What This Means for Us Today
-
-Isaiah 53 humbles us. It tells the truth about our condition: we are the wandering sheep. It also tells the truth about grace: peace comes at great cost to the Servant. That destroys pride and nourishes gratitude.
-
-The chapter also steadies believers in suffering. It does not say all suffering is redemptive in the same way. But it does show that God can work through what appears weak, rejected, and disastrous. The Servant’s path teaches us never to measure God’s saving work only by outward appearance.
 
 ### Common Misunderstandings
 
@@ -1116,17 +1104,15 @@ The final chapters deepen the same truth. God’s throne is heaven and earth is 
 
 And yet the end of the book is not anti-worship. It is filled with worship. Zion rejoices. The nations come. God’s glory is seen. All flesh comes before the Lord. This shows that the summit of Isaiah is not criticism of religion but restored worship purified by grace and truth.
 
+Isaiah calls churches to examine themselves. We can sing passionately and still resist God’s ways. We can pray publicly and neglect the afflicted. We can defend sacred practices while refusing humility. Isaiah will not let us separate worship from character.
+
+It also encourages those who feel unworthy but come with contrite hearts. The Lord does not despise humble worship. He looks to the one who trembles at His Word, not to the one who performs impressively without surrender.
+
 ### How This Points to Christ
 
 Christ stands naturally in Isaiah’s teaching on worship because He fulfills what Isaiah longs for: truth in the inner being, mercy without hypocrisy, obedience without show, and a people brought near to God in righteousness. He is also the One through whom the nations are gathered and worship is renewed.
 
 In Christ, worship is not emptied of holiness or repentance. It is deepened. The servant’s work makes real cleansing possible, so that the worship Isaiah envisions can become the joyful response of a redeemed people.
-
-### What This Means for Us Today
-
-Isaiah calls churches to examine themselves. We can sing passionately and still resist God’s ways. We can pray publicly and neglect the afflicted. We can defend sacred practices while refusing humility. Isaiah will not let us separate worship from character.
-
-It also encourages those who feel unworthy but come with contrite hearts. The Lord does not despise humble worship. He looks to the one who trembles at His Word, not to the one who performs impressively without surrender.
 
 ### Common Misunderstandings
 
@@ -1217,19 +1203,17 @@ That is why the promise attached to Sabbath delight is so rich. Those who honor 
 
 Finally, Isaiah 66 broadens the horizon again. From one Sabbath to another, all flesh comes to worship before the Lord. Here the Sabbath belongs to the book’s final vision of restored creation and universal worship. It is not a fading detail from an earlier religious system. It stands within the joy of God’s final reign.
 
-### How This Points to Christ
-
-Christ brings Isaiah’s themes of worship, rest, mercy, inclusion, and delight into deeper light. The Sabbath in Isaiah points beyond bare observance to restored fellowship with God, mercy toward the humble, and joyful honoring of the Lord. That Sabbath vision finds its fullest beauty in Christ, who draws people into true worship and rest in the presence of God.
-
-At the same time, Christ does not make Isaiah’s vision trivial. He fulfills its heart: delight in God, mercy rather than hypocrisy, and worship shaped by grace and truth.
-
-### What This Means for Us Today
-
 Isaiah teaches us not to think of sacred time as empty, harsh, or self-designed. It is a gift to receive reverently. The Sabbath becomes a testing ground for whether we love the Lord or simply love our own routines.
 
 It also challenges churches to connect worship with life. We cannot cherish sacred rhythms while ignoring justice, mercy, humility, and covenant faithfulness. Sabbath delight belongs with righteous living.
 
 And it comforts those who feel outside. Isaiah places Sabbath within God’s welcoming embrace of those who truly join themselves to Him.
+
+### How This Points to Christ
+
+Christ brings Isaiah’s themes of worship, rest, mercy, inclusion, and delight into deeper light. The Sabbath in Isaiah points beyond bare observance to restored fellowship with God, mercy toward the humble, and joyful honoring of the Lord. That Sabbath vision finds its fullest beauty in Christ, who draws people into true worship and rest in the presence of God.
+
+At the same time, Christ does not make Isaiah’s vision trivial. He fulfills its heart: delight in God, mercy rather than hypocrisy, and worship shaped by grace and truth.
 
 ### Common Misunderstandings
 
@@ -1320,17 +1304,15 @@ The final chapters widen the horizon further. The nations are gathered. God’s 
 
 So what is Zion in Isaiah? It is the city judged for sin, cleansed by grace, beautified by God’s presence, made central in worship, and set before the nations as the place where the Holy One reigns. Zion is where Isaiah’s movement from ruin to glory becomes visible.
 
+Isaiah’s Zion teaches us to long for more than private spirituality. God’s purpose includes a people, a dwelling place of praise, and a public display of His glory. Salvation is communal, worshipful, and world-facing.
+
+Zion also teaches us that God can redeem what is deeply compromised. The city exposed in shame becomes the city crowned with beauty. That gives hope to broken communities and compromised churches that truly return to the Lord.
+
 ### How This Points to Christ
 
 Zion in Isaiah naturally points to Christ because its deepest meaning lies in God’s saving presence, righteous reign, gathered people, and worldwide blessing. Christ stands at the center of that reality. He is the one through whom Zion’s restoration, God’s reign, and the gathering of the nations come into focus.
 
 He also keeps Zion from being reduced to mere geography or sentiment. In him, the city’s hope becomes bound up with God’s redeeming action and the creation of a worshiping people marked by righteousness and joy.
-
-### What This Means for Us Today
-
-Isaiah’s Zion teaches us to long for more than private spirituality. God’s purpose includes a people, a dwelling place of praise, and a public display of His glory. Salvation is communal, worshipful, and world-facing.
-
-Zion also teaches us that God can redeem what is deeply compromised. The city exposed in shame becomes the city crowned with beauty. That gives hope to broken communities and compromised churches that truly return to the Lord.
 
 ### Common Misunderstandings
 
@@ -1413,29 +1395,31 @@ The final chapters also contrast God’s servants with those who persist in rebe
 
 Isaiah’s new-creation hope begins with remembrance transformed. Former things will not dominate the future because God is doing something genuinely new. The point is not shallow amnesia, but the end of grief’s tyranny. Former sorrow will not define the everlasting world God makes.
 
+The passage must also be read with its covenant setting. Isaiah describes what God intended to do through a faithful, restored Israel before the final eradication of sin. Peace, health, secure homes, fruitful labor, long life, and children spared from calamity were conditional national blessings. Israel's failure meant that this historical order was not realized in the form offered. That distinction explains why Isaiah 65 can speak of death and childbirth inside a passage that begins with new heavens and a new earth.
+
 Joy is central. The new heavens and new earth are not merely repaired conditions. They are a rejoicing order in which God creates Jerusalem for gladness and His people for delight. The mood of the ending matters. Isaiah has been a serious book, often a severe one, but it is moving toward joy.
 
-The vision also includes healed life. The language of long life, security, fruitfulness, and meaningful labor shows a world no longer distorted by the frustrations that mark the present fallen order. People build and inhabit, plant and eat, rejoice and enjoy the work of their hands. The curse-like pattern of labor lost to others is reversed.
+The final fulfillment is greater than prolonged mortal life. Later Scripture places the new heavens and new earth after judgment and bodily resurrection, when death is no more. There are no infants dying, centenarians still under mortality, or new generations born into risk. Isaiah's preliminary covenant picture gives way to immortal life in the restored creation.
+
+The vision includes healed, embodied life. Houses, vineyards, fruitful labor, and secure enjoyment show that redemption does not end in disembodied escape. The curse-like pattern of labor lost to others is reversed, and in the final new earth no enemy or death can interrupt what God gives.
 
 Peace fills creation. The wolf and lamb together, along with other reconciling images, show a world under the settled shalom of God. Isaiah’s earlier vision of a peaceable kingdom echoes here. Creation is no longer a theater of hostility under rebellion, but a sphere ordered by the Lord’s reign.
 
 Worship remains central. Isaiah 66 places new creation alongside the promise that all flesh will come to worship before the Lord. Final renewal is not secular well-being with religion added on. It is life centered on God’s glory. Worship is not an optional ornament on redemption; it is part of redemption’s very goal.
 
-There is also continuity and discontinuity here. Isaiah does not portray a formless heavenly abstraction. He uses images of city, labor, peace, offspring, worship, and delight. Yet he also announces something qualitatively new. The world to come is not merely this world, slightly improved. It is creation under God’s final, unchallenged blessing.
+There is both continuity and discontinuity here. Isaiah does not portray a formless heavenly abstraction. He uses images of city, labor, peace, family, worship, and delight that his first hearers could understand. Yet the final world is not this one slightly improved, nor a temporary political kingdom. It is creation under God’s unchallenged blessing after evil has been judged and consumed.
 
 Finally, the last chapters do not let us separate this hope from holiness. The new heavens and new earth appear alongside the final distinction between servants and rebels. Isaiah’s hope belongs with God’s final judgment, the defeat of evil, true worship, and the restored creation. New creation is not sentimental universalism. It is the righteous future of the God who judges evil and redeems His people.
+
+Isaiah teaches believers to live with a large hope. We do not simply endure until the end. We look toward the renewal of all things under God’s glory. That gives courage in suffering because present sorrow is not the final shape of reality.
+
+It also shapes worship and ethics. If God is making a world full of righteousness, peace, joy, and worship, Christians should hunger for those things now. New-creation hope does not produce passivity. It produces faithful longing.
 
 ### How This Points to Christ
 
 Isaiah’s new-creation hope points to Christ because all of the book’s restorative threads—servant redemption, Zion’s glory, gathered nations, comfort for mourners, and peace under God’s reign—find their center in him. He is the redeemer through whom the path to this future is opened.
 
 Christ also keeps new creation from becoming mere fantasy. The same Lord who bears sin and rises in vindicated life guarantees that Isaiah’s final horizon is not wishful thinking. New creation stands on accomplished redemption.
-
-### What This Means for Us Today
-
-Isaiah teaches believers to live with a large hope. We do not simply endure until the end. We look toward the renewal of all things under God’s glory. That gives courage in suffering because present sorrow is not the final shape of reality.
-
-It also shapes worship and ethics. If God is making a world full of righteousness, peace, joy, and worship, Christians should hunger for those things now. New-creation hope does not produce passivity. It produces faithful longing.
 
 ### Common Misunderstandings
 
@@ -1450,6 +1434,9 @@ It also shapes worship and ethics. If God is making a world full of righteousnes
 
 - **“The imagery should be flattened into bare literalism or dismissed as unreal poetry.”**  
   The imagery is rich and meaningful, expressing a real and glorious renewal.
+
+- **“References to death and children prove that mortality and childbirth continue in the final new earth.”**  
+  Those details belong to Isaiah's conditional picture of restored Israel. The final canonical fulfillment comes after resurrection, when death is no more.
 
 - **“The new creation is mainly about human happiness.”**  
   Joy is central, but so are God’s glory and universal worship.
@@ -1531,17 +1518,15 @@ Eighth, Isaiah helps Christians live in anxious times. The book is full of threa
 
 Finally, Isaiah carries readers toward worship. The book begins with unfaithful worship and ends with all flesh worshiping before the Lord. That is no small thing. Isaiah is not merely diagnosing the human condition. It is guiding the people of God toward their true end.
 
+Christians today need Isaiah to deepen reverence, expose idols, strengthen hope, and enlarge love for Christ. We need its honesty about sin, its beauty of worship, its concern for justice, and its confidence in God’s sovereignty.
+
+We also need Isaiah to help us endure. When cultural power shifts, when religious performance is tempting, when sorrow grows heavy, and when hope seems distant, Isaiah keeps calling us back to the Lord who remains on the throne and will complete what He has promised.
+
 ### How This Points to Christ
 
 For Christians, Isaiah matters supremely because it gives a powerful, many-sided vision of Christ. It teaches us to recognize Him not only as King but as Servant, not only as glorious but as humble, not only as victorious but as suffering, not only as Israel’s hope but as light to the nations.
 
 It also helps Christians understand the meaning of His work. Christ does not merely inspire the guilty; He bears sin. He does not merely offer guidance; He establishes justice. He does not merely comfort temporarily; He leads God’s people toward restored worship and new creation. Isaiah makes Christian faith fuller, deeper, and more worshipful.
-
-### What This Means for Us Today
-
-Christians today need Isaiah to deepen reverence, expose idols, strengthen hope, and enlarge love for Christ. We need its honesty about sin, its beauty of worship, its concern for justice, and its confidence in God’s sovereignty.
-
-We also need Isaiah to help us endure. When cultural power shifts, when religious performance is tempting, when sorrow grows heavy, and when hope seems distant, Isaiah keeps calling us back to the Lord who remains on the throne and will complete what He has promised.
 
 ### Common Misunderstandings
 
