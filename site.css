@@ -3071,10 +3071,6 @@ textarea {
 }
 
 .cross-reference-chip[data-verse-preview] {
-  cursor: help;
-}
-
-a.cross-reference-chip[data-verse-preview] {
   cursor: pointer;
 }
 
