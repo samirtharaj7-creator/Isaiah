@@ -1095,7 +1095,7 @@ const homePage = () =>
         <section class="hero">
           <div class="hero-content">
             <h1><span class="hero-title-kicker">The Book of</span><span>Isaiah</span></h1>
-            <p class="hero-copy">Read every chapter of Isaiah in a split Scripture and verse-by-verse study workspace. The introduction supplies historical and theological context, while the articles trace Isaiah's major themes and enduring message.</p>
+            <p class="hero-copy">Enter Isaiah, where the Holy One confronts rebellion, comforts His people, reveals the suffering Servant, gathers the nations, and promises a world made new.</p>
             <div class="hero-actions">
               <a class="primary-action" href="/chapters/1/">Start with Chapter 1 ${icon.arrowRight}</a>
               <a class="secondary-action" href="/background/">Introduction</a>
