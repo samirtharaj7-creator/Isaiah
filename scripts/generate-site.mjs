@@ -463,7 +463,12 @@ const globalRibbon = `
               <a class="mbe-library-item" href="https://parables.mybibleexplorer.com"><span class="mbe-library-name">Parables</span><span class="mbe-library-desc">Stories of the kingdom</span></a>
               <a class="mbe-library-item" href="https://romans.mybibleexplorer.com"><span class="mbe-library-name">Romans</span><span class="mbe-library-desc">Righteousness by faith and life in the Spirit</span></a>
               <a class="mbe-library-item" href="https://corinthians.mybibleexplorer.com/"><span class="mbe-library-name">Corinthians</span><span class="mbe-library-desc">Unity, worship, holy living, and resurrection</span></a>
+              <a class="mbe-library-item" href="https://galatians.mybibleexplorer.com/"><span class="mbe-library-name">Galatians</span><span class="mbe-library-desc">Freedom in Christ and life by the Spirit</span></a>
+              <a class="mbe-library-item" href="https://ephesians.mybibleexplorer.com/"><span class="mbe-library-name">Ephesians</span><span class="mbe-library-desc">Grace, unity, new life, and spiritual warfare</span></a>
+              <a class="mbe-library-item" href="https://philippians.mybibleexplorer.com/"><span class="mbe-library-name">Philippians</span><span class="mbe-library-desc">Joy, humility, perseverance, and contentment</span></a>
+              <a class="mbe-library-item" href="https://colossians.mybibleexplorer.com/"><span class="mbe-library-name">Colossians</span><span class="mbe-library-desc">The supremacy of Christ and life in Him</span></a>
               <a class="mbe-library-item" href="https://hebrews.mybibleexplorer.com/"><span class="mbe-library-name">Hebrews</span><span class="mbe-library-desc">Christ, covenant, sanctuary, and persevering faith</span></a>
+              <a class="mbe-library-item" href="https://james.mybibleexplorer.com/"><span class="mbe-library-name">James</span><span class="mbe-library-desc">Living faith, wisdom, speech, patience, and prayer</span></a>
               <a class="mbe-library-item" href="https://isaiah.mybibleexplorer.com/" aria-current="page"><span class="mbe-library-name">Isaiah</span><span class="mbe-library-desc">Judgment, comfort, and gospel hope</span></a>
               <a class="mbe-library-item" href="https://daniel.mybibleexplorer.com"><span class="mbe-library-name">Daniel</span><span class="mbe-library-desc">Prophecy and providence</span></a>
               <a class="mbe-library-item" href="https://revelation.mybibleexplorer.com/"><span class="mbe-library-name">Revelation</span><span class="mbe-library-desc">Symbols, judgment, and final hope</span></a>
@@ -476,6 +481,19 @@ const globalRibbon = `
     </div>
   </header>
   `;
+
+const footer = `
+  <footer class="mbe-global-footer" data-tool="isaiah">
+    <div class="mbe-shell-wrap mbe-footer-wrap">
+      <a class="mbe-footer-brand" href="https://mybibleexplorer.com" aria-label="My Bible Explorer home">
+        <img class="mbe-footer-logo" src="https://mybibleexplorer.com/assets/my-bible-explorer-logo.png?v=mbe-20260715-1" alt="My Bible Explorer" width="107" height="34">
+      </a>
+      <span>Know the Word. Live the Word.</span>
+      <span>To contact, email <a class="mbe-footer-link" href="mailto:admin@mybibleexplorer.com">admin@mybibleexplorer.com</a></span>
+      <a class="mbe-footer-link" href="https://mybibleexplorer.com/#donate">Support</a>
+      <span>&copy; <span data-mbe-year></span> My Bible Explorer</span>
+    </div>
+  </footer>`;
 
 const navItems = [
   ["home", "/", "Home", icon.book],
