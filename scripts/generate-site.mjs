@@ -30,6 +30,12 @@ const crossReferencePath = join(
   "isaiah-cross-references",
   "isaiah-cross-references.json",
 );
+const studyLinksPath = join(
+  root,
+  "research",
+  "isaiah-cross-references",
+  "isaiah-study-links.json",
+);
 
 const htmlEscape = (value) =>
   String(value)
@@ -86,6 +92,16 @@ const readCrossReferences = async () => {
   try {
     const payload = await readJson(crossReferencePath);
     return payload?.references && typeof payload.references === "object" ? payload.references : {};
+  } catch (error) {
+    if (error.code === "ENOENT") return {};
+    throw error;
+  }
+};
+
+const readStudyLinks = async () => {
+  try {
+    const payload = await readJson(studyLinksPath);
+    return payload?.wordNotes && typeof payload.wordNotes === "object" ? payload.wordNotes : {};
   } catch (error) {
     if (error.code === "ENOENT") return {};
     throw error;
@@ -447,7 +463,7 @@ const globalRibbon = `
     <div class="mbe-shell-wrap">
       <div class="mbe-ribbon-left">
         <a class="mbe-ribbon-brand" href="https://mybibleexplorer.com" aria-label="My Bible Explorer home">
-          <img class="mbe-ribbon-logo" src="https://mybibleexplorer.com/assets/my-bible-explorer-logo.png?v=mbe-20260715-1" alt="My Bible Explorer" width="107" height="34">
+          <img class="mbe-ribbon-logo" src="/assets/my-bible-explorer-logo.png" alt="My Bible Explorer">
         </a>
         <a class="mbe-ribbon-back" href="https://mybibleexplorer.com/#journeys">Back to Library</a>
       </div>
@@ -458,35 +474,24 @@ const globalRibbon = `
             <div class="mbe-library-grid">
               <a class="mbe-library-item" href="https://hermeneutics.mybibleexplorer.com"><span class="mbe-library-name">Hermeneutics</span><span class="mbe-library-desc">Learn to read Scripture faithfully</span></a>
               <a class="mbe-library-item" href="https://psalms.mybibleexplorer.com"><span class="mbe-library-name">Psalms</span><span class="mbe-library-desc">Worship, lament, praise, and prayer</span></a>
+              <a class="mbe-library-item" href="https://daniel.mybibleexplorer.com"><span class="mbe-library-name">Daniel</span><span class="mbe-library-desc">Prophecy and providence</span></a>
+              <a class="mbe-library-item" href="https://isaiah.mybibleexplorer.com" aria-current="page"><span class="mbe-library-name">Isaiah</span><span class="mbe-library-desc">Judgment, comfort, and gospel hope</span></a>
+              <a class="mbe-library-item" href="https://revelation.mybibleexplorer.com/"><span class="mbe-library-name">Revelation</span><span class="mbe-library-desc">Symbols, judgment, and final hope</span></a>
               <a class="mbe-library-item" href="https://sanctuary.mybibleexplorer.com/#structure"><span class="mbe-library-name">Sanctuary</span><span class="mbe-library-desc">A blueprint of salvation</span></a>
               <a class="mbe-library-item" href="https://lastdayevents.mybibleexplorer.com/index.html"><span class="mbe-library-name">Last Day Events</span><span class="mbe-library-desc">Earth's final chapter</span></a>
-              <a class="mbe-library-item" href="https://parables.mybibleexplorer.com"><span class="mbe-library-name">Parables</span><span class="mbe-library-desc">Stories of the kingdom</span></a>
-              <a class="mbe-library-item" href="https://romans.mybibleexplorer.com"><span class="mbe-library-name">Romans</span><span class="mbe-library-desc">Righteousness by faith and life in the Spirit</span></a>
-              <a class="mbe-library-item" href="https://corinthians.mybibleexplorer.com/"><span class="mbe-library-name">Corinthians</span><span class="mbe-library-desc">Unity, worship, holy living, and resurrection</span></a>
-              <a class="mbe-library-item" href="https://galatians.mybibleexplorer.com/"><span class="mbe-library-name">Galatians</span><span class="mbe-library-desc">Freedom in Christ and life by the Spirit</span></a>
-              <a class="mbe-library-item" href="https://ephesians.mybibleexplorer.com/"><span class="mbe-library-name">Ephesians</span><span class="mbe-library-desc">Grace, unity, new life, and spiritual warfare</span></a>
-              <a class="mbe-library-item" href="https://philippians.mybibleexplorer.com/"><span class="mbe-library-name">Philippians</span><span class="mbe-library-desc">Joy, humility, perseverance, and contentment</span></a>
-              <a class="mbe-library-item" href="https://colossians.mybibleexplorer.com/"><span class="mbe-library-name">Colossians</span><span class="mbe-library-desc">The supremacy of Christ and life in Him</span></a>
-              <a class="mbe-library-item" href="https://hebrews.mybibleexplorer.com/"><span class="mbe-library-name">Hebrews</span><span class="mbe-library-desc">Christ, covenant, sanctuary, and persevering faith</span></a>
-              <a class="mbe-library-item" href="https://james.mybibleexplorer.com/"><span class="mbe-library-name">James</span><span class="mbe-library-desc">Living faith, wisdom, speech, patience, and prayer</span></a>
-              <a class="mbe-library-item" href="https://isaiah.mybibleexplorer.com/" aria-current="page"><span class="mbe-library-name">Isaiah</span><span class="mbe-library-desc">Judgment, comfort, and gospel hope</span></a>
-              <a class="mbe-library-item" href="https://daniel.mybibleexplorer.com"><span class="mbe-library-name">Daniel</span><span class="mbe-library-desc">Prophecy and providence</span></a>
-              <a class="mbe-library-item" href="https://revelation.mybibleexplorer.com/"><span class="mbe-library-name">Revelation</span><span class="mbe-library-desc">Symbols, judgment, and final hope</span></a>
-              <a class="mbe-library-item" href="https://christ.mybibleexplorer.com/"><span class="mbe-library-name">Life of Christ</span><span class="mbe-library-desc">The life and ministry of Jesus</span></a>
             </div>
           </div>
         </details>
         <a class="mbe-ribbon-give" href="https://mybibleexplorer.com/#donate">Support</a>
       </nav>
     </div>
-  </header>
-  `;
+  </header>`;
 
 const footer = `
   <footer class="mbe-global-footer" data-tool="isaiah">
     <div class="mbe-shell-wrap mbe-footer-wrap">
       <a class="mbe-footer-brand" href="https://mybibleexplorer.com" aria-label="My Bible Explorer home">
-        <img class="mbe-footer-logo" src="https://mybibleexplorer.com/assets/my-bible-explorer-logo.png?v=mbe-20260715-1" alt="My Bible Explorer" width="107" height="34">
+        <img class="mbe-footer-logo" src="/assets/my-bible-explorer-logo.png" alt="My Bible Explorer">
       </a>
       <span>Know the Word. Live the Word.</span>
       <span>To contact, email <a class="mbe-footer-link" href="mailto:admin@mybibleexplorer.com">admin@mybibleexplorer.com</a></span>
@@ -536,19 +541,19 @@ const shell = ({ title, description, active, bodyClass = "", content, scripts = 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${htmlEscape(title)}</title>
   <meta name="description" content="${attr(description)}">
-${["home", "background", "articles"].includes(active) ? '  <link rel="preload" as="image" href="/assets/isaiah-hero-v2.webp?v=mbe-20260715-1" type="image/webp" fetchpriority="high">' : ""}
+${["home", "background", "articles"].includes(active) ? '  <link rel="preload" as="image" href="/assets/isaiah-hero-v2.webp" type="image/webp" fetchpriority="high">' : ""}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/global-shell.css">
-  <link rel="stylesheet" href="/site.css?v=20260715-asset-delivery-21">
+  <link rel="stylesheet" href="/site.css?v=20260715-mobile-inline-notes-20">
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
   ${appHeader(active)}
   ${content}
   ${footer}
-  <script src="/site.js?v=20260715-asset-delivery-21" defer></script>
+  <script src="/site.js?v=20260715-mobile-inline-notes-20" defer></script>
   ${scripts}
 </body>
 </html>`;
@@ -1113,7 +1118,7 @@ const homePage = () =>
         <section class="hero">
           <div class="hero-content">
             <h1><span class="hero-title-kicker">The Book of</span><span>Isaiah</span></h1>
-            <p class="hero-copy">Enter Isaiah, where the Holy One confronts rebellion, comforts His people, reveals the suffering Servant, gathers the nations, and promises a world made new.</p>
+            <p class="hero-copy">Read every chapter of Isaiah in a split Scripture and verse-by-verse study workspace. The introduction supplies historical and theological context, while the articles trace Isaiah's major themes and enduring message.</p>
             <div class="hero-actions">
               <a class="primary-action" href="/chapters/1/">Start with Chapter 1 ${icon.arrowRight}</a>
               <a class="secondary-action" href="/background/">Introduction</a>
@@ -1865,9 +1870,11 @@ const renderWordPhraseNotes = (notes) => {
                 </div>`;
 };
 
-const renderStudyLinks = (sourceReference, references = [], verseText = "") => {
+const renderStudyLinks = (sourceReference, references = [], verseText = "", wordNotesByReference = {}) => {
   const cleanReferences = bestCrossReferences(sourceReference, references);
-  const phraseNotes = phraseNotesForVerse(sourceReference, verseText);
+  const phraseNotes = wordNotesByReference[sourceReference]?.length
+    ? wordNotesByReference[sourceReference]
+    : phraseNotesForVerse(sourceReference, verseText);
 
   if (!cleanReferences.length && !phraseNotes.length) return "";
 
@@ -1888,7 +1895,13 @@ const renderStudyLinks = (sourceReference, references = [], verseText = "") => {
               </section>`;
 };
 
-const renderVerseCommentary = (verses, n, chapterCommentary, crossReferences = {}) => {
+const renderVerseCommentary = (
+  verses,
+  n,
+  chapterCommentary,
+  crossReferences = {},
+  wordNotesByReference = {},
+) => {
   const activeVerse = String(verses[0]?.verse ?? 1);
 
   return `
@@ -1901,6 +1914,7 @@ const renderVerseCommentary = (verses, n, chapterCommentary, crossReferences = {
                   sourceReference,
                   crossReferences[sourceReference] || [],
                   text,
+                  wordNotesByReference,
                 );
                 const active = String(verse) === activeVerse;
                 return `
@@ -1914,7 +1928,7 @@ const renderVerseCommentary = (verses, n, chapterCommentary, crossReferences = {
           </div>`;
 };
 
-const chapterPage = (chapter, chapterCommentary = {}, crossReferences = {}) => {
+const chapterPage = (chapter, chapterCommentary = {}, crossReferences = {}, wordNotesByReference = {}) => {
   const verses = chapter.verses;
   const n = chapter.chapter;
   const previous = n > 1 ? n - 1 : null;
@@ -1982,7 +1996,7 @@ const chapterPage = (chapter, chapterCommentary = {}, crossReferences = {}) => {
               <button class="icon-button" type="button" data-notes-font-up aria-label="Increase study notes text size" title="Increase study notes text size">${icon.plus}</button>
             </div>
           </header>
-          ${renderVerseCommentary(verses, n, chapterCommentary, crossReferences)}
+          ${renderVerseCommentary(verses, n, chapterCommentary, crossReferences, wordNotesByReference)}
         </aside>
       </div>`,
   });
@@ -2230,7 +2244,7 @@ input {
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92) 0%, rgba(7, 17, 28, 0.68) 34%, rgba(7, 17, 28, 0.12) 100%),
     linear-gradient(180deg, rgba(7, 17, 28, 0.1) 0%, rgba(7, 17, 28, 0.28) 58%, rgba(7, 17, 28, 0.88) 100%),
-    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center;
   background-size: cover;
 }
@@ -2483,7 +2497,7 @@ h3 {
   padding: clamp(6rem, 12vh, 9rem) clamp(1.5rem, 5vw, 5rem) clamp(2rem, 6vh, 4rem);
   background-image:
     linear-gradient(90deg, rgba(7, 17, 28, 0.92), rgba(7, 17, 28, 0.48)),
-    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -2589,7 +2603,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(11, 31, 58, 0.95) 0%, rgba(11, 31, 58, 0.72) 45%, rgba(11, 31, 58, 0.22) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.1), rgba(11, 31, 58, 0.86)),
-    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -2803,7 +2817,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(11, 31, 58, 0.98) 0%, rgba(11, 31, 58, 0.92) 24%, rgba(11, 31, 58, 0.60) 52%, rgba(11, 31, 58, 0.18) 78%, rgba(11, 31, 58, 0.34) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.24), rgba(11, 31, 58, 0.70)),
-    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center right;
   background-size: cover;
   isolation: isolate;
@@ -3966,7 +3980,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.32) 57%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center top;
   opacity: 0.86;
 }
@@ -3991,7 +4005,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.72) 0%, rgba(11, 31, 58, 0.28) 36%, rgba(11, 31, 58, 0.08) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.03) 0%, rgba(11, 31, 58, 0.30) 52%, rgba(11, 31, 58, 0.78) 82%, #0b1f3a 100%),
-    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
+    url("/assets/isaiah-hero-v2.webp");
 }
 
 .home-route .hero::after {
@@ -4082,7 +4096,7 @@ h4 {
   background-image:
     linear-gradient(90deg, rgba(11, 31, 58, 0.92) 0%, rgba(11, 31, 58, 0.64) 42%, rgba(11, 31, 58, 0.16) 100%),
     linear-gradient(180deg, rgba(11, 31, 58, 0.18) 0%, rgba(11, 31, 58, 0.30) 58%, rgba(11, 31, 58, 0.90) 100%),
-    url("/assets/isaiah-hero-v2.webp?v=mbe-20260715-1");
+    url("/assets/isaiah-hero-v2.webp");
   background-position: center right;
   background-size: cover;
 }
@@ -6517,6 +6531,7 @@ const main = async () => {
   const kjv = await readJson(kjvPath);
   const commentary = await readCommentary();
   const crossReferences = await readCrossReferences();
+  const wordNotesByReference = await readStudyLinks();
   const articles = await readArticles();
   bibleVerseLookup = await readFullBibleVerseLookup();
   const isaiah = kjv.books.Isaiah;
@@ -6576,7 +6591,7 @@ const main = async () => {
   for (const chapter of chapters) {
     await write(
       join(root, "chapters", String(chapter.chapter), "index.html"),
-      chapterPage(chapter, commentary[String(chapter.chapter)] || {}, crossReferences),
+      chapterPage(chapter, commentary[String(chapter.chapter)] || {}, crossReferences, wordNotesByReference),
     );
   }
 
