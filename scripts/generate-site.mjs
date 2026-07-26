@@ -443,21 +443,6 @@ const icon = {
     '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M15 3v18"></path><path d="m10 15-3-3 3-3"></path></svg>',
 };
 
-const brandMark = `
-  <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
-    <g>
-      <line x1="50" y1="30" x2="50" y2="20"></line>
-      <line x1="42" y1="31.5" x2="38.5" y2="22.5"></line>
-      <line x1="58" y1="31.5" x2="61.5" y2="22.5"></line>
-      <line x1="35" y1="35" x2="28.5" y2="28.5"></line>
-      <line x1="65" y1="35" x2="71.5" y2="28.5"></line>
-    </g>
-    <path d="M50 47 q-13 -6 -24 -3 v27 q11 -3 24 3"></path>
-    <path d="M50 47 q13 -6 24 -3 v27 q-11 -3 -24 3"></path>
-    <line x1="50" y1="47" x2="50" y2="77"></line>
-    <path d="M32 55 q8 -2 15 1 M32 61 q8 -2 15 1 M53 56 q8 -3 15 0 M53 62 q8 -3 15 0"></path>
-  </svg>`;
-
 const globalRibbon = `
   <header class="mbe-global-shell" data-tool="isaiah" data-embedded="true">
     <div class="mbe-shell-wrap">
@@ -500,40 +485,6 @@ const footer = `
     </div>
   </footer>`;
 
-const navItems = [
-  ["home", "/", "Home", icon.book],
-  ["background", "/background/", "Introduction", icon.library],
-  ["chapters", "/chapters/1/", "Commentary", icon.book],
-  ["articles", "/articles/", "Articles", icon.file],
-];
-
-const appHeader = (active) => `
-  <header class="site-header">
-    <div class="site-header-inner">
-      <a class="site-brand" href="/">
-        <span class="brand-icon">${brandMark}</span>
-        <span>Isaiah Study</span>
-      </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        ${navItems
-          .map(
-            ([key, href, label]) =>
-              `<a class="${key === active ? "is-active" : ""}" href="${href}">${label}</a>`,
-          )
-          .join("")}
-      </nav>
-      <button class="icon-button menu-button" data-menu-toggle aria-label="Toggle menu" title="Toggle menu">${icon.menu}</button>
-    </div>
-    <nav class="mobile-nav" data-mobile-nav aria-label="Mobile navigation">
-      ${navItems
-        .map(
-          ([key, href, label, itemIcon]) =>
-            `<a class="${key === active ? "is-active" : ""}" href="${href}">${itemIcon}<span>${label}</span></a>`,
-        )
-        .join("")}
-    </nav>
-  </header>`;
-
 const shell = ({ title, description, active, bodyClass = "", content, scripts = "" }) => `<!doctype html>
 <html lang="en" class="dark">
 <head>
@@ -550,7 +501,6 @@ ${["home", "background", "articles"].includes(active) ? '  <link rel="preload" a
 </head>
 <body class="mbe-shell-managed ${bodyClass}">
   ${globalRibbon}
-  ${appHeader(active)}
   ${content}
   ${footer}
   <script src="/site.js?v=20260715-mobile-inline-notes-20" defer></script>
