@@ -298,7 +298,7 @@ body{
 
 /* MBE canonical subsite ribbon */
 .mbe-global-shell,.mbe-global-footer{--mbe-ink:#ede4d3;--mbe-muted:#b9c0ce;--mbe-navy:#ede4d3;--mbe-gold-dark:#e3c278;--mbe-rule:#344055;--mbe-soft:#202c3e;background:linear-gradient(180deg,#1b283b,#142032);color:#b9c0ce;}
-.mbe-library-panel{background:#142032;color:#ede4d3;border-color:#344055;}
+.mbe-library-panel{position:fixed;top:var(--mbe-ribbon-occupied-height,47px);right:max(12px,calc((100vw - var(--mbe-max))/2 + 28px));width:min(920px,calc(100vw - 24px));background:#142032;color:#ede4d3;border-color:#344055;}
 .mbe-library-groups{display:grid;grid-template-columns:2fr 1fr;gap:18px;padding:4px;}
 .mbe-library-group{min-width:0;}
 .mbe-library-heading{margin:2px 8px 9px;color:#e3c278;font:700 .7rem/1 var(--mbe-font-ui);letter-spacing:.16em;text-transform:uppercase;}
