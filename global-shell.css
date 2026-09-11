@@ -295,3 +295,25 @@ html,
 body{
   overscroll-behavior-y:none;
 }
+
+/* MBE canonical subsite ribbon */
+.mbe-global-shell,
+.mbe-global-footer{
+  --mbe-ink:#ede4d3;
+  --mbe-muted:#b9c0ce;
+  --mbe-navy:#ede4d3;
+  --mbe-gold-dark:#e3c278;
+  --mbe-rule:#344055;
+  --mbe-soft:#202c3e;
+  background:linear-gradient(180deg,#1b283b,#142032);
+  color:#b9c0ce;
+}
+.mbe-library-panel{background:#142032;color:#ede4d3;border-color:#344055;}
+.mbe-library-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;}
+.mbe-library-item{color:#ede4d3;}
+.mbe-library-item:hover{background:#202c3e;}
+.mbe-library-item[aria-current="page"]{background:rgba(237,228,211,.12);}
+.mbe-library-desc{display:none!important;}
+.mbe-ribbon-logo,
+.mbe-footer-logo{background:transparent;border-radius:0;padding:0;filter:grayscale(1) brightness(0) invert(88%) sepia(18%) saturate(320%) hue-rotate(2deg);}
+@media(max-width:720px){.mbe-library-grid{grid-template-columns:1fr;}}
