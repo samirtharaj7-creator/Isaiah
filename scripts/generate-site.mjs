@@ -475,6 +475,7 @@ const globalRibbon = `
             <section class="mbe-library-group" aria-labelledby="mbe-books-heading">
               <p class="mbe-library-heading" id="mbe-books-heading">Books of the Bible</p>
               <div class="mbe-library-grid mbe-library-grid-books">
+                <a class="mbe-library-item" href="https://timothy.mybibleexplorer.com/"><span class="mbe-library-name">1 &amp; 2 Timothy</span></a>
                 <a class="mbe-library-item" href="https://colossians.mybibleexplorer.com/"><span class="mbe-library-name">Colossians</span></a>
                 <a class="mbe-library-item" href="https://corinthians.mybibleexplorer.com/"><span class="mbe-library-name">Corinthians</span></a>
                 <a class="mbe-library-item" href="https://daniel.mybibleexplorer.com"><span class="mbe-library-name">Daniel</span></a>
@@ -483,10 +484,16 @@ const globalRibbon = `
                 <a class="mbe-library-item" href="https://hebrews.mybibleexplorer.com/"><span class="mbe-library-name">Hebrews</span></a>
                 <a class="mbe-library-item" href="https://isaiah.mybibleexplorer.com/" aria-current="page"><span class="mbe-library-name">Isaiah</span></a>
                 <a class="mbe-library-item" href="https://james.mybibleexplorer.com/"><span class="mbe-library-name">James</span></a>
+                <a class="mbe-library-item" href="https://jude.mybibleexplorer.com/"><span class="mbe-library-name">Jude</span></a>
+                <a class="mbe-library-item" href="https://johnletters.mybibleexplorer.com/"><span class="mbe-library-name">Letters of John</span></a>
+                <a class="mbe-library-item" href="https://peter.mybibleexplorer.com/"><span class="mbe-library-name">Peter</span></a>
+                <a class="mbe-library-item" href="https://philemon.mybibleexplorer.com/"><span class="mbe-library-name">Philemon</span></a>
                 <a class="mbe-library-item" href="https://philippians.mybibleexplorer.com/"><span class="mbe-library-name">Philippians</span></a>
                 <a class="mbe-library-item" href="https://psalms.mybibleexplorer.com"><span class="mbe-library-name">Psalms</span></a>
                 <a class="mbe-library-item" href="https://revelation.mybibleexplorer.com/"><span class="mbe-library-name">Revelation</span></a>
                 <a class="mbe-library-item" href="https://romans.mybibleexplorer.com"><span class="mbe-library-name">Romans</span></a>
+                <a class="mbe-library-item" href="https://thessalonians.mybibleexplorer.com/"><span class="mbe-library-name">Thessalonians</span></a>
+                <a class="mbe-library-item" href="https://titus.mybibleexplorer.com/"><span class="mbe-library-name">Titus</span></a>
               </div>
             </section>
             <section class="mbe-library-group" aria-labelledby="mbe-topics-heading">
