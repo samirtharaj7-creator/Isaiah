@@ -958,3 +958,12 @@
   s.defer = true;
   document.head.appendChild(s);
 })();
+
+/* Phone verse drop-down: a chevron on each verse that opens and closes its notes, as in the Genesis reader. */
+(function () {
+  if (document.getElementById("mbe-verse-dropdown-style")) return;
+  var style = document.createElement("style");
+  style.id = "mbe-verse-dropdown-style";
+  style.textContent = '@media (max-width: 1100px) {\n  button.verse-button { position: relative !important; padding-right: 2.75rem !important; }\n  button.verse-button::after { content: ""; position: absolute; top: 0.8rem; right: 0.75rem; width: 1.15rem; height: 1.15rem; background-color: hsl(42 54% 64%); opacity: 0.78; pointer-events: none; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'black\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'black\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'m6 9 6 6 6-6\'/%3E%3C/svg%3E") center / contain no-repeat; transition: transform 160ms ease, opacity 160ms ease; }\n  button.verse-button[aria-expanded="true"]::after { transform: rotate(180deg); opacity: 1; }\n}\n@media (prefers-reduced-motion: reduce) { button.verse-button::after { transition: none; } }';
+  (document.head || document.documentElement).appendChild(style);
+})();
